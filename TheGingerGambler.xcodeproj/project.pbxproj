@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DEB7091C151113080006BD83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091B151113080006BD83 /* UIKit.framework */; };
+		DEB7091E151113080006BD83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091D151113080006BD83 /* Foundation.framework */; };
+		DEB70920151113080006BD83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091F151113080006BD83 /* CoreGraphics.framework */; };
+		DEB70922151113080006BD83 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB70921151113080006BD83 /* CoreData.framework */; };
+		DEB70928151113080006BD83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEB70926151113080006BD83 /* InfoPlist.strings */; };
+		DEB7092A151113080006BD83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB70929151113080006BD83 /* main.m */; };
+		DEB7092E151113080006BD83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7092D151113080006BD83 /* AppDelegate.m */; };
+		DEB70931151113080006BD83 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB7092F151113080006BD83 /* MainStoryboard.storyboard */; };
+		DEB70934151113090006BD83 /* TheGingerGambler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEB70932151113090006BD83 /* TheGingerGambler.xcdatamodeld */; };
+		DEB70937151113090006BD83 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB70936151113090006BD83 /* MasterViewController.m */; };
+		DEB7093A151113090006BD83 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB70939151113090006BD83 /* DetailViewController.m */; };
+		DEB70942151113090006BD83 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB70941151113090006BD83 /* SenTestingKit.framework */; };
+		DEB70943151113090006BD83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091B151113080006BD83 /* UIKit.framework */; };
+		DEB70944151113090006BD83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091D151113080006BD83 /* Foundation.framework */; };
+		DEB70945151113090006BD83 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB70921151113080006BD83 /* CoreData.framework */; };
+		DEB7094D151113090006BD83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEB7094B151113090006BD83 /* InfoPlist.strings */; };
+		DEB70950151113090006BD83 /* TheGingerGamblerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7094F151113090006BD83 /* TheGingerGamblerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEB70946151113090006BD83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEB7090E151113070006BD83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEB70916151113080006BD83;
+			remoteInfo = TheGingerGambler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DEB70917151113080006BD83 /* TheGingerGambler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheGingerGambler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEB7091B151113080006BD83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DEB7091D151113080006BD83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DEB7091F151113080006BD83 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DEB70921151113080006BD83 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DEB70925151113080006BD83 /* TheGingerGambler-Info.plist */ = {isa = PBXFileReference; path = "TheGingerGambler-Info.plist"; sourceTree = "<group>"; };
+		DEB70927151113080006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DEB70929151113080006BD83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DEB7092B151113080006BD83 /* TheGingerGambler-Prefix.pch */ = {isa = PBXFileReference; path = "TheGingerGambler-Prefix.pch"; sourceTree = "<group>"; };
+		DEB7092C151113080006BD83 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		DEB7092D151113080006BD83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DEB70930151113080006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DEB70933151113090006BD83 /* TheGingerGambler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheGingerGambler.xcdatamodel; sourceTree = "<group>"; };
+		DEB70935151113090006BD83 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		DEB70936151113090006BD83 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		DEB70938151113090006BD83 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		DEB70939151113090006BD83 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DEB70940151113090006BD83 /* TheGingerGamblerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheGingerGamblerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEB70941151113090006BD83 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DEB7094A151113090006BD83 /* TheGingerGamblerTests-Info.plist */ = {isa = PBXFileReference; path = "TheGingerGamblerTests-Info.plist"; sourceTree = "<group>"; };
+		DEB7094C151113090006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DEB7094E151113090006BD83 /* TheGingerGamblerTests.h */ = {isa = PBXFileReference; path = TheGingerGamblerTests.h; sourceTree = "<group>"; };
+		DEB7094F151113090006BD83 /* TheGingerGamblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheGingerGamblerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEB70914151113080006BD83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB7091C151113080006BD83 /* UIKit.framework in Frameworks */,
+				DEB7091E151113080006BD83 /* Foundation.framework in Frameworks */,
+				DEB70920151113080006BD83 /* CoreGraphics.framework in Frameworks */,
+				DEB70922151113080006BD83 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEB7093C151113090006BD83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB70942151113090006BD83 /* SenTestingKit.framework in Frameworks */,
+				DEB70943151113090006BD83 /* UIKit.framework in Frameworks */,
+				DEB70944151113090006BD83 /* Foundation.framework in Frameworks */,
+				DEB70945151113090006BD83 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DEB7090C151113070006BD83 = {
+			isa = PBXGroup;
+			children = (
+				DEB70923151113080006BD83 /* TheGingerGambler */,
+				DEB70948151113090006BD83 /* TheGingerGamblerTests */,
+				DEB7091A151113080006BD83 /* Frameworks */,
+				DEB70918151113080006BD83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEB70918151113080006BD83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEB70917151113080006BD83 /* TheGingerGambler.app */,
+				DEB70940151113090006BD83 /* TheGingerGamblerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEB7091A151113080006BD83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEB7091B151113080006BD83 /* UIKit.framework */,
+				DEB7091D151113080006BD83 /* Foundation.framework */,
+				DEB7091F151113080006BD83 /* CoreGraphics.framework */,
+				DEB70921151113080006BD83 /* CoreData.framework */,
+				DEB70941151113090006BD83 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEB70923151113080006BD83 /* TheGingerGambler */ = {
+			isa = PBXGroup;
+			children = (
+				DEB7092C151113080006BD83 /* AppDelegate.h */,
+				DEB7092D151113080006BD83 /* AppDelegate.m */,
+				DEB7092F151113080006BD83 /* MainStoryboard.storyboard */,
+				DEB70935151113090006BD83 /* MasterViewController.h */,
+				DEB70936151113090006BD83 /* MasterViewController.m */,
+				DEB70938151113090006BD83 /* DetailViewController.h */,
+				DEB70939151113090006BD83 /* DetailViewController.m */,
+				DEB70932151113090006BD83 /* TheGingerGambler.xcdatamodeld */,
+				DEB70924151113080006BD83 /* Supporting Files */,
+			);
+			path = TheGingerGambler;
+			sourceTree = "<group>";
+		};
+		DEB70924151113080006BD83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEB70925151113080006BD83 /* TheGingerGambler-Info.plist */,
+				DEB70926151113080006BD83 /* InfoPlist.strings */,
+				DEB70929151113080006BD83 /* main.m */,
+				DEB7092B151113080006BD83 /* TheGingerGambler-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEB70948151113090006BD83 /* TheGingerGamblerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEB7094E151113090006BD83 /* TheGingerGamblerTests.h */,
+				DEB7094F151113090006BD83 /* TheGingerGamblerTests.m */,
+				DEB70949151113090006BD83 /* Supporting Files */,
+			);
+			path = TheGingerGamblerTests;
+			sourceTree = "<group>";
+		};
+		DEB70949151113090006BD83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEB7094A151113090006BD83 /* TheGingerGamblerTests-Info.plist */,
+				DEB7094B151113090006BD83 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEB70916151113080006BD83 /* TheGingerGambler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEB70953151113090006BD83 /* Build configuration list for PBXNativeTarget "TheGingerGambler" */;
+			buildPhases = (
+				DEB70913151113080006BD83 /* Sources */,
+				DEB70914151113080006BD83 /* Frameworks */,
+				DEB70915151113080006BD83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheGingerGambler;
+			productName = TheGingerGambler;
+			productReference = DEB70917151113080006BD83 /* TheGingerGambler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEB7093F151113090006BD83 /* TheGingerGamblerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEB70956151113090006BD83 /* Build configuration list for PBXNativeTarget "TheGingerGamblerTests" */;
+			buildPhases = (
+				DEB7093B151113090006BD83 /* Sources */,
+				DEB7093C151113090006BD83 /* Frameworks */,
+				DEB7093D151113090006BD83 /* Resources */,
+				DEB7093E151113090006BD83 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEB70947151113090006BD83 /* PBXTargetDependency */,
+			);
+			name = TheGingerGamblerTests;
+			productName = TheGingerGamblerTests;
+			productReference = DEB70940151113090006BD83 /* TheGingerGamblerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEB7090E151113070006BD83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Huawei Technologies de Mexico";
+			};
+			buildConfigurationList = DEB70911151113070006BD83 /* Build configuration list for PBXProject "TheGingerGambler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DEB7090C151113070006BD83;
+			productRefGroup = DEB70918151113080006BD83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEB70916151113080006BD83 /* TheGingerGambler */,
+				DEB7093F151113090006BD83 /* TheGingerGamblerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEB70915151113080006BD83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB70928151113080006BD83 /* InfoPlist.strings in Resources */,
+				DEB70931151113080006BD83 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEB7093D151113090006BD83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB7094D151113090006BD83 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEB7093E151113090006BD83 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEB70913151113080006BD83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB7092A151113080006BD83 /* main.m in Sources */,
+				DEB7092E151113080006BD83 /* AppDelegate.m in Sources */,
+				DEB70934151113090006BD83 /* TheGingerGambler.xcdatamodeld in Sources */,
+				DEB70937151113090006BD83 /* MasterViewController.m in Sources */,
+				DEB7093A151113090006BD83 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEB7093B151113090006BD83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB70950151113090006BD83 /* TheGingerGamblerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEB70947151113090006BD83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEB70916151113080006BD83 /* TheGingerGambler */;
+			targetProxy = DEB70946151113090006BD83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEB70926151113080006BD83 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEB70927151113080006BD83 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DEB7092F151113080006BD83 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEB70930151113080006BD83 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		DEB7094B151113090006BD83 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEB7094C151113090006BD83 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEB70951151113090006BD83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DEB70952151113090006BD83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEB70954151113090006BD83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheGingerGambler/TheGingerGambler-Prefix.pch";
+				INFOPLIST_FILE = "TheGingerGambler/TheGingerGambler-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DEB70955151113090006BD83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheGingerGambler/TheGingerGambler-Prefix.pch";
+				INFOPLIST_FILE = "TheGingerGambler/TheGingerGambler-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DEB70957151113090006BD83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TheGingerGambler.app/TheGingerGambler";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheGingerGambler/TheGingerGambler-Prefix.pch";
+				INFOPLIST_FILE = "TheGingerGamblerTests/TheGingerGamblerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DEB70958151113090006BD83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TheGingerGambler.app/TheGingerGambler";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheGingerGambler/TheGingerGambler-Prefix.pch";
+				INFOPLIST_FILE = "TheGingerGamblerTests/TheGingerGamblerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEB70911151113070006BD83 /* Build configuration list for PBXProject "TheGingerGambler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEB70951151113090006BD83 /* Debug */,
+				DEB70952151113090006BD83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEB70953151113090006BD83 /* Build configuration list for PBXNativeTarget "TheGingerGambler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEB70954151113090006BD83 /* Debug */,
+				DEB70955151113090006BD83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DEB70956151113090006BD83 /* Build configuration list for PBXNativeTarget "TheGingerGamblerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEB70957151113090006BD83 /* Debug */,
+				DEB70958151113090006BD83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DEB70932151113090006BD83 /* TheGingerGambler.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DEB70933151113090006BD83 /* TheGingerGambler.xcdatamodel */,
+			);
+			currentVersion = DEB70933151113090006BD83 /* TheGingerGambler.xcdatamodel */;
+			path = TheGingerGambler.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DEB7090E151113070006BD83 /* Project object */;
+}
