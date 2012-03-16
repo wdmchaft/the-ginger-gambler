@@ -24,6 +24,10 @@
 		DEB70945151113090006BD83 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB70921151113080006BD83 /* CoreData.framework */; };
 		DEB7094D151113090006BD83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEB7094B151113090006BD83 /* InfoPlist.strings */; };
 		DEB70950151113090006BD83 /* TheGingerGamblerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7094F151113090006BD83 /* TheGingerGamblerTests.m */; };
+		DEB709671513D2470006BD83 /* Bet.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709661513D2470006BD83 /* Bet.m */; };
+		DEB7096B1513D3190006BD83 /* Bookie.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7096A1513D3190006BD83 /* Bookie.m */; };
+		DEB7096E1513D38F0006BD83 /* Sport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7096D1513D38F0006BD83 /* Sport.m */; };
+		DEB709711513D6400006BD83 /* PlaceBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709701513D6400006BD83 /* PlaceBetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,14 @@
 		DEB7094C151113090006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DEB7094E151113090006BD83 /* TheGingerGamblerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheGingerGamblerTests.h; sourceTree = "<group>"; };
 		DEB7094F151113090006BD83 /* TheGingerGamblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheGingerGamblerTests.m; sourceTree = "<group>"; };
+		DEB709651513D2470006BD83 /* Bet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bet.h; sourceTree = "<group>"; };
+		DEB709661513D2470006BD83 /* Bet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bet.m; sourceTree = "<group>"; };
+		DEB709691513D3190006BD83 /* Bookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bookie.h; sourceTree = "<group>"; };
+		DEB7096A1513D3190006BD83 /* Bookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookie.m; sourceTree = "<group>"; };
+		DEB7096C1513D38F0006BD83 /* Sport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport.h; sourceTree = "<group>"; };
+		DEB7096D1513D38F0006BD83 /* Sport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport.m; sourceTree = "<group>"; };
+		DEB7096F1513D6400006BD83 /* PlaceBetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBetViewController.h; sourceTree = "<group>"; };
+		DEB709701513D6400006BD83 /* PlaceBetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +141,15 @@
 				DEB70936151113090006BD83 /* MasterViewController.m */,
 				DEB70938151113090006BD83 /* DetailViewController.h */,
 				DEB70939151113090006BD83 /* DetailViewController.m */,
+				DEB7096F1513D6400006BD83 /* PlaceBetViewController.h */,
+				DEB709701513D6400006BD83 /* PlaceBetViewController.m */,
 				DEB70932151113090006BD83 /* TheGingerGambler.xcdatamodeld */,
+				DEB7096C1513D38F0006BD83 /* Sport.h */,
+				DEB7096D1513D38F0006BD83 /* Sport.m */,
+				DEB709691513D3190006BD83 /* Bookie.h */,
+				DEB7096A1513D3190006BD83 /* Bookie.m */,
+				DEB709651513D2470006BD83 /* Bet.h */,
+				DEB709661513D2470006BD83 /* Bet.m */,
 				DEB70924151113080006BD83 /* Supporting Files */,
 			);
 			path = TheGingerGambler;
@@ -277,6 +297,10 @@
 				DEB70934151113090006BD83 /* TheGingerGambler.xcdatamodeld in Sources */,
 				DEB70937151113090006BD83 /* MasterViewController.m in Sources */,
 				DEB7093A151113090006BD83 /* DetailViewController.m in Sources */,
+				DEB709671513D2470006BD83 /* Bet.m in Sources */,
+				DEB7096B1513D3190006BD83 /* Bookie.m in Sources */,
+				DEB7096E1513D38F0006BD83 /* Sport.m in Sources */,
+				DEB709711513D6400006BD83 /* PlaceBetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +470,7 @@
 				DEB70955151113090006BD83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEB70956151113090006BD83 /* Build configuration list for PBXNativeTarget "TheGingerGamblerTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +479,7 @@
 				DEB70958151113090006BD83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

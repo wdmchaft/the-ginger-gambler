@@ -1,14 +1,11 @@
-//
-//  AppDelegate.m
-//  TheGingerGambler
-//
-//  Created by Huawei R&D Mexico on 3/14/12.
-//  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
-//
+
 
 #import "AppDelegate.h"
 
 #import "MasterViewController.h"
+#import "Bookie.h"
+#import "Sport.h"
+#import "Bet.h"
 
 @implementation AppDelegate
 
@@ -19,6 +16,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSManagedObjectContext* context = [self managedObjectContext];
+    NSManagedObject* sport = [NSEntityDescription
+                              insertNewObjectForEntityForName:@"Sport" inManagedObjectContext:context];
+    [sport setValue:@"football" forKey:@"name"];
+    NSError *error;
+    if(![context save:&error]){
+        NSLog(@"Whoops, couldn´t save: %@", [error localizedDescription]);
+    }
+    
+    NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription* entity = [NSEntityDescription entityForName:@"Bet" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray* fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (Sport* sport in fetchedObjects) {
+        NSLog(@"Name : %@", sport.name);
+    }
+    
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
