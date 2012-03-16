@@ -42,23 +42,23 @@
 		DEB7091D151113080006BD83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEB7091F151113080006BD83 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DEB70921151113080006BD83 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		DEB70925151113080006BD83 /* TheGingerGambler-Info.plist */ = {isa = PBXFileReference; path = "TheGingerGambler-Info.plist"; sourceTree = "<group>"; };
+		DEB70925151113080006BD83 /* TheGingerGambler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheGingerGambler-Info.plist"; sourceTree = "<group>"; };
 		DEB70927151113080006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DEB70929151113080006BD83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DEB7092B151113080006BD83 /* TheGingerGambler-Prefix.pch */ = {isa = PBXFileReference; path = "TheGingerGambler-Prefix.pch"; sourceTree = "<group>"; };
-		DEB7092C151113080006BD83 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		DEB7092B151113080006BD83 /* TheGingerGambler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheGingerGambler-Prefix.pch"; sourceTree = "<group>"; };
+		DEB7092C151113080006BD83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DEB7092D151113080006BD83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DEB70930151113080006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DEB70933151113090006BD83 /* TheGingerGambler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheGingerGambler.xcdatamodel; sourceTree = "<group>"; };
-		DEB70935151113090006BD83 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		DEB70935151113090006BD83 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		DEB70936151113090006BD83 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		DEB70938151113090006BD83 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		DEB70938151113090006BD83 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		DEB70939151113090006BD83 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		DEB70940151113090006BD83 /* TheGingerGamblerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheGingerGamblerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB70941151113090006BD83 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		DEB7094A151113090006BD83 /* TheGingerGamblerTests-Info.plist */ = {isa = PBXFileReference; path = "TheGingerGamblerTests-Info.plist"; sourceTree = "<group>"; };
+		DEB7094A151113090006BD83 /* TheGingerGamblerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheGingerGamblerTests-Info.plist"; sourceTree = "<group>"; };
 		DEB7094C151113090006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DEB7094E151113090006BD83 /* TheGingerGamblerTests.h */ = {isa = PBXFileReference; path = TheGingerGamblerTests.h; sourceTree = "<group>"; };
+		DEB7094E151113090006BD83 /* TheGingerGamblerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheGingerGamblerTests.h; sourceTree = "<group>"; };
 		DEB7094F151113090006BD83 /* TheGingerGamblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheGingerGamblerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
