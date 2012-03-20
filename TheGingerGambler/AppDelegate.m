@@ -18,15 +18,15 @@
 {
     NSManagedObjectContext* context = [self managedObjectContext];
     NSManagedObject* sport = [NSEntityDescription
-                              insertNewObjectForEntityForName:@"Sport" inManagedObjectContext:context];
-    [sport setValue:@"football" forKey:@"name"];
+                              insertNewObjectForEntityForName:@"Bookie" inManagedObjectContext:context];
+    [sport setValue:@"ladbrokes" forKey:@"name"];
     NSError *error;
     if(![context save:&error]){
         NSLog(@"Whoops, couldn´t save: %@", [error localizedDescription]);
     }
     
     NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription* entity = [NSEntityDescription entityForName:@"Bet" inManagedObjectContext:context];
+    NSEntityDescription* entity = [NSEntityDescription entityForName:@"Sport" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     NSArray* fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     for (Sport* sport in fetchedObjects) {

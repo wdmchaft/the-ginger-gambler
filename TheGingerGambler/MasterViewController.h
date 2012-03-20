@@ -14,5 +14,11 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (weak, nonatomic) IBOutlet UITextField *placeBetsTextField;
+@property (weak, nonatomic) IBOutlet UILabel *placeBetsDetailLabel;
+@property (weak, nonatomic) IBOutlet UITableViewCell *settleBetsTextField;
+@property (weak, nonatomic) IBOutlet UILabel *settleBetsDetailLabel;
+@property (weak, nonatomic) IBOutlet UITableViewCell *winsLossesTextField;
+@property (weak, nonatomic) IBOutlet UILabel *winsLossesDetailLabel;
 
 @end

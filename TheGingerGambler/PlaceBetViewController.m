@@ -45,13 +45,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription* entity = [NSEntityDescription entityForName:@"Sport" inManagedObjectContext:_context];
-    [fetchRequest setEntity:entity];
-    NSError* error;
-    self.sports = [_context executeFetchRequest:fetchRequest error:&error];
-    self.title = @"Place Bets";
 }
 
 

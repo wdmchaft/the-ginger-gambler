@@ -18,6 +18,12 @@
 
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize placeBetsTextField = _placeBetsTextField;
+@synthesize placeBetsDetailLabel = _placeBetsDetailLabel;
+@synthesize settleBetsTextField = _settleBetsTextField;
+@synthesize settleBetsDetailLabel = _settleBetsDetailLabel;
+@synthesize winsLossesTextField = _winsLossesTextField;
+@synthesize winsLossesDetailLabel = _winsLossesDetailLabel;
 
 - (void)awakeFromNib
 {
@@ -45,6 +51,12 @@
 
 - (void)viewDidUnload
 {
+    [self setPlaceBetsTextField:nil];
+    [self setPlaceBetsDetailLabel:nil];
+    [self setSettleBetsTextField:nil];
+    [self setSettleBetsDetailLabel:nil];
+    [self setWinsLossesTextField:nil];
+    [self setWinsLossesDetailLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -74,28 +86,6 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
-// Customize the number of sections in the table view.
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return [[self.fetchedResultsController sections] count];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
-}
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    [self configureCell:cell atIndexPath:indexPath];
-    return cell;
 }
 
 /*
