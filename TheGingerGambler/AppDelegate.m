@@ -17,9 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSManagedObjectContext* context = [self managedObjectContext];
-    NSManagedObject* sport = [NSEntityDescription
+    NSManagedObject* bookie = [NSEntityDescription
                               insertNewObjectForEntityForName:@"Bookie" inManagedObjectContext:context];
-    [sport setValue:@"ladbrokes" forKey:@"name"];
+    [bookie setValue:@"ladbrokes" forKey:@"name"];
     NSError *error;
     if(![context save:&error]){
         NSLog(@"Whoops, couldn´t save: %@", [error localizedDescription]);

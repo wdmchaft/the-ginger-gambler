@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BookiePickerViewController : UITableViewController{
-    NSArray* bookies;
+
 }
+
+@property (strong) NSArray* bookies;
 
 @end

@@ -27,8 +27,8 @@
 		DEB709671513D2470006BD83 /* Bet.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709661513D2470006BD83 /* Bet.m */; };
 		DEB7096B1513D3190006BD83 /* Bookie.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7096A1513D3190006BD83 /* Bookie.m */; };
 		DEB7096E1513D38F0006BD83 /* Sport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7096D1513D38F0006BD83 /* Sport.m */; };
-		DEB709711513D6400006BD83 /* PlaceBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709701513D6400006BD83 /* PlaceBetViewController.m */; };
 		DEB7097A151923400006BD83 /* BookiePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709791519233B0006BD83 /* BookiePickerViewController.m */; };
+		DEB7097D151A257B0006BD83 /* PlaceBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +71,10 @@
 		DEB7096A1513D3190006BD83 /* Bookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookie.m; sourceTree = "<group>"; };
 		DEB7096C1513D38F0006BD83 /* Sport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport.h; sourceTree = "<group>"; };
 		DEB7096D1513D38F0006BD83 /* Sport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport.m; sourceTree = "<group>"; };
-		DEB7096F1513D6400006BD83 /* PlaceBetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBetViewController.h; sourceTree = "<group>"; };
-		DEB709701513D6400006BD83 /* PlaceBetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBetViewController.m; sourceTree = "<group>"; };
 		DEB70978151923390006BD83 /* BookiePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookiePickerViewController.h; sourceTree = "<group>"; };
 		DEB709791519233B0006BD83 /* BookiePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookiePickerViewController.m; sourceTree = "<group>"; };
+		DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBetViewController.h; sourceTree = "<group>"; };
+		DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,10 +198,10 @@
 				DEB70936151113090006BD83 /* MasterViewController.m */,
 				DEB70938151113090006BD83 /* DetailViewController.h */,
 				DEB70939151113090006BD83 /* DetailViewController.m */,
-				DEB7096F1513D6400006BD83 /* PlaceBetViewController.h */,
-				DEB709701513D6400006BD83 /* PlaceBetViewController.m */,
 				DEB70978151923390006BD83 /* BookiePickerViewController.h */,
 				DEB709791519233B0006BD83 /* BookiePickerViewController.m */,
+				DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */,
+				DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -321,8 +321,8 @@
 				DEB709671513D2470006BD83 /* Bet.m in Sources */,
 				DEB7096B1513D3190006BD83 /* Bookie.m in Sources */,
 				DEB7096E1513D38F0006BD83 /* Sport.m in Sources */,
-				DEB709711513D6400006BD83 /* PlaceBetViewController.m in Sources */,
 				DEB7097A151923400006BD83 /* BookiePickerViewController.m in Sources */,
+				DEB7097D151A257B0006BD83 /* PlaceBetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

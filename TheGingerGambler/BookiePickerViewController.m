@@ -13,6 +13,8 @@
 
 @implementation BookiePickerViewController
 
+@synthesize bookies = _bookies;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -47,13 +49,13 @@
     for (Bookie* bookie in fetchedObjects) {
         NSLog(@"Name : %@", bookie.name);
     }   
-    bookies = fetchedObjects;
+    self.bookies = fetchedObjects;
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    bookies = nil;
+    self.bookies = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -93,13 +95,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [bookies count];
+    return [self.bookies count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"BookieCell"];
-    cell.textLabel.text = [bookies objectAtIndex:indexPath.row];
+    Bookie* bookie = [self.bookies objectAtIndex:indexPath.row];
+    cell.textLabel.text = [bookie name];
     
     // Configure the cell...
     
