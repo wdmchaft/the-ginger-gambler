@@ -1,20 +1,18 @@
-    //
-//  BookiePickerViewController.m
+//
+//  SportPickerViewController.m
 //  TheGingerGambler
 //
-//  Created by Huawei R&D Mexico on 3/20/12.
+//  Created by Huawei R&D Mexico on 3/21/12.
 //  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
 //
 
-#import "BookiePickerViewController.h"
-#import "AppDelegate.h"
+#import "SportPickerViewController.h"
 #import "DatabaseManager.h"
-#import "Bookie.h"
+#import "Sport.h"
 
+@implementation SportPickerViewController
 
-@implementation BookiePickerViewController
-
-@synthesize bookies = _bookies;
+@synthesize sports = _sports;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,20 +36,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     // Preserves selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;
-    
+ 
     // displays an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.bookies = [DatabaseManager entitiesFor:BOOKIE_ENTITY_NAME];
+    self.sports = [DatabaseManager entitiesFor:SPORT_ENTITY_NAME];
+                  
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.bookies = nil;
+     self.sports = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -84,24 +83,20 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.bookies count];
+    return self.sports.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:BOOKIE_CELL_NAME];
-    Bookie* bookie = [self.bookies objectAtIndex:indexPath.row];
-    cell.textLabel.text = [bookie name];
-    
-    // Configure the cell...
-    
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:SPORT_CELL_NAME];
+    Sport* sport = [self.sports objectAtIndex:indexPath.row];
+    cell.textLabel.text = [sport name];
+        
     return cell;
 }
 

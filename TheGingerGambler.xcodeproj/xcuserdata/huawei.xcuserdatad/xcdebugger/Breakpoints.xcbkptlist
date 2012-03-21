@@ -35,11 +35,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "TheGingerGambler/BookiePickerViewController.m"
-         timestampString = "354037312.576282"
+         timestampString = "354052434.557912"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "99"
+         endingLineNumber = "99"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -49,13 +49,25 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "TheGingerGambler/BookiePickerViewController.m"
-         timestampString = "354037312.576282"
+         timestampString = "354052434.557912"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "39"
-         endingLineNumber = "39"
+         startingLineNumber = "46"
+         endingLineNumber = "46"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "TheGingerGambler/Bookie.h"
+         timestampString = "354055811.96812"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "12"
+         endingLineNumber = "12">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

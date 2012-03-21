@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#define SPORT_ENTITY_NAME @"Sport"
+#define SPORT_CELL_NAME @"SportCell"
+
 @class Bet;
 
 @interface Sport : NSManagedObject

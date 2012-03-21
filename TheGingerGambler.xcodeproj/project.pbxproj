@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE5E7323151A621B00F60FBF /* SportPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7322151A621B00F60FBF /* SportPickerViewController.m */; };
+		DE5E7328151A639500F60FBF /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7327151A639500F60FBF /* DatabaseManager.m */; };
+		DE5E732B151A771500F60FBF /* SettleBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E732A151A771400F60FBF /* SettleBetViewController.m */; };
+		DE5E732E151A7B6200F60FBF /* UICustomSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E732D151A7B6200F60FBF /* UICustomSwitch.m */; };
 		DEB7091C151113080006BD83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091B151113080006BD83 /* UIKit.framework */; };
 		DEB7091E151113080006BD83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091D151113080006BD83 /* Foundation.framework */; };
 		DEB70920151113080006BD83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091F151113080006BD83 /* CoreGraphics.framework */; };
@@ -42,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE5E7321151A621B00F60FBF /* SportPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportPickerViewController.h; sourceTree = "<group>"; };
+		DE5E7322151A621B00F60FBF /* SportPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportPickerViewController.m; sourceTree = "<group>"; };
+		DE5E7326151A639500F60FBF /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		DE5E7327151A639500F60FBF /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
+		DE5E7329151A771400F60FBF /* SettleBetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettleBetViewController.h; sourceTree = "<group>"; };
+		DE5E732A151A771400F60FBF /* SettleBetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettleBetViewController.m; sourceTree = "<group>"; };
+		DE5E732C151A7B6100F60FBF /* UICustomSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomSwitch.h; sourceTree = "<group>"; };
+		DE5E732D151A7B6200F60FBF /* UICustomSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomSwitch.m; sourceTree = "<group>"; };
 		DEB70917151113080006BD83 /* TheGingerGambler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheGingerGambler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB7091B151113080006BD83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEB7091D151113080006BD83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE5E7325151A634700F60FBF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE5E7326151A639500F60FBF /* DatabaseManager.h */,
+				DE5E7327151A639500F60FBF /* DatabaseManager.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		DEB7090C151113070006BD83 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +158,7 @@
 		DEB70923151113080006BD83 /* TheGingerGambler */ = {
 			isa = PBXGroup;
 			children = (
+				DE5E7325151A634700F60FBF /* Utils */,
 				DEB70977151915C10006BD83 /* GUI */,
 				DEB709761519158E0006BD83 /* Model */,
 				DEB70924151113080006BD83 /* Supporting Files */,
@@ -191,9 +213,13 @@
 		DEB70977151915C10006BD83 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE5E732C151A7B6100F60FBF /* UICustomSwitch.h */,
+				DE5E732D151A7B6200F60FBF /* UICustomSwitch.m */,
 				DEB7092C151113080006BD83 /* AppDelegate.h */,
 				DEB7092D151113080006BD83 /* AppDelegate.m */,
 				DEB7092F151113080006BD83 /* MainStoryboard.storyboard */,
+				DE5E7321151A621B00F60FBF /* SportPickerViewController.h */,
+				DE5E7322151A621B00F60FBF /* SportPickerViewController.m */,
 				DEB70935151113090006BD83 /* MasterViewController.h */,
 				DEB70936151113090006BD83 /* MasterViewController.m */,
 				DEB70938151113090006BD83 /* DetailViewController.h */,
@@ -202,6 +228,8 @@
 				DEB709791519233B0006BD83 /* BookiePickerViewController.m */,
 				DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */,
 				DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */,
+				DE5E7329151A771400F60FBF /* SettleBetViewController.h */,
+				DE5E732A151A771400F60FBF /* SettleBetViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -323,6 +351,10 @@
 				DEB7096E1513D38F0006BD83 /* Sport.m in Sources */,
 				DEB7097A151923400006BD83 /* BookiePickerViewController.m in Sources */,
 				DEB7097D151A257B0006BD83 /* PlaceBetViewController.m in Sources */,
+				DE5E7323151A621B00F60FBF /* SportPickerViewController.m in Sources */,
+				DE5E7328151A639500F60FBF /* DatabaseManager.m in Sources */,
+				DE5E732B151A771500F60FBF /* SettleBetViewController.m in Sources */,
+				DE5E732E151A7B6200F60FBF /* UICustomSwitch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

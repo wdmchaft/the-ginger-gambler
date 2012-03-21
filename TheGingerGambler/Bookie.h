@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#define BOOKIE_ENTITY_NAME @"Bookie"
+#define BOOKIE_CELL_NAME @"BookieCell"
+
 @class Bet;
 
 @interface Bookie : NSManagedObject
