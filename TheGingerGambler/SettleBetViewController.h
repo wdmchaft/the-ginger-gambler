@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UICustomSwitch.h"
+#import "RCSwitchOnOff.h"
 
 @interface SettleBetViewController : UITableViewController
-
-@property (strong, nonatomic) IBOutlet UICustomSwitch* winLossSwitch;
+@property (weak, nonatomic) IBOutlet RCSwitchOnOff *winLossSwitch;
 
 @end
