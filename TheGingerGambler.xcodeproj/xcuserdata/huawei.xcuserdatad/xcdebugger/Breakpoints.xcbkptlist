@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "TheGingerGambler/AppDelegate.m"
-         timestampString = "353969623.132952"
+         timestampString = "354139405.929476"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "28"
-         endingLineNumber = "28"
+         startingLineNumber = "44"
+         endingLineNumber = "44"
          landmarkName = "-application:didFinishLaunchingWithOptions:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -68,6 +68,18 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "12"
          endingLineNumber = "12">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "TheGingerGambler/Bet.m"
+         timestampString = "354140462.425167"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "32"
+         endingLineNumber = "32">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

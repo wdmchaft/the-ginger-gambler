@@ -28,6 +28,8 @@
 		DE5E735E151B889300F60FBF /* btn_slider_track_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E734E151B889300F60FBF /* btn_slider_track_pressed@2x.png */; };
 		DE5E735F151B889300F60FBF /* btn_slider_track.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E734F151B889300F60FBF /* btn_slider_track.png */; };
 		DE5E7360151B889300F60FBF /* btn_slider_track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7350151B889300F60FBF /* btn_slider_track@2x.png */; };
+		DE5E7374151BBF3E00F60FBF /* Bet.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7373151BBF3E00F60FBF /* Bet.m */; };
+		DE5E7377151BC3FE00F60FBF /* BetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */; };
 		DEB7091C151113080006BD83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091B151113080006BD83 /* UIKit.framework */; };
 		DEB7091E151113080006BD83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091D151113080006BD83 /* Foundation.framework */; };
 		DEB70920151113080006BD83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091F151113080006BD83 /* CoreGraphics.framework */; };
@@ -45,7 +47,6 @@
 		DEB70945151113090006BD83 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB70921151113080006BD83 /* CoreData.framework */; };
 		DEB7094D151113090006BD83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEB7094B151113090006BD83 /* InfoPlist.strings */; };
 		DEB70950151113090006BD83 /* TheGingerGamblerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7094F151113090006BD83 /* TheGingerGamblerTests.m */; };
-		DEB709671513D2470006BD83 /* Bet.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709661513D2470006BD83 /* Bet.m */; };
 		DEB7096B1513D3190006BD83 /* Bookie.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7096A1513D3190006BD83 /* Bookie.m */; };
 		DEB7096E1513D38F0006BD83 /* Sport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7096D1513D38F0006BD83 /* Sport.m */; };
 		DEB7097A151923400006BD83 /* BookiePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709791519233B0006BD83 /* BookiePickerViewController.m */; };
@@ -89,6 +90,10 @@
 		DE5E734E151B889300F60FBF /* btn_slider_track_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_track_pressed@2x.png"; sourceTree = "<group>"; };
 		DE5E734F151B889300F60FBF /* btn_slider_track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_slider_track.png; sourceTree = "<group>"; };
 		DE5E7350151B889300F60FBF /* btn_slider_track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_track@2x.png"; sourceTree = "<group>"; };
+		DE5E7372151BBF3E00F60FBF /* Bet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bet.h; sourceTree = "<group>"; };
+		DE5E7373151BBF3E00F60FBF /* Bet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bet.m; sourceTree = "<group>"; };
+		DE5E7375151BC3FE00F60FBF /* BetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetPickerViewController.h; sourceTree = "<group>"; };
+		DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetPickerViewController.m; sourceTree = "<group>"; };
 		DEB70917151113080006BD83 /* TheGingerGambler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheGingerGambler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB7091B151113080006BD83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEB7091D151113080006BD83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,8 +117,6 @@
 		DEB7094C151113090006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DEB7094E151113090006BD83 /* TheGingerGamblerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheGingerGamblerTests.h; sourceTree = "<group>"; };
 		DEB7094F151113090006BD83 /* TheGingerGamblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheGingerGamblerTests.m; sourceTree = "<group>"; };
-		DEB709651513D2470006BD83 /* Bet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bet.h; sourceTree = "<group>"; };
-		DEB709661513D2470006BD83 /* Bet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bet.m; sourceTree = "<group>"; };
 		DEB709691513D3190006BD83 /* Bookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bookie.h; sourceTree = "<group>"; };
 		DEB7096A1513D3190006BD83 /* Bookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookie.m; sourceTree = "<group>"; };
 		DEB7096C1513D38F0006BD83 /* Sport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport.h; sourceTree = "<group>"; };
@@ -259,12 +262,12 @@
 			isa = PBXGroup;
 			children = (
 				DEB70932151113090006BD83 /* TheGingerGambler.xcdatamodeld */,
+				DE5E7372151BBF3E00F60FBF /* Bet.h */,
+				DE5E7373151BBF3E00F60FBF /* Bet.m */,
 				DEB7096C1513D38F0006BD83 /* Sport.h */,
 				DEB7096D1513D38F0006BD83 /* Sport.m */,
 				DEB709691513D3190006BD83 /* Bookie.h */,
 				DEB7096A1513D3190006BD83 /* Bookie.m */,
-				DEB709651513D2470006BD83 /* Bet.h */,
-				DEB709661513D2470006BD83 /* Bet.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -272,6 +275,8 @@
 		DEB70977151915C10006BD83 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE5E7375151BC3FE00F60FBF /* BetPickerViewController.h */,
+				DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */,
 				DE5E733D151B83A000F60FBF /* RCSwitchOnOff.h */,
 				DE5E733E151B83A000F60FBF /* RCSwitchOnOff.m */,
 				DE5E733A151B839400F60FBF /* RCSwitch.h */,
@@ -423,7 +428,6 @@
 				DEB70934151113090006BD83 /* TheGingerGambler.xcdatamodeld in Sources */,
 				DEB70937151113090006BD83 /* MasterViewController.m in Sources */,
 				DEB7093A151113090006BD83 /* DetailViewController.m in Sources */,
-				DEB709671513D2470006BD83 /* Bet.m in Sources */,
 				DEB7096B1513D3190006BD83 /* Bookie.m in Sources */,
 				DEB7096E1513D38F0006BD83 /* Sport.m in Sources */,
 				DEB7097A151923400006BD83 /* BookiePickerViewController.m in Sources */,
@@ -433,6 +437,8 @@
 				DE5E732B151A771500F60FBF /* SettleBetViewController.m in Sources */,
 				DE5E733C151B839500F60FBF /* RCSwitch.m in Sources */,
 				DE5E733F151B83A100F60FBF /* RCSwitchOnOff.m in Sources */,
+				DE5E7374151BBF3E00F60FBF /* Bet.m in Sources */,
+				DE5E7377151BC3FE00F60FBF /* BetPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

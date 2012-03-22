@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Bet" representedClassName="Bet" syncable="YES">
-        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="amount" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" minValueString="1" maxValueString="50" syncable="YES"/>
         <attribute name="odds" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="bookie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookie" inverseName="bet" inverseEntity="Bookie" syncable="YES"/>
-        <relationship name="sport" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Sport" inverseName="bet" inverseEntity="Sport" syncable="YES"/>
+        <relationship name="bookie" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookie" inverseName="bet" inverseEntity="Bookie" syncable="YES"/>
+        <relationship name="sport" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Sport" inverseName="bet" inverseEntity="Sport" syncable="YES"/>
     </entity>
     <entity name="Bookie" representedClassName="Bookie" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
