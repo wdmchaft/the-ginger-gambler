@@ -12,6 +12,6 @@
 
 }
 
-@property (strong) NSArray* bookies;
+@property (strong) NSMutableArray* bookies;
 
 @end

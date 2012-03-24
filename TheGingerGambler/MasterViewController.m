@@ -8,8 +8,6 @@
 
 #import "MasterViewController.h"
 
-#import "DetailViewController.h"
-
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -123,7 +121,7 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setDetailItem:selectedObject];
+        // [[segue destinationViewController] setDetailItem:selectedObject];
     }
 }
 

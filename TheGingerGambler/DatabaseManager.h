@@ -10,6 +10,9 @@
 
 @interface DatabaseManager : NSObject
 
-+ (NSArray*)entitiesFor:(NSString*)name;
++ (NSMutableArray*)entitiesFor:(NSString*)name;
++ (NSManagedObjectContext*) context;
++ (void) save;
++ (void) delete: (NSManagedObject*) object;
 
 @end

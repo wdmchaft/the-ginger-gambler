@@ -114,7 +114,7 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="IL3-cc-vVU" kind="push" id="t52-6O-MLs"/>
+                                            <segue destination="gME-Se-DKo" kind="push" id="qv2-w8-SjA"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -133,64 +133,6 @@
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="445" y="64"/>
-        </scene>
-        <scene sceneID="nqa-OM-7dE">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RFp-M8-mHs" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="" title="Detail" id="IL3-cc-vVU" customClass="DetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oGg-9t-FkP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Profit" lineBreakMode="tailTruncation" minimumFontSize="10" id="dRC-yt-YF7">
-                                <rect key="frame" x="55" y="231" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="+1.5" id="XvW-jW-0NE">
-                                <rect key="frame" x="146" y="227" width="62" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="trk-UR-wdQ">
-                                <rect key="frame" x="27" y="59" width="266" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Bookie">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="R1R-wq-XrG">
-                                <rect key="frame" x="26" y="130" width="266" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Sport">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Detail" id="AqZ-iD-dVg"/>
-                    <connections>
-                        <segue destination="eYK-uy-GlF" kind="push" id="FWN-cg-qhd"/>
-                        <segue destination="sCa-hh-oAj" kind="push" id="fNp-Am-d5i"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="902" y="670"/>
         </scene>
         <scene sceneID="oDy-fb-zUV">
             <objects>
@@ -228,7 +170,7 @@
                     <navigationItem key="navigationItem" title="Select Bookie" id="Rbc-nX-q1Z"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1339" y="-1113"/>
+            <point key="canvasLocation" x="1339" y="-532"/>
         </scene>
         <scene sceneID="rru-fG-B9S">
             <objects>
@@ -348,7 +290,7 @@
                     <navigationItem key="navigationItem" title="Select Sport" id="1pE-jZ-2H1"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1339" y="-532"/>
+            <point key="canvasLocation" x="1339" y="64"/>
         </scene>
         <scene sceneID="tRf-5r-6Xc">
             <objects>
@@ -429,7 +371,7 @@
                     <navigationItem key="navigationItem" id="HvY-Z0-1JS"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="902" y="675"/>
         </scene>
         <scene sceneID="rDk-yV-NZC">
             <objects>
@@ -467,65 +409,89 @@
                     <navigationItem key="navigationItem" id="CMW-Or-0pU"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1339" y="64"/>
-        </scene>
-        <scene sceneID="v0c-dD-6O2">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1JL-J8-7zF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="eYK-uy-GlF" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZXm-Xo-50E">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5N1-jk-P5b">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="eYK-uy-GlF" id="WVi-L3-WcA"/>
-                            <outlet property="delegate" destination="eYK-uy-GlF" id="7VG-dt-FeW"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="fNC-TK-aHm"/>
-                </tableViewController>
-            </objects>
             <point key="canvasLocation" x="1339" y="675"/>
         </scene>
-        <scene sceneID="qbn-uR-DhO">
+        <scene sceneID="20j-BJ-5WB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ksq-8F-HZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="sCa-hh-oAj" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dLA-Bh-MrN">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHC-T8-gMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="gME-Se-DKo" customClass="WinLossesViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="STi-Py-N68">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Fr4-2T-VH0">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Categories" id="6pm-Hr-NXy">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BookieCell" textLabel="fxR-Jp-cw2" detailTextLabel="uT4-hQ-fm6" style="IBUITableViewCellStyleValue1" id="TMo-pr-JEc">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Bookie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fxR-Jp-cw2">
+                                                    <rect key="frame" x="10" y="11" width="57" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Select bookie to place bet with" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uT4-hQ-fm6">
+                                                    <rect key="frame" x="80" y="13" width="190" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="IBD-TT-ceZ" kind="push" id="jd2-p6-wHp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SportCell" textLabel="R7K-Qi-XMP" detailTextLabel="oFx-K7-xVR" style="IBUITableViewCellStyleValue1" id="kHt-W2-5H3">
+                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Sport" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R7K-Qi-XMP">
+                                                    <rect key="frame" x="10" y="11" width="45" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="What sport are you betting on" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oFx-K7-xVR">
+                                                    <rect key="frame" x="86" y="13" width="184" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="L8f-Nb-ERY" kind="push" id="BQO-Rj-zm6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
-                            <outlet property="dataSource" destination="sCa-hh-oAj" id="OLi-f8-1R9"/>
-                            <outlet property="delegate" destination="sCa-hh-oAj" id="BZN-JO-ZvU"/>
+                            <outlet property="dataSource" destination="gME-Se-DKo" id="vZt-9a-RQ7"/>
+                            <outlet property="delegate" destination="gME-Se-DKo" id="NfP-KT-Pvr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="NbL-J3-lMC"/>
+                    <navigationItem key="navigationItem" id="iVf-ZO-dYn"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1339" y="1279"/>
+            <point key="canvasLocation" x="902" y="64"/>
         </scene>
     </scenes>
     <classes>
@@ -534,12 +500,6 @@
         </class>
         <class className="BookiePickerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BookiePickerViewController.h"/>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-            </relationships>
         </class>
         <class className="MasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
@@ -567,10 +527,17 @@
         <class className="SportPickerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SportPickerViewController.h"/>
         </class>
+        <class className="WinLossesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WinLossesViewController.h"/>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="jd2-p6-wHp"/>
+        <segue reference="BQO-Rj-zm6"/>
+    </inferredMetricsTieBreakers>
 </document>

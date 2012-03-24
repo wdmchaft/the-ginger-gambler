@@ -1,20 +1,15 @@
-    //
-//  BookiePickerViewController.m
+//
+//  WinsLossesViewController.m
 //  TheGingerGambler
 //
-//  Created by Huawei R&D Mexico on 3/20/12.
+//  Created by Huawei R&D Mexico on 3/23/12.
 //  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
 //
 
-#import "BookiePickerViewController.h"
-#import "AppDelegate.h"
-#import "DatabaseManager.h"
-#import "Bookie.h"
+#import "WinsLossesViewController.h"
 
 
-@implementation BookiePickerViewController
-
-@synthesize bookies = _bookies;
+@implementation WinsLossesViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,20 +33,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Preserves selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
-    
-    // displays an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.bookies = [DatabaseManager entitiesFor:BOOKIE_ENTITY_NAME];
+
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.bookies = nil;
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -84,21 +78,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.bookies count];
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:BOOKIE_CELL_NAME];
-    Bookie* bookie = [self.bookies objectAtIndex:indexPath.row];
-    cell.textLabel.text = [bookie name];
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
     
@@ -114,24 +113,19 @@
 }
 */
 
-
+/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        NSManagedObject* bookieForDelete = [self.bookies objectAtIndex:indexPath.row];
-        [DatabaseManager delete:bookieForDelete];
-        
-        [self.bookies removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
-        [DatabaseManager save];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
+*/
 
 /*
 // Override to support rearranging the table view.
