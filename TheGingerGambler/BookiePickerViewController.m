@@ -9,6 +9,7 @@
 #import "BookiePickerViewController.h"
 #import "AppDelegate.h"
 #import "DatabaseManager.h"
+#import "BookieAdderViewController.h";
 #import "Bookie.h"
 
 
@@ -90,19 +91,78 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.bookies count];
+    return self.editing ? self.bookies.count + 1 : self.bookies.count;
+     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:BOOKIE_CELL_NAME];
-    Bookie* bookie = [self.bookies objectAtIndex:indexPath.row];
-    cell.textLabel.text = [bookie name];
+
+    NSString* cellIdentifier = BOOKIE_CELL_NAME;
     
+    BOOL addCell = (indexPath.row == self.bookies.count);
+    
+    if(addCell)
+    {
+        cellIdentifier = @"AddCell";
+    }
+    
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if(cell == nil)
+    {
+        cell =  [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        if(!addCell)
+        {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+    }
+    
+    if(addCell)
+    {
+        cell.textLabel.text = @"Add...";
+    }
+    else
+    {
+        Bookie* bookie = [self.bookies objectAtIndex:indexPath.row];
+        cell.textLabel.text = [bookie name];
+    }
+    
+    /*
+    if(self.editing)
+    {
+        if(indexPath.row == 0)
+        {
+            cell = [[UITableViewCell alloc] initWithFrame:CGRectZero];
+            cell.text = @"insert";
+        }
+        else
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:BOOKIE_CELL_NAME];
+            Bookie* bookie = [self.bookies objectAtIndex:indexPath.row - 1];
+            cell.textLabel.text = [bookie name];
+        }
+    }
+    else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:BOOKIE_CELL_NAME];
+        Bookie* bookie = [self.bookies objectAtIndex:indexPath.row];
+        cell.textLabel.text = [bookie name];
+    }
+     */
     // Configure the cell...
-    
     return cell;
+}
+
+-(UITableViewCellEditingStyle) tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == [self.bookies count])
+    {
+        return UITableViewCellEditingStyleInsert;
+    }
+    else
+    {
+        return UITableViewCellEditingStyleDelete;
+    }
 }
 
 /*
@@ -114,6 +174,23 @@
 }
 */
 
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+    [self.tableView beginUpdates];
+    NSArray* paths = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:self.bookies.count inSection:0]];
+    if(editing)
+    {
+        [[self tableView] insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationLeft];
+    }
+    else
+    {
+        [[self tableView] deleteRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationLeft];
+    }
+    [self.tableView endUpdates];
+}
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,8 +205,10 @@
         
         [DatabaseManager save];
     }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    else if (editingStyle == UITableViewCellEditingStyleInsert) 
+    {
+        UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:[BookieAdderViewController new]];
+        [self presentModalViewController:navigationController animated:YES];
     }   
 }
 
