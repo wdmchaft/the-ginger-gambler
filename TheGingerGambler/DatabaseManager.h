@@ -14,5 +14,6 @@
 + (NSManagedObjectContext*) context;
 + (void) save;
 + (void) delete: (NSManagedObject*) object;
++ (NSEntityDescription*) entityDescriptionFor:(NSString*)name;
 
 @end

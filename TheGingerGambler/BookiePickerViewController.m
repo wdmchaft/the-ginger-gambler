@@ -9,13 +9,23 @@
 #import "BookiePickerViewController.h"
 #import "AppDelegate.h"
 #import "DatabaseManager.h"
-#import "BookieAdderViewController.h";
+#import "BookieAdderViewController.h"
 #import "Bookie.h"
 
 
 @implementation BookiePickerViewController
 
 @synthesize bookies = _bookies;
+
+- (void) add:(NSString *)name
+{
+    Bookie* bookie = [[Bookie alloc] initWithEntity:[DatabaseManager entityDescriptionFor:BOOKIE_ENTITY_NAME] insertIntoManagedObjectContext:[DatabaseManager context]];
+    [bookie setName:name];
+    [self.bookies addObject:bookie];
+    [DatabaseManager save];
+    [self setEditing:YES];
+    [self.tableView reloadData];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -127,28 +137,6 @@
         cell.textLabel.text = [bookie name];
     }
     
-    /*
-    if(self.editing)
-    {
-        if(indexPath.row == 0)
-        {
-            cell = [[UITableViewCell alloc] initWithFrame:CGRectZero];
-            cell.text = @"insert";
-        }
-        else
-        {
-            cell = [tableView dequeueReusableCellWithIdentifier:BOOKIE_CELL_NAME];
-            Bookie* bookie = [self.bookies objectAtIndex:indexPath.row - 1];
-            cell.textLabel.text = [bookie name];
-        }
-    }
-    else
-    {
-        cell = [tableView dequeueReusableCellWithIdentifier:BOOKIE_CELL_NAME];
-        Bookie* bookie = [self.bookies objectAtIndex:indexPath.row];
-        cell.textLabel.text = [bookie name];
-    }
-     */
     // Configure the cell...
     return cell;
 }
@@ -207,8 +195,9 @@
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) 
     {
-        UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:[BookieAdderViewController new]];
-        [self presentModalViewController:navigationController animated:YES];
+        BookieAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddBookie"];
+        modalController.delegate = self;
+        [self presentModalViewController:modalController animated:YES];
     }   
 }
 

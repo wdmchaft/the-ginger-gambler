@@ -9,7 +9,9 @@
 #import "BookieAdderViewController.h"
 
 @implementation BookieAdderViewController
+
 @synthesize nameTextField;
+@synthesize delegate;
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,6 +39,10 @@
 
 - (IBAction)save:(id)sender 
 {
-     
+    if([[self delegate] respondsToSelector:@selector(add:)])
+    {
+        [[self delegate] add:self.nameTextField.text];
+    }
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

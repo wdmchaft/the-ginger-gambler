@@ -32,6 +32,11 @@
     }    
 }
 
++ (NSEntityDescription*) entityDescriptionFor:(NSString*)name
+{
+    return [NSEntityDescription entityForName:name inManagedObjectContext:[DatabaseManager context]];
+}
+
 + (void) delete:(NSManagedObject *)object
 {
     [[self context] deleteObject:object];

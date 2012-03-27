@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BookiePickerViewController : UITableViewController{
+#import "BookieAdderViewController.h"
+
+@interface BookiePickerViewController : UITableViewController <AdderNotifications> {
 }
 
 @property (strong) NSMutableArray* bookies;

@@ -295,7 +295,7 @@
         <scene sceneID="3de-bI-ez1">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOL-Wx-dpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="tsc-Ka-t52" customClass="BookieAdderViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddBookie" id="tsc-Ka-t52" customClass="BookieAdderViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="93D-cB-cd3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

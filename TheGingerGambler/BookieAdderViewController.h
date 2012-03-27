@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol AdderNotifications <NSObject>
+
+@optional
+- (void) add:(NSString*) name;
+
+@end
+
 @interface BookieAdderViewController : UIViewController
+
+@property (nonatomic, weak) id<AdderNotifications> delegate;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
