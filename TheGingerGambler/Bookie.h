@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Category.h"
 
 #define BOOKIE_ENTITY_NAME @"Bookie"
 #define BOOKIE_CELL_NAME @"BookieCell"
 
 @class Bet;
 
-@interface Bookie : NSManagedObject
+@interface Bookie : NSManagedObject<Category>
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *bet;

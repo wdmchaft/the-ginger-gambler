@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Category.h"
 
 #define SPORT_ENTITY_NAME @"Sport"
 #define SPORT_CELL_NAME @"SportCell"
 
 @class Bet;
 
-@interface Sport : NSManagedObject
+@interface Sport : NSManagedObject<Category>
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *bet;

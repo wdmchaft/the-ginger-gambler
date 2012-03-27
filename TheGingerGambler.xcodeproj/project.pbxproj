@@ -32,6 +32,7 @@
 		DE5E7377151BC3FE00F60FBF /* BetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */; };
 		DE5E737D151CBC5C00F60FBF /* WinLossesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E737C151CBC5B00F60FBF /* WinLossesViewController.m */; };
 		DE64B016152115CC00B2E2E7 /* BookieAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE64B015152115CC00B2E2E7 /* BookieAdderViewController.m */; };
+		DE64B01C1522502500B2E2E7 /* EditableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE64B01B1522502400B2E2E7 /* EditableTableViewController.m */; };
 		DEB7091C151113080006BD83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091B151113080006BD83 /* UIKit.framework */; };
 		DEB7091E151113080006BD83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091D151113080006BD83 /* Foundation.framework */; };
 		DEB70920151113080006BD83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091F151113080006BD83 /* CoreGraphics.framework */; };
@@ -99,6 +100,9 @@
 		DE5E737C151CBC5B00F60FBF /* WinLossesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinLossesViewController.m; sourceTree = "<group>"; };
 		DE64B014152115CC00B2E2E7 /* BookieAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookieAdderViewController.h; sourceTree = "<group>"; };
 		DE64B015152115CC00B2E2E7 /* BookieAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookieAdderViewController.m; sourceTree = "<group>"; };
+		DE64B01A1522502400B2E2E7 /* EditableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableTableViewController.h; sourceTree = "<group>"; };
+		DE64B01B1522502400B2E2E7 /* EditableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableViewController.m; sourceTree = "<group>"; };
+		DE64B01D152255D600B2E2E7 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		DEB70917151113080006BD83 /* TheGingerGambler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheGingerGambler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB7091B151113080006BD83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEB7091D151113080006BD83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -271,6 +275,7 @@
 				DEB7096D1513D38F0006BD83 /* Sport.m */,
 				DEB709691513D3190006BD83 /* Bookie.h */,
 				DEB7096A1513D3190006BD83 /* Bookie.m */,
+				DE64B01D152255D600B2E2E7 /* Category.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -293,6 +298,8 @@
 				DEB70936151113090006BD83 /* MasterViewController.m */,
 				DEB70978151923390006BD83 /* BookiePickerViewController.h */,
 				DEB709791519233B0006BD83 /* BookiePickerViewController.m */,
+				DE64B01A1522502400B2E2E7 /* EditableTableViewController.h */,
+				DE64B01B1522502400B2E2E7 /* EditableTableViewController.m */,
 				DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */,
 				DE5E737B151CBC5B00F60FBF /* WinLossesViewController.h */,
 				DE5E737C151CBC5B00F60FBF /* WinLossesViewController.m */,
@@ -445,6 +452,7 @@
 				DE5E7377151BC3FE00F60FBF /* BetPickerViewController.m in Sources */,
 				DE5E737D151CBC5C00F60FBF /* WinLossesViewController.m in Sources */,
 				DE64B016152115CC00B2E2E7 /* BookieAdderViewController.m in Sources */,
+				DE64B01C1522502500B2E2E7 /* EditableTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

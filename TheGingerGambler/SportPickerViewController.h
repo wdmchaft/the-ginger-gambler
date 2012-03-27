@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EditableTableViewController.h"
 
-@interface SportPickerViewController : UITableViewController
-
-@property (strong) NSArray* sports;
+@interface SportPickerViewController : EditableTableViewController
 
 @end
