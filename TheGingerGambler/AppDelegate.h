@@ -2,9 +2,14 @@
 //  AppDelegate.h
 //  TheGingerGambler
 //
-//  Created by Huawei R&D Mexico on 3/14/12.
-//  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
-//
+
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+#define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
 #import <UIKit/UIKit.h>
 

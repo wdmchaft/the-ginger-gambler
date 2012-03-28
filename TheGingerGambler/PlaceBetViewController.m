@@ -7,9 +7,17 @@
 //
 
 #import "PlaceBetViewController.h"
-
+#import "DatabaseManager.h"
+#import "Bookie.h"
+#import "Sport.h"
+#import "Bet.h"
+#import "AppDelegate.h"
 
 @implementation PlaceBetViewController
+
+@synthesize bookieSelect;
+@synthesize sportSelect;
+@synthesize priceOddsCell;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,16 +41,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    bet = [[Bet alloc] initWithEntity:[DatabaseManager entityDescriptionFor:BET_ENTITY_NAME] insertIntoManagedObjectContext:[DatabaseManager context]];
 }
 
 - (void)viewDidUnload
 {
+    bet = nil;
+    [self setBookieSelect:nil];
+    [self setSportSelect:nil];
+    [self setPriceOddsCell:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -72,6 +80,42 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) selectSport:(Sport*)sport
+{
+    DLog(@"Selected sport category with name %@", [sport name]);
+    [bet setSport:(Sport*)sport];
+    self.sportSelect.textLabel.text = [sport name];
+}
+
+- (void) selectBookie:(Bookie*)bookie
+{
+    DLog(@"Selected bookie category with name %@", [bookie name]);
+    [bet setBookie:(Bookie*)bookie];
+    self.bookieSelect.textLabel.text = [bookie name];
+}
+
+- (void) enter:(NSDecimalNumber*)price with:(NSDecimalNumber*)odds
+{
+    DLog(@"Price and odds set %@", [NSString stringWithFormat:@"%@ : %@", [price stringValue], [odds stringValue]]);
+    [bet setAmount:price];
+    [bet setOdds:odds];
+    self.priceOddsCell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", [price stringValue], [odds stringValue]];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:SELECT_BOOKIE_SEGUE] || [[segue identifier] isEqualToString:SELECT_BOOKIE_SEGUE])
+    {
+        EditableTableViewController* editableTableController = (EditableTableViewController*)[segue destinationViewController];
+        [editableTableController setDelegate:self]; 
+    }
+    else if([[segue identifier] isEqualToString:ENTER_PRICE_ODDS_SEGUE])
+    {
+        PriceOddsViewController* priceOddsController = (PriceOddsViewController*)[segue destinationViewController];
+        [priceOddsController setDelegate:self];
+    }
 }
 
 /*

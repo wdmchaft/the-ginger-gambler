@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE525A851523A3F60054B5FC /* PriceOddsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE525A841523A3F60054B5FC /* PriceOddsViewController.m */; };
 		DE5E7323151A621B00F60FBF /* SportPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7322151A621B00F60FBF /* SportPickerViewController.m */; };
 		DE5E7328151A639500F60FBF /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7327151A639500F60FBF /* DatabaseManager.m */; };
 		DE5E732B151A771500F60FBF /* SettleBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E732A151A771400F60FBF /* SettleBetViewController.m */; };
@@ -66,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE525A831523A3F50054B5FC /* PriceOddsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceOddsViewController.h; sourceTree = "<group>"; };
+		DE525A841523A3F60054B5FC /* PriceOddsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceOddsViewController.m; sourceTree = "<group>"; };
 		DE5E7321151A621B00F60FBF /* SportPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportPickerViewController.h; sourceTree = "<group>"; };
 		DE5E7322151A621B00F60FBF /* SportPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportPickerViewController.m; sourceTree = "<group>"; };
 		DE5E7326151A639500F60FBF /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
@@ -98,7 +101,7 @@
 		DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetPickerViewController.m; sourceTree = "<group>"; };
 		DE5E737B151CBC5B00F60FBF /* WinLossesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinLossesViewController.h; sourceTree = "<group>"; };
 		DE5E737C151CBC5B00F60FBF /* WinLossesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinLossesViewController.m; sourceTree = "<group>"; };
-		DE64B014152115CC00B2E2E7 /* CategoryAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CategoryAdderViewController.h; sourceTree = "<group>"; };
+		DE64B014152115CC00B2E2E7 /* CategoryAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryAdderViewController.h; sourceTree = "<group>"; };
 		DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryAdderViewController.m; sourceTree = "<group>"; };
 		DE64B01A1522502400B2E2E7 /* EditableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableTableViewController.h; sourceTree = "<group>"; };
 		DE64B01B1522502400B2E2E7 /* EditableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableViewController.m; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 		DEB70977151915C10006BD83 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE525A831523A3F50054B5FC /* PriceOddsViewController.h */,
+				DE525A841523A3F60054B5FC /* PriceOddsViewController.m */,
 				DE5E7375151BC3FE00F60FBF /* BetPickerViewController.h */,
 				DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */,
 				DE5E733D151B83A000F60FBF /* RCSwitchOnOff.h */,
@@ -301,9 +306,9 @@
 				DE64B01A1522502400B2E2E7 /* EditableTableViewController.h */,
 				DE64B01B1522502400B2E2E7 /* EditableTableViewController.m */,
 				DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */,
+				DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */,
 				DE5E737B151CBC5B00F60FBF /* WinLossesViewController.h */,
 				DE5E737C151CBC5B00F60FBF /* WinLossesViewController.m */,
-				DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */,
 				DE5E7329151A771400F60FBF /* SettleBetViewController.h */,
 				DE5E732A151A771400F60FBF /* SettleBetViewController.m */,
 				DE64B014152115CC00B2E2E7 /* CategoryAdderViewController.h */,
@@ -453,6 +458,7 @@
 				DE5E737D151CBC5C00F60FBF /* WinLossesViewController.m in Sources */,
 				DE64B016152115CC00B2E2E7 /* CategoryAdderViewController.m in Sources */,
 				DE64B01C1522502500B2E2E7 /* EditableTableViewController.m in Sources */,
+				DE525A851523A3F60054B5FC /* PriceOddsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

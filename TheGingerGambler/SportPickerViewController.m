@@ -41,4 +41,12 @@
     return [super tableView:tableView cellForRowAtIndexPath:indexPath entityCell:SPORT_ENTITY_NAME];
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.delegate selectSport:[self.entities objectAtIndex:indexPath.row]];
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
 @end
