@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BookieAdderViewController.h"
+#import "CategoryAdderViewController.h"
 
 @interface EditableTableViewController : UITableViewController <AdderNotifications>{
 }

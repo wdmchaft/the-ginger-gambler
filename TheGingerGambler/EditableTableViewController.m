@@ -9,7 +9,7 @@
 #import "EditableTableViewController.h"
 #import "AppDelegate.h"
 #import "DatabaseManager.h"
-#import "BookieAdderViewController.h"
+#import "CategoryAdderViewController.h"
 
 @implementation EditableTableViewController
 
@@ -190,7 +190,7 @@
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) 
     {
-        BookieAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddBookie"];
+        CategoryAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddBookie"];
         modalController.delegate = self;
         [self presentModalViewController:modalController animated:YES];
     }   

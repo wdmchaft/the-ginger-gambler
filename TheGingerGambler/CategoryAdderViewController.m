@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
 //
 
-#import "BookieAdderViewController.h"
+#import "CategoryAdderViewController.h"
 
-@implementation BookieAdderViewController
+@implementation CategoryAdderViewController
 
 @synthesize nameTextField;
 @synthesize delegate;

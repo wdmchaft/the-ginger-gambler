@@ -15,7 +15,7 @@
 
 @end
 
-@interface BookieAdderViewController : UIViewController
+@interface CategoryAdderViewController : UIViewController
 
 @property (nonatomic, weak) id<AdderNotifications> delegate;
 

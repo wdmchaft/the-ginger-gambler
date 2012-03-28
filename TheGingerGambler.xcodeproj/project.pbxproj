@@ -31,7 +31,7 @@
 		DE5E7374151BBF3E00F60FBF /* Bet.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7373151BBF3E00F60FBF /* Bet.m */; };
 		DE5E7377151BC3FE00F60FBF /* BetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */; };
 		DE5E737D151CBC5C00F60FBF /* WinLossesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E737C151CBC5B00F60FBF /* WinLossesViewController.m */; };
-		DE64B016152115CC00B2E2E7 /* BookieAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE64B015152115CC00B2E2E7 /* BookieAdderViewController.m */; };
+		DE64B016152115CC00B2E2E7 /* CategoryAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */; };
 		DE64B01C1522502500B2E2E7 /* EditableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE64B01B1522502400B2E2E7 /* EditableTableViewController.m */; };
 		DEB7091C151113080006BD83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091B151113080006BD83 /* UIKit.framework */; };
 		DEB7091E151113080006BD83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091D151113080006BD83 /* Foundation.framework */; };
@@ -98,8 +98,8 @@
 		DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetPickerViewController.m; sourceTree = "<group>"; };
 		DE5E737B151CBC5B00F60FBF /* WinLossesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinLossesViewController.h; sourceTree = "<group>"; };
 		DE5E737C151CBC5B00F60FBF /* WinLossesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinLossesViewController.m; sourceTree = "<group>"; };
-		DE64B014152115CC00B2E2E7 /* BookieAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookieAdderViewController.h; sourceTree = "<group>"; };
-		DE64B015152115CC00B2E2E7 /* BookieAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookieAdderViewController.m; sourceTree = "<group>"; };
+		DE64B014152115CC00B2E2E7 /* CategoryAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CategoryAdderViewController.h; sourceTree = "<group>"; };
+		DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryAdderViewController.m; sourceTree = "<group>"; };
 		DE64B01A1522502400B2E2E7 /* EditableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableTableViewController.h; sourceTree = "<group>"; };
 		DE64B01B1522502400B2E2E7 /* EditableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableViewController.m; sourceTree = "<group>"; };
 		DE64B01D152255D600B2E2E7 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -306,8 +306,8 @@
 				DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */,
 				DE5E7329151A771400F60FBF /* SettleBetViewController.h */,
 				DE5E732A151A771400F60FBF /* SettleBetViewController.m */,
-				DE64B014152115CC00B2E2E7 /* BookieAdderViewController.h */,
-				DE64B015152115CC00B2E2E7 /* BookieAdderViewController.m */,
+				DE64B014152115CC00B2E2E7 /* CategoryAdderViewController.h */,
+				DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -451,7 +451,7 @@
 				DE5E7374151BBF3E00F60FBF /* Bet.m in Sources */,
 				DE5E7377151BC3FE00F60FBF /* BetPickerViewController.m in Sources */,
 				DE5E737D151CBC5C00F60FBF /* WinLossesViewController.m in Sources */,
-				DE64B016152115CC00B2E2E7 /* BookieAdderViewController.m in Sources */,
+				DE64B016152115CC00B2E2E7 /* CategoryAdderViewController.m in Sources */,
 				DE64B01C1522502500B2E2E7 /* EditableTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
