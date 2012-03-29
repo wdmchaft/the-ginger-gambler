@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
 //
 
+#define VIEW_CATEGORY_ADDER @"ViewCategoryAdder" 
+
 #import <UIKit/UIKit.h>
 
 @protocol AdderNotifications <NSObject>

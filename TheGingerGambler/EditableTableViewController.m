@@ -177,7 +177,7 @@
 }
 
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath withEntityName:(NSString*)entityName
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
@@ -191,8 +191,9 @@
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) 
     {
-        CategoryAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:@"AddBookie"];
+        CategoryAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:VIEW_CATEGORY_ADDER];
         modalController.delegate = self;
+        modalController.title = entityName;
         [self presentModalViewController:modalController animated:YES];
     }   
 }

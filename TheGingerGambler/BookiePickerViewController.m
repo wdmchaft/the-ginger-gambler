@@ -43,4 +43,11 @@
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [super tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath withEntityName:BOOKIE_ENTITY_NAME];
+}
+
+
 @end

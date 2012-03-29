@@ -261,7 +261,13 @@
                             <outlet property="delegate" destination="2Xd-bA-EFG" id="ILD-hZ-Npr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Place Bet" id="hs1-Hc-iXn"/>
+                    <navigationItem key="navigationItem" title="Place Bet" id="hs1-Hc-iXn">
+                        <barButtonItem key="rightBarButtonItem" title="Bet" id="0bP-00-KAS">
+                            <connections>
+                                <action selector="betButton:" destination="2Xd-bA-EFG" id="dDr-t6-oXT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bookieSelect" destination="p3b-Qd-yL8" id="XtO-gd-mpE"/>
                         <outlet property="priceOddsCell" destination="pbt-qY-h9r" id="GXr-Tv-Q6d"/>
@@ -312,19 +318,19 @@
         <scene sceneID="3de-bI-ez1">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOL-Wx-dpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="AddBookie" id="tsc-Ka-t52" customClass="BookieAdderViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewCategoryAdder" id="tsc-Ka-t52" customClass="CategoryAdderViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="93D-cB-cd3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="LEM-IR-JGa">
-                                <rect key="frame" x="143" y="137" width="150" height="31"/>
+                                <rect key="frame" x="150" y="137" width="150" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bookie Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="MaU-bo-SWE">
-                                <rect key="frame" x="23" y="141" width="187" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="MaU-bo-SWE">
+                                <rect key="frame" x="20" y="142" width="187" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -334,7 +340,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Add Bookie" id="7V8-rn-Upv">
+                                    <navigationItem title="Add Category" id="7V8-rn-Upv">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="tjb-gL-RFH"/>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="HYX-rj-f73">
                                             <connections>
@@ -564,27 +570,27 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price" lineBreakMode="tailTruncation" minimumFontSize="10" id="Egk-UT-Lrd">
-                                <rect key="frame" x="53" y="168" width="101" height="36"/>
+                                <rect key="frame" x="57" y="50" width="101" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Odds" lineBreakMode="tailTruncation" minimumFontSize="10" id="ecu-he-Ttt">
-                                <rect key="frame" x="53" y="212" width="101" height="36"/>
+                                <rect key="frame" x="57" y="94" width="101" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="MuB-C5-2XT">
-                                <rect key="frame" x="162" y="170" width="97" height="31"/>
+                                <rect key="frame" x="166" y="52" width="97" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="5iu-AQ-vK5">
-                                <rect key="frame" x="162" y="214" width="97" height="31"/>
+                                <rect key="frame" x="166" y="96" width="97" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

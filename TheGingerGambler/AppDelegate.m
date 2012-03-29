@@ -2,6 +2,7 @@
 
 #import "AppDelegate.h"
 
+#import "DatabaseManager.h"
 #import "MasterViewController.h"
 #import "Bookie.h"
 #import "Sport.h"
@@ -20,6 +21,9 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    [DatabaseManager setup];
+    
     return YES;
 }
 							

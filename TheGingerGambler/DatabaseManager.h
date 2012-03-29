@@ -10,6 +10,7 @@
 
 @interface DatabaseManager : NSObject
 
++ (void)setup;
 + (NSMutableArray*)entitiesFor:(NSString*)name;
 + (NSManagedObjectContext*) context;
 + (void) save;

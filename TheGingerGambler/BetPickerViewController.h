@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class Bet;
+
+@protocol BetSelectorNotifications <NSObject>
+    
+- (void) selectBet:(Bet*)bet;
+
+@end
+
 @interface BetPickerViewController : UITableViewController
+
+@property (nonatomic, weak) id<BetSelectorNotifications> delegate;
 
 @property (strong) NSArray* bets;
 

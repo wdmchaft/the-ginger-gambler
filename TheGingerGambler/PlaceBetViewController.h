@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell* bookieSelect;
 @property (weak, nonatomic) IBOutlet UITableViewCell* sportSelect;
 @property (weak, nonatomic) IBOutlet UITableViewCell* priceOddsCell;
+- (IBAction)betButton:(id)sender;
 
 @end
