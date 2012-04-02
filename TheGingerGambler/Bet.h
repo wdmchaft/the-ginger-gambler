@@ -28,4 +28,8 @@ typedef enum
 @property (nonatomic, retain) Sport* sport;
 @property (nonatomic, retain) NSNumber* status;
 
+- (Status)betStatus;
+- (void)setBetStatus:(Status)betStatus;
++ (NSSet*)keyPathsForValuesAffectingBetStatus;
+
 @end

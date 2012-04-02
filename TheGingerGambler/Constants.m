@@ -24,5 +24,6 @@ NSString* const BetEntityName = @"Bet";
 NSString* const EnterPriceAndOddsSegue = @"EnterPriceAndOdds";
 NSString* const PickBookieSegue = @"PickBookie";
 NSString* const PickSportSegue = @"PickSport";
+NSString* const PickBetSegue = @"PickBet";
 
 @end

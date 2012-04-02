@@ -10,8 +10,15 @@
 #import "RCSwitchOnOff.h"
 #import "BetPickerViewController.h"
 
-@interface SettleBetViewController : UITableViewController<BetSelectorNotifications>
+@interface SettleBetViewController : UITableViewController<BetSelectorNotifications>{
+    Bet* bet;
+}
 
-@property (weak, nonatomic) IBOutlet RCSwitchOnOff *winLossSwitch;
+@property (weak, nonatomic) IBOutlet UITableViewCell *settleBetCell;
+
+- (IBAction)winLossSwitch:(RCSwitchOnOff*)sender;
+- (IBAction)settleBetButton:(id)sender;
+
+- (void) selectBet:(Bet*)betSelected;
 
 @end

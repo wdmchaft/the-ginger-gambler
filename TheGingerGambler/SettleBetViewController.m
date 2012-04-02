@@ -2,16 +2,15 @@
 //  SettleBetViewController.m
 //  TheGingerGambler
 //
-//  Created by Huawei R&D Mexico on 3/21/12.
-//  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
-//
 
 #import "SettleBetViewController.h"
+#import "Bet.h"
+#import "DatabaseManager.h"
 
 
 @implementation SettleBetViewController
 
-@synthesize winLossSwitch;
+@synthesize settleBetCell;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,7 +44,7 @@
 
 - (void)viewDidUnload
 {
-    [self setWinLossSwitch:nil];
+    [self setSettleBetCell:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -77,9 +76,25 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)selectBet:(Bet *)bet
+- (IBAction)winLossSwitch:(RCSwitchOnOff*)sender {
+    if(bet != nil)
+    {
+        [bet setBetStatus:([sender isOn] ? kWonState : kLossedState)];
+    }
+}
+
+- (IBAction)settleBetButton:(id)sender {
+    if(bet != nil)
+    {
+        [DatabaseManager save];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)selectBet:(Bet*)betSelected
 {
-    
+    settleBetCell.textLabel.text = [betSelected name];
+    bet = betSelected;
 }
 
 #pragma mark - Table view delegate
@@ -93,6 +108,15 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:PickBetSegue])
+    {
+        BetPickerViewController* betPickerController = (BetPickerViewController*)[segue destinationViewController];
+        [betPickerController setDelegate:self]; 
+    }
 }
 
 @end

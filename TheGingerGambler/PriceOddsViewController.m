@@ -66,7 +66,7 @@
 
 - (IBAction)saveButton:(id)sender 
 {
-    [self.delegate enter:[NSDecimalNumber decimalNumberWithString:self.priceTextField.text] with:[NSDecimalNumber decimalNumberWithString:self.oddsTextField.text]];
+    [self.delegate enterPrice:[NSDecimalNumber decimalNumberWithString:self.priceTextField.text] withOdds:[NSDecimalNumber decimalNumberWithString:self.oddsTextField.text]];
     [self.navigationController popViewControllerAnimated:YES]; 
 }
 

@@ -32,5 +32,6 @@ extern NSString* const BookieEntityName;
 extern NSString* const EnterPriceAndOddsSegue;
 extern NSString* const PickBookieSegue;
 extern NSString* const PickSportSegue;
+extern NSString* const PickBetSegue;
 
 @end

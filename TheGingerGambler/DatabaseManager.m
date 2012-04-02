@@ -73,6 +73,14 @@
     return [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];    
 }
 
++ (id)entitiesWith:(NSString*)name withPredicate:(NSPredicate*)predicate andExpression:(NSExpressionDescription*)expressionDescription
+{
+    NSFetchRequest* fetchRequest = [DatabaseManager fetchReqestForEntitiesWith:name];
+    [fetchRequest setPredicate:predicate];
+    [fetchRequest setPropertiesToFetch:[NSArray arrayWithObject:expressionDescription]];
+    return [DatabaseManager executeFetchRequest:fetchRequest];
+}
+
 + (void) setup {
         
     AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];

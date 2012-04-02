@@ -102,7 +102,7 @@
     self.bookieSelect.textLabel.text = [bookie name];
 }
 
-- (void) enter:(NSDecimalNumber*)price with:(NSDecimalNumber*)odds
+- (void) enterPrice:(NSDecimalNumber*)price withOdds:(NSDecimalNumber*)odds
 {
     DLog(@"Price and odds set %@", [NSString stringWithFormat:@"%@ : %@", [price stringValue], [odds stringValue]]);
     [bet setAmount:price];

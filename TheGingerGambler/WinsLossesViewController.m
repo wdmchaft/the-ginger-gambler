@@ -1,15 +1,23 @@
 //
-//  WinsLossesViewController.m
+//  PlaceBetViewController.m
 //  TheGingerGambler
 //
-//  Created by Huawei R&D Mexico on 3/23/12.
+//  Created by Huawei R&D Mexico on 3/21/12.
 //  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
 //
 
 #import "WinsLossesViewController.h"
-
+#import "DatabaseManager.h"
+#import "ModelFactory.h"
+#import "Bookie.h"
+#import "Sport.h"
+#import "Bet.h"
 
 @implementation WinsLossesViewController
+
+@synthesize bookieSelect;
+@synthesize sportSelect;
+@synthesize winsLossesCell;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,16 +41,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"status == @%", kPlacedState];
+    NSExpression* winsLossesExpression = [NSExpression expressionForKeyPath:@"amount"];
+    NSExpression* winsLossesSummationExpression = [NSExpression expressionForFunction:@"sum" arguments:[NSArray arrayWithObject:winsLossesExpression]];
+    NSExpressionDescription* expressionDescription = [[NSExpressionDescription alloc] init];
+    [expressionDescription setName:@"sumWinsLosses"];
+    [expressionDescription setExpression:winsLossesSummationExpression];
+    [expressionDescription setExpressionResultType:NSDecimalAttributeType];
+    NSDecimal* summation = (__bridge NSDecimal*)[DatabaseManager entitiesWith:BetEntityName withPredicate:predicate andExpression:expressionDescription];
+    winsLossesCell.textLabel.text = [NSString stringWithFormat:@"%d", summation];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
 {
+    [self setBookieSelect:nil];
+    [self setSportSelect:nil];
+    [self setWinsLossesCell:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -74,86 +89,21 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void) selectSport:(Sport*)sport
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (void) selectBookie:(Bookie*)bookie
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+-(void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    if([[segue identifier] isEqualToString:PickBookieSegue] || [[segue identifier] isEqualToString:PickSportSegue])
+    {
+        EditableTableViewController* editableTableController = (EditableTableViewController*)[segue destinationViewController];
+        [editableTableController setDelegate:self]; 
     }
-    
-    // Configure the cell...
-    
-    return cell;
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
 }
 
 @end

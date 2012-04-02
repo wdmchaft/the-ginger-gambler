@@ -10,7 +10,7 @@
 
 @protocol PriceWithOddsNotifications <NSObject>
 
-- (void) enter:(NSDecimalNumber*)price with:(NSDecimalNumber*)odds; 
+- (void) enterPrice:(NSDecimalNumber*)price withOdds:(NSDecimalNumber*)odds; 
 
 @end
 
