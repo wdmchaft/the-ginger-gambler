@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701AB0101527BC34007FC9F1 /* TheGingerGambler.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 701AB00F1527BC34007FC9F1 /* TheGingerGambler.xcdatamodel */; };
+		70CE0CF515276E9400F2F4EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CF415276E9300F2F4EF /* Constants.m */; };
+		70CE0CF81527772600F2F4EF /* DatabasePopulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CF71527772600F2F4EF /* DatabasePopulator.m */; };
+		70CE0CFE1527786900F2F4EF /* ModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CFD1527786900F2F4EF /* ModelFactory.m */; };
+		70CE0D00152783BA00F2F4EF /* TheGingerGambler.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 70CE0CFF152783BA00F2F4EF /* TheGingerGambler.sqlite */; };
 		DE525A851523A3F60054B5FC /* PriceOddsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE525A841523A3F60054B5FC /* PriceOddsViewController.m */; };
 		DE5E7323151A621B00F60FBF /* SportPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7322151A621B00F60FBF /* SportPickerViewController.m */; };
 		DE5E7328151A639500F60FBF /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7327151A639500F60FBF /* DatabaseManager.m */; };
@@ -42,7 +47,6 @@
 		DEB7092A151113080006BD83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB70929151113080006BD83 /* main.m */; };
 		DEB7092E151113080006BD83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7092D151113080006BD83 /* AppDelegate.m */; };
 		DEB70931151113080006BD83 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB7092F151113080006BD83 /* MainStoryboard.storyboard */; };
-		DEB70934151113090006BD83 /* TheGingerGambler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEB70932151113090006BD83 /* TheGingerGambler.xcdatamodeld */; };
 		DEB70937151113090006BD83 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB70936151113090006BD83 /* MasterViewController.m */; };
 		DEB70942151113090006BD83 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB70941151113090006BD83 /* SenTestingKit.framework */; };
 		DEB70943151113090006BD83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB7091B151113080006BD83 /* UIKit.framework */; };
@@ -67,6 +71,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		701AB00F1527BC34007FC9F1 /* TheGingerGambler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheGingerGambler.xcdatamodel; sourceTree = "<group>"; };
+		70CE0CF115276DB700F2F4EF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		70CE0CF415276E9300F2F4EF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		70CE0CF61527772600F2F4EF /* DatabasePopulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabasePopulator.h; sourceTree = "<group>"; };
+		70CE0CF71527772600F2F4EF /* DatabasePopulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabasePopulator.m; sourceTree = "<group>"; };
+		70CE0CFC1527786900F2F4EF /* ModelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelFactory.h; sourceTree = "<group>"; };
+		70CE0CFD1527786900F2F4EF /* ModelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelFactory.m; sourceTree = "<group>"; };
+		70CE0CFF152783BA00F2F4EF /* TheGingerGambler.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = TheGingerGambler.sqlite; path = TheGingerGambler/TheGingerGambler.sqlite; sourceTree = "<group>"; };
 		DE525A831523A3F50054B5FC /* PriceOddsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceOddsViewController.h; sourceTree = "<group>"; };
 		DE525A841523A3F60054B5FC /* PriceOddsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceOddsViewController.m; sourceTree = "<group>"; };
 		DE5E7321151A621B00F60FBF /* SportPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportPickerViewController.h; sourceTree = "<group>"; };
@@ -118,7 +130,6 @@
 		DEB7092C151113080006BD83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DEB7092D151113080006BD83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DEB70930151113080006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DEB70933151113090006BD83 /* TheGingerGambler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheGingerGambler.xcdatamodel; sourceTree = "<group>"; };
 		DEB70935151113090006BD83 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		DEB70936151113090006BD83 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		DEB70940151113090006BD83 /* TheGingerGamblerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheGingerGamblerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,11 +174,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70CE0CF015276D9B00F2F4EF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				70CE0CF115276DB700F2F4EF /* Constants.h */,
+				70CE0CF415276E9300F2F4EF /* Constants.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		DE5E7325151A634700F60FBF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				DE5E7326151A639500F60FBF /* DatabaseManager.h */,
 				DE5E7327151A639500F60FBF /* DatabaseManager.m */,
+				70CE0CF61527772600F2F4EF /* DatabasePopulator.h */,
+				70CE0CF71527772600F2F4EF /* DatabasePopulator.m */,
+				70CE0CFC1527786900F2F4EF /* ModelFactory.h */,
+				70CE0CFD1527786900F2F4EF /* ModelFactory.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -198,6 +222,7 @@
 		DEB7090C151113070006BD83 = {
 			isa = PBXGroup;
 			children = (
+				70CE0CFF152783BA00F2F4EF /* TheGingerGambler.sqlite */,
 				DEB70923151113080006BD83 /* TheGingerGambler */,
 				DEB70948151113090006BD83 /* TheGingerGamblerTests */,
 				DEB7091A151113080006BD83 /* Frameworks */,
@@ -229,6 +254,7 @@
 		DEB70923151113080006BD83 /* TheGingerGambler */ = {
 			isa = PBXGroup;
 			children = (
+				70CE0CF015276D9B00F2F4EF /* Classes */,
 				DE5E7340151B885B00F60FBF /* Images */,
 				DE5E7325151A634700F60FBF /* Utils */,
 				DEB70977151915C10006BD83 /* GUI */,
@@ -271,7 +297,7 @@
 		DEB709761519158E0006BD83 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DEB70932151113090006BD83 /* TheGingerGambler.xcdatamodeld */,
+				701AB00F1527BC34007FC9F1 /* TheGingerGambler.xcdatamodel */,
 				DE5E7372151BBF3E00F60FBF /* Bet.h */,
 				DE5E7373151BBF3E00F60FBF /* Bet.m */,
 				DEB7096C1513D38F0006BD83 /* Sport.h */,
@@ -414,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEB7094D151113090006BD83 /* InfoPlist.strings in Resources */,
+				70CE0D00152783BA00F2F4EF /* TheGingerGambler.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +469,6 @@
 			files = (
 				DEB7092A151113080006BD83 /* main.m in Sources */,
 				DEB7092E151113080006BD83 /* AppDelegate.m in Sources */,
-				DEB70934151113090006BD83 /* TheGingerGambler.xcdatamodeld in Sources */,
 				DEB70937151113090006BD83 /* MasterViewController.m in Sources */,
 				DEB7096B1513D3190006BD83 /* Bookie.m in Sources */,
 				DEB7096E1513D38F0006BD83 /* Sport.m in Sources */,
@@ -459,6 +485,10 @@
 				DE64B016152115CC00B2E2E7 /* CategoryAdderViewController.m in Sources */,
 				DE64B01C1522502500B2E2E7 /* EditableTableViewController.m in Sources */,
 				DE525A851523A3F60054B5FC /* PriceOddsViewController.m in Sources */,
+				70CE0CF515276E9400F2F4EF /* Constants.m in Sources */,
+				70CE0CF81527772600F2F4EF /* DatabasePopulator.m in Sources */,
+				70CE0CFE1527786900F2F4EF /* ModelFactory.m in Sources */,
+				701AB0101527BC34007FC9F1 /* TheGingerGambler.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,19 +670,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DEB70932151113090006BD83 /* TheGingerGambler.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DEB70933151113090006BD83 /* TheGingerGambler.xcdatamodel */,
-			);
-			currentVersion = DEB70933151113090006BD83 /* TheGingerGambler.xcdatamodel */;
-			path = TheGingerGambler.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DEB7090E151113070006BD83 /* Project object */;
 }

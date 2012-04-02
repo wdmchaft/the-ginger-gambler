@@ -14,7 +14,7 @@
 
 - (void) add:(NSString *)name
 {
-    Sport* sport = [[Sport alloc] initWithEntity:[DatabaseManager entityDescriptionFor:SPORT_ENTITY_NAME] insertIntoManagedObjectContext:[DatabaseManager context]];
+    Sport* sport = [[Sport alloc] initWithEntity:[DatabaseManager entityDescriptionFor:SportEntityName] insertIntoManagedObjectContext:[DatabaseManager context]];
     [sport setName:name];
     [self.entities addObject:sport];
     [DatabaseManager save];
@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoadWithEntity:SPORT_ENTITY_NAME];
+    [super viewDidLoadWithEntity:SportEntityName];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -38,7 +38,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    return [super tableView:tableView cellForRowAtIndexPath:indexPath entityCell:SPORT_ENTITY_NAME];
+    return [super tableView:tableView cellForRowAtIndexPath:indexPath entityCell:SportCellName];
 }
 
 #pragma mark - Table view delegate
@@ -52,7 +52,7 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath withEntityName:SPORT_ENTITY_NAME];
+    [super tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath withEntityName:SportEntityName];
 }
 
 @end

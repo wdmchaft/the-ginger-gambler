@@ -12,6 +12,7 @@
 
 + (void)setup;
 + (NSMutableArray*)entitiesFor:(NSString*)name;
++ (NSMutableArray*)entitiesWith:(NSString*)name withPredicate:(NSPredicate*)predicate;
 + (NSManagedObjectContext*) context;
 + (void) save;
 + (void) delete: (NSManagedObject*) object;

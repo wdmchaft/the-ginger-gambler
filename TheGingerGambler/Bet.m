@@ -2,9 +2,6 @@
 //  Bet.m
 //  TheGingerGambler
 //
-//  Created by Huawei R&D Mexico on 3/22/12.
-//  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
-//
 
 #import "Bet.h"
 #import "Bookie.h"
@@ -17,6 +14,7 @@
 @dynamic name;
 @dynamic bookie;
 @dynamic sport;
+@dynamic status;
 
 - (NSString*) name
 {
@@ -25,6 +23,20 @@
         return [NSString stringWithFormat:@"%@ - %@ - %@ - %@", [[self bookie] name], [[self sport] name], [self odds], [self amount]];
     }
     return possibleName;
+}
+
+- (Status)betStatus 
+{
+    return (Status)[[self status] intValue];
+}
+
+- (void)setBetStatus:(Status)betStatus 
+{
+    [self setStatus:[NSNumber numberWithInt:betStatus]];
+}
+
++ (NSSet*)keyPathsForValuesAffectingBetStatus   {
+    return [NSSet setWithObject:@"status"];
 }
 
 @end

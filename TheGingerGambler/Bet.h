@@ -9,10 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-#define BET_ENTITY_NAME @"Bet"
-#define BET_CELL_NAME @"BetCell"
-
 @class Bookie, Sport;
+
+typedef enum 
+{
+    kDraftState = 0,
+    kPlacedState = 1,
+    kWonState = 2,
+    kLossedState = 3
+} Status;
 
 @interface Bet : NSManagedObject
 
@@ -21,5 +26,6 @@
 @property (nonatomic, retain) NSString* name;
 @property (nonatomic, retain) Bookie* bookie;
 @property (nonatomic, retain) Sport* sport;
+@property (nonatomic, retain) NSNumber* status;
 
 @end

@@ -8,10 +8,10 @@
 
 #import "PlaceBetViewController.h"
 #import "DatabaseManager.h"
+#import "ModelFactory.h"
 #import "Bookie.h"
 #import "Sport.h"
 #import "Bet.h"
-#import "AppDelegate.h"
 
 @implementation PlaceBetViewController
 
@@ -41,8 +41,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    bet = [[Bet alloc] initWithEntity:[DatabaseManager entityDescriptionFor:BET_ENTITY_NAME] insertIntoManagedObjectContext:[DatabaseManager context]];
 }
 
 - (void)viewDidUnload
@@ -84,6 +82,10 @@
 
 - (void) selectSport:(Sport*)sport
 {
+    if(!bet)
+    {
+        bet = [ModelFactory createBet];
+    }
     DLog(@"Selected sport category with name %@", [sport name]);
     [bet setSport:(Sport*)sport];
     self.sportSelect.textLabel.text = [sport name];
@@ -91,6 +93,10 @@
 
 - (void) selectBookie:(Bookie*)bookie
 {
+    if(!bet)
+    {
+        bet = [ModelFactory createBet];
+    }
     DLog(@"Selected bookie category with name %@", [bookie name]);
     [bet setBookie:(Bookie*)bookie];
     self.bookieSelect.textLabel.text = [bookie name];
@@ -106,12 +112,12 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:SELECT_BOOKIE_SEGUE] || [[segue identifier] isEqualToString:SELECT_SPORT_SEGUE])
+    if([[segue identifier] isEqualToString:PickBookieSegue] || [[segue identifier] isEqualToString:PickSportSegue])
     {
         EditableTableViewController* editableTableController = (EditableTableViewController*)[segue destinationViewController];
         [editableTableController setDelegate:self]; 
     }
-    else if([[segue identifier] isEqualToString:ENTER_PRICE_ODDS_SEGUE])
+    else if([[segue identifier] isEqualToString:EnterPriceAndOddsSegue])
     {
         PriceOddsViewController* priceOddsController = (PriceOddsViewController*)[segue destinationViewController];
         [priceOddsController setDelegate:self];
@@ -119,12 +125,11 @@
 }
 
 - (IBAction)betButton:(id)sender 
-{
+{   
+    bet.status = [ NSNumber numberWithInt:kPlacedState];
     [DatabaseManager save];
     ALog(@"Bet placed : %@", [bet name]);
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-
 
 @end

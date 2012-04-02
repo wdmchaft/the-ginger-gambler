@@ -10,10 +10,6 @@
 #import "EditableTableViewController.h"
 #import "PriceOddsViewController.h"
 
-#define ENTER_PRICE_ODDS_SEGUE @"EnterPriceAndOdds"
-#define SELECT_BOOKIE_SEGUE @"PickBookie"
-#define SELECT_SPORT_SEGUE @"PickSport"
-
 @class Bet;
 
 @interface PlaceBetViewController : UITableViewController<CategorySelectorNotifications, PriceWithOddsNotifications>{

@@ -10,18 +10,44 @@
 
 #import "AppDelegate.h"
 
+@interface DatabaseManager()
+
++ (NSFetchRequest*) fetchReqestForEntitiesWith:(NSString*)name;
++ (NSMutableArray*) executeFetchRequest:(NSFetchRequest*)fetchRquest;
+
+
+@end
+
 @implementation DatabaseManager
 
 + (NSMutableArray*)entitiesFor:(NSString*)name 
+{
+    NSFetchRequest* fetchRequest = [DatabaseManager fetchReqestForEntitiesWith:name];
+    return [DatabaseManager executeFetchRequest:fetchRequest];
+}
+
++ (NSMutableArray*)entitiesWith:(NSString*)name withPredicate:(NSPredicate*)predicate
+{
+    NSFetchRequest* fetchRequest = [DatabaseManager fetchReqestForEntitiesWith:name];
+    [fetchRequest setPredicate:predicate];
+    return [DatabaseManager executeFetchRequest:fetchRequest];
+}
+
++ (NSMutableArray*) executeFetchRequest:(NSFetchRequest*)fetchRequest
+{
+    NSError* error;
+    NSArray* fetchedObjects = [[DatabaseManager context] executeFetchRequest:fetchRequest error:&error];
+    [self save];
+    return [fetchedObjects mutableCopy];
+}
+
++ (NSFetchRequest*) fetchReqestForEntitiesWith:(NSString*)name
 {
     NSManagedObjectContext* context = [DatabaseManager context];
     NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription* entity = [NSEntityDescription entityForName:name inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
-    NSError *error;
-    NSArray* fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    [self save];
-    return [fetchedObjects mutableCopy];
+    return fetchRequest;
 }
 
 + (void) save
@@ -84,6 +110,9 @@
     }    
 }
 
-
++ (void) populate
+{
+    
+}
 
 @end

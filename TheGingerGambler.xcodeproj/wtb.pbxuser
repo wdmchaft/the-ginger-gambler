@@ -1,0 +1,159 @@
+// !$*UTF8*$!
+{
+	7022331415215219004E8BC4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DEB70930151113080006BD83 /* en */;
+		name = "MainStoryboard.storyboard: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3643;
+		vrLoc = 0;
+	};
+	707029B215168D5600A09AD6 /* TheGingerGambler */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = TheGingerGambler;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	707029C415168D7800A09AD6 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	707029C515168D7800A09AD6 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	707029C715168EA600A09AD6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DEB70935151113090006BD83 /* MasterViewController.h */;
+		name = "MasterViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 0;
+	};
+	707029C815168EA600A09AD6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DEB7096C1513D38F0006BD83 /* Sport.h */;
+		name = "Sport.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 565;
+		vrLoc = 0;
+	};
+	707029CA15168EA600A09AD6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DEB70930151113080006BD83 /* en */;
+		name = "MainStoryboard.storyboard: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3608;
+		vrLoc = 0;
+	};
+	DEB7090E151113070006BD83 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 707029B215168D5600A09AD6 /* TheGingerGambler */;
+		activeTarget = DEB70916151113080006BD83 /* TheGingerGambler */;
+		codeSenseManager = 707029C515168D7800A09AD6 /* Code sense */;
+		executables = (
+			707029B215168D5600A09AD6 /* TheGingerGambler */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_ObjectSize_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					833,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 354505232;
+			PBXWorkspaceStateSaveDate = 354505232;
+		};
+		perUserProjectItems = {
+			7022331415215219004E8BC4 /* PBXTextBookmark */ = 7022331415215219004E8BC4 /* PBXTextBookmark */;
+			707029C715168EA600A09AD6 /* PBXTextBookmark */ = 707029C715168EA600A09AD6 /* PBXTextBookmark */;
+			707029C815168EA600A09AD6 /* PBXTextBookmark */ = 707029C815168EA600A09AD6 /* PBXTextBookmark */;
+			707029CA15168EA600A09AD6 /* PBXTextBookmark */ = 707029CA15168EA600A09AD6 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 707029C415168D7800A09AD6 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	DEB70916151113080006BD83 /* TheGingerGambler */ = {
+		activeExec = 0;
+		executables = (
+			707029B215168D5600A09AD6 /* TheGingerGambler */,
+		);
+	};
+	DEB70930151113080006BD83 /* en */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2406, 7189}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 3643}";
+			sepNavWindowFrame = "{{15, 63}, {750, 710}}";
+		};
+	};
+	DEB70935151113090006BD83 /* MasterViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 247}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 412}";
+		};
+	};
+	DEB7093F151113090006BD83 /* TheGingerGamblerTests */ = {
+		activeExec = 0;
+	};
+	DEB7096C1513D38F0006BD83 /* Sport.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 526}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 565}";
+		};
+	};
+}

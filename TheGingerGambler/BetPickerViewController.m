@@ -44,7 +44,7 @@
     // displays an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.bets = [DatabaseManager entitiesFor:BET_ENTITY_NAME];
+    self.bets = [DatabaseManager entitiesWith:BetEntityName withPredicate:[NSPredicate predicateWithFormat:@"status == 1"]];
 }
 
 - (void)viewDidUnload
@@ -94,7 +94,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:BET_CELL_NAME];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:BetCellName];
     Bet* bet = [self.bets objectAtIndex:indexPath.row];
     cell.textLabel.text = [bet name];
     

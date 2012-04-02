@@ -8,7 +8,7 @@
 
 - (void) add:(NSString *)name
 {
-    Bookie* bookie = [[Bookie alloc] initWithEntity:[DatabaseManager entityDescriptionFor:BOOKIE_ENTITY_NAME] insertIntoManagedObjectContext:[DatabaseManager context]];
+    Bookie* bookie = [[Bookie alloc] initWithEntity:[DatabaseManager entityDescriptionFor:BookieEntityName] insertIntoManagedObjectContext:[DatabaseManager context]];
     [bookie setName:name];
     [self.entities addObject:bookie];
     [DatabaseManager save];
@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoadWithEntity:BOOKIE_ENTITY_NAME];
+    [super viewDidLoadWithEntity:BookieEntityName];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -32,7 +32,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    return [super tableView:tableView cellForRowAtIndexPath:indexPath entityCell:BOOKIE_ENTITY_NAME];
+    return [super tableView:tableView cellForRowAtIndexPath:indexPath entityCell:BookieCellName];
 }
 
 #pragma mark - Table view delegate
@@ -46,7 +46,7 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath withEntityName:BOOKIE_ENTITY_NAME];
+    [super tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath withEntityName:BookieEntityName];
 }
 
 
