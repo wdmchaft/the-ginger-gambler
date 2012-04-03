@@ -44,7 +44,7 @@
     // displays an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.bets = [DatabaseManager entitiesWith:BetEntityName withPredicate:[NSPredicate predicateWithFormat:@"status == @%", kPlacedState]];
+    self.bets = [DatabaseManager entitiesWith:BetEntityName withPredicate:[NSPredicate predicateWithFormat:@"status == %d", kPlacedState]];
 }
 
 - (void)viewDidUnload

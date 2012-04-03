@@ -41,16 +41,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"status == @%", kPlacedState];
-    NSExpression* winsLossesExpression = [NSExpression expressionForKeyPath:@"amount"];
-    NSExpression* winsLossesSummationExpression = [NSExpression expressionForFunction:@"sum" arguments:[NSArray arrayWithObject:winsLossesExpression]];
-    NSExpressionDescription* expressionDescription = [[NSExpressionDescription alloc] init];
-    [expressionDescription setName:@"sumWinsLosses"];
-    [expressionDescription setExpression:winsLossesSummationExpression];
-    [expressionDescription setExpressionResultType:NSDecimalAttributeType];
-    NSDecimal* summation = (__bridge NSDecimal*)[DatabaseManager entitiesWith:BetEntityName withPredicate:predicate andExpression:expressionDescription];
-    winsLossesCell.textLabel.text = [NSString stringWithFormat:@"%d", summation];
-
 }
 
 - (void)viewDidUnload
@@ -66,6 +56,17 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"status == %i", kPlacedState];
+    NSExpression* winsLossesExpression = [NSExpression expressionForKeyPath:@"amount"];
+    NSExpression* winsLossesSummationExpression = [NSExpression expressionForFunction:@"sum:" arguments:[NSArray arrayWithObject:winsLossesExpression]];
+    NSExpressionDescription* expressionDescription = [[NSExpressionDescription alloc] init];
+    [expressionDescription setName:@"sumAmount"];
+    [expressionDescription setExpression:winsLossesSummationExpression];
+    [expressionDescription setExpressionResultType:NSDecimalAttributeType];
+    NSMutableArray* summationResultsArray = [DatabaseManager entitiesWith:BetEntityName withPredicate:predicate andExpression:expressionDescription];
+    NSNumber* decimal = [[summationResultsArray objectAtIndex:0] valueForKey:@"sumAmount"];
+    winsLossesCell.textLabel.text = [NSString stringWithFormat:@"%d", decimal];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated

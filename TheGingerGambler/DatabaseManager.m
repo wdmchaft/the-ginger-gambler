@@ -37,7 +37,9 @@
 {
     NSError* error;
     NSArray* fetchedObjects = [[DatabaseManager context] executeFetchRequest:fetchRequest error:&error];
-    [self save];
+    if(error){
+        NSLog(@"Whoops, couldn´t fetch: %@", [error localizedDescription]);
+    } 
     return [fetchedObjects mutableCopy];
 }
 
@@ -73,7 +75,7 @@
     return [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];    
 }
 
-+ (id)entitiesWith:(NSString*)name withPredicate:(NSPredicate*)predicate andExpression:(NSExpressionDescription*)expressionDescription
++ (NSMutableArray*)entitiesWith:(NSString*)name withPredicate:(NSPredicate*)predicate andExpression:(NSExpressionDescription*)expressionDescription
 {
     NSFetchRequest* fetchRequest = [DatabaseManager fetchReqestForEntitiesWith:name];
     [fetchRequest setPredicate:predicate];

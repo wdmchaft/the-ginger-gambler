@@ -14,6 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableViewCell* bookieSelect;
 @property (weak, nonatomic) IBOutlet UITableViewCell* sportSelect;
-@property (weak, nonatomic) IBOutlet UITableViewCell *winsLossesCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell* winsLossesCell;
 
 @end
