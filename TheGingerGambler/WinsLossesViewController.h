@@ -12,8 +12,9 @@
 
 @interface WinsLossesViewController : UITableViewController<CategorySelectorNotifications>
 
-@property (weak, nonatomic) IBOutlet UITableViewCell* bookieSelect;
-@property (weak, nonatomic) IBOutlet UITableViewCell* sportSelect;
+@property (weak, nonatomic) IBOutlet UITableViewCell *sportSelect;
+@property (weak, nonatomic) IBOutlet UITableViewCell *bookieSelect;
+
 @property (weak, nonatomic) IBOutlet UITableViewCell* winsLossesCell;
 
 @end

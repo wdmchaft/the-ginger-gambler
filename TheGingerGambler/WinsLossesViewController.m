@@ -12,12 +12,29 @@
 #import "Bookie.h"
 #import "Sport.h"
 #import "Bet.h"
+#import "NumberManipulator.h"
 
+@interface WinsLossesViewController()
+{
+@private
+    Bookie* selectedBookie;
+    Sport* selectedSport;
+} 
+
+@property (strong, nonatomic) Bookie* selectedBookie;
+@property (strong, nonatomic) Sport* selectedSport;
+
+- (void) calculateProfits;
+
+@end
+    
 @implementation WinsLossesViewController
 
 @synthesize bookieSelect;
 @synthesize sportSelect;
 @synthesize winsLossesCell;
+@synthesize selectedBookie;
+@synthesize selectedSport;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -48,6 +65,8 @@
     [self setBookieSelect:nil];
     [self setSportSelect:nil];
     [self setWinsLossesCell:nil];
+    [self setSportSelect:nil];
+    [self setBookieSelect:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -56,17 +75,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"status == %i", kPlacedState];
-    NSExpression* winsLossesExpression = [NSExpression expressionForKeyPath:@"amount"];
-    NSExpression* winsLossesSummationExpression = [NSExpression expressionForFunction:@"sum:" arguments:[NSArray arrayWithObject:winsLossesExpression]];
-    NSExpressionDescription* expressionDescription = [[NSExpressionDescription alloc] init];
-    [expressionDescription setName:@"sumAmount"];
-    [expressionDescription setExpression:winsLossesSummationExpression];
-    [expressionDescription setExpressionResultType:NSDecimalAttributeType];
-    NSMutableArray* summationResultsArray = [DatabaseManager entitiesWith:BetEntityName withPredicate:predicate andExpression:expressionDescription];
-    NSNumber* decimal = [[summationResultsArray objectAtIndex:0] valueForKey:@"sumAmount"];
-    winsLossesCell.textLabel.text = [NSString stringWithFormat:@"%d", decimal];
-
+    [self calculateProfits];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -92,19 +101,47 @@
 
 - (void) selectSport:(Sport*)sport
 {
+    self.selectedSport = sport;
+    [self calculateProfits];
+    self.sportSelect.textLabel.text = [self.selectedSport name];
 }
 
 - (void) selectBookie:(Bookie*)bookie
 {
+    self.selectedBookie = bookie;
+    [self calculateProfits];
+    self.bookieSelect.textLabel.text = [self.selectedBookie name];
 }
 
--(void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
+- (void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
     if([[segue identifier] isEqualToString:PickBookieSegue] || [[segue identifier] isEqualToString:PickSportSegue])
     {
         EditableTableViewController* editableTableController = (EditableTableViewController*)[segue destinationViewController];
         [editableTableController setDelegate:self]; 
     }
+}
+
+- (void) calculateProfits
+{
+    NSMutableArray* predicates = [NSMutableArray arrayWithObject:[NSPredicate predicateWithFormat:@"status == %i", kWonState]];
+    if(self.selectedSport != nil)
+    {
+        [predicates addObject:[NSPredicate predicateWithFormat:@"sport.objectID == %@", selectedSport.objectID]];
+    }
+    if(self.selectedBookie != nil)
+    {
+        [predicates addObject:[NSPredicate predicateWithFormat:@"bookie.objectID == %@", selectedBookie.objectID]];
+    }
+    NSExpression* winsLossesExpression = [NSExpression expressionForKeyPath:@"amount"];
+    NSExpression* winsLossesSummationExpression = [NSExpression expressionForFunction:@"sum:" arguments:[NSArray arrayWithObject:winsLossesExpression]];
+    NSExpressionDescription* expressionDescription = [[NSExpressionDescription alloc] init];
+    [expressionDescription setName:@"sumAmount"];
+    [expressionDescription setExpression:winsLossesSummationExpression];
+    [expressionDescription setExpressionResultType:NSDecimalAttributeType];
+    NSMutableArray* summationResultsArray = [DatabaseManager entitiesWith:BetEntityName withPredicate:[NSCompoundPredicate andPredicateWithSubpredicates:predicates] andExpression:expressionDescription];
+    NSDecimalNumber* decimal = [[summationResultsArray objectAtIndex:0] valueForKey:@"sumAmount"];
+    winsLossesCell.textLabel.text = [NumberManipulator formattedStringWithDecimal:decimal];   
 }
 
 @end

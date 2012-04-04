@@ -57,6 +57,7 @@
 		DEB7097A151923400006BD83 /* BookiePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709791519233B0006BD83 /* BookiePickerViewController.m */; };
 		DEB7097D151A257B0006BD83 /* PlaceBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */; };
 		DEC4BAD41529E38400F7E25C /* TheGingerGambler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEC4BAD21529E38400F7E25C /* TheGingerGambler.xcdatamodeld */; };
+		DEFE1CE8152CD92E00C61305 /* NumberManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFE1CE7152CD92E00C61305 /* NumberManipulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBetViewController.h; sourceTree = "<group>"; };
 		DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBetViewController.m; sourceTree = "<group>"; };
 		DEC4BAD31529E38400F7E25C /* TheGingerGambler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheGingerGambler.xcdatamodel; sourceTree = "<group>"; };
+		DEFE1CE6152CD92E00C61305 /* NumberManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberManipulator.h; sourceTree = "<group>"; };
+		DEFE1CE7152CD92E00C61305 /* NumberManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberManipulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +193,8 @@
 				70CE0CF71527772600F2F4EF /* DatabasePopulator.m */,
 				70CE0CFC1527786900F2F4EF /* ModelFactory.h */,
 				70CE0CFD1527786900F2F4EF /* ModelFactory.m */,
+				DEFE1CE6152CD92E00C61305 /* NumberManipulator.h */,
+				DEFE1CE7152CD92E00C61305 /* NumberManipulator.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				70CE0CFE1527786900F2F4EF /* ModelFactory.m in Sources */,
 				DEC4BAD41529E38400F7E25C /* TheGingerGambler.xcdatamodeld in Sources */,
 				DE865AEC152A373D0067734F /* WinsLossesViewController.m in Sources */,
+				DEFE1CE8152CD92E00C61305 /* NumberManipulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

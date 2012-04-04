@@ -79,6 +79,7 @@
 {
     NSFetchRequest* fetchRequest = [DatabaseManager fetchReqestForEntitiesWith:name];
     [fetchRequest setPredicate:predicate];
+    [fetchRequest setResultType:NSDictionaryResultType];
     [fetchRequest setPropertiesToFetch:[NSArray arrayWithObject:expressionDescription]];
     return [DatabaseManager executeFetchRequest:fetchRequest];
 }
