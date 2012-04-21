@@ -17,7 +17,7 @@
          landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TheGingerGambler/Bet.m"
@@ -27,6 +27,19 @@
          startingLineNumber = "36"
          endingLineNumber = "36"
          landmarkName = "-setBetStatus:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "TheGingerGambler/WinsLossesViewController.m"
+         timestampString = "356580117.736427"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "127"
+         endingLineNumber = "127"
+         landmarkName = "-calculateProfits"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

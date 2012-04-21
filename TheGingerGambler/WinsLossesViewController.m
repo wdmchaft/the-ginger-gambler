@@ -124,14 +124,14 @@
 
 - (void) calculateProfits
 {
-    NSMutableArray* predicates = [NSMutableArray arrayWithObject:[NSPredicate predicateWithFormat:@"status == %i", kWonState]];
+    NSMutableArray* predicates = [NSMutableArray arrayWithObject:[NSPredicate predicateWithFormat:@"(status == %i) OR (status == %i)", kWonState, kLossedState]];
     if(self.selectedSport != nil)
     {
-        [predicates addObject:[NSPredicate predicateWithFormat:@"sport.objectID == %@", selectedSport.objectID]];
+        [predicates addObject:[NSPredicate predicateWithFormat:@"sport == %@", selectedSport]];
     }
     if(self.selectedBookie != nil)
     {
-        [predicates addObject:[NSPredicate predicateWithFormat:@"bookie.objectID == %@", selectedBookie.objectID]];
+        [predicates addObject:[NSPredicate predicateWithFormat:@"bookie == %@", selectedBookie]];
     }
     NSExpression* winsLossesExpression = [NSExpression expressionForKeyPath:@"amount"];
     NSExpression* winsLossesSummationExpression = [NSExpression expressionForFunction:@"sum:" arguments:[NSArray arrayWithObject:winsLossesExpression]];
