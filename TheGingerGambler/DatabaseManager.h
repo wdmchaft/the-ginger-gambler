@@ -18,5 +18,7 @@
 + (void) save;
 + (void) delete: (NSManagedObject*) object;
 + (NSEntityDescription*) entityDescriptionFor:(NSString*)name;
++ (NSFetchRequest*) fetchReqestForEntitiesWith:(NSString*)name;
++ (NSMutableArray*) executeFetchRequest:(NSFetchRequest*)fetchRquest;
 
 @end

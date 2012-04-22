@@ -123,25 +123,55 @@
 }
 
 - (void) calculateProfits
+{   
+    NSFetchRequest* winsLossesRequest = [DatabaseManager fetchReqestForEntitiesWith:BetEntityName]; 
+    [winsLossesRequest setPredicate:self.categoryPredicate];
+    [winsLossesRequest setResultType:NSDictionaryResultType];
+    NSArray* props = [NSArray arrayWithObjects:@"amount", @"odds", @"status", nil];
+    [winsLossesRequest setPropertiesToFetch:props];
+    // amounts is an array of dictionaries, each hold the desired property values.
+    NSArray* amounts = [DatabaseManager executeFetchRequest:winsLossesRequest]; 
+    
+    // Loop and sum the individual amounts
+    NSDecimalNumber* total = [NSDecimalNumber zero];
+    
+    // Should do something with auto release pool
+    for (NSDictionary* result in amounts) 
+    {
+        NSDecimalNumber* amount = [result valueForKeyPath:@"amount"];
+        if([[result valueForKeyPath:@"status"] intValue] == kWonState)
+        {
+            NSDecimalNumber* odds = [result valueForKeyPath:@"odds"];
+            
+            // do the unit rate multiplication and accumulate the result in the total
+            
+            NSDecimalNumber* betWinnings = [amount decimalNumberByMultiplyingBy:odds];   
+            total = [total decimalNumberByAdding:betWinnings];
+        }
+        else 
+        {
+            total = [total decimalNumberBySubtracting:amount];
+        }
+    }
+    winsLossesCell.textLabel.text = [NumberManipulator formattedStringWithDecimal:total];
+}
+
+- (NSPredicate*) categoryPredicate
 {
-    NSMutableArray* predicates = [NSMutableArray arrayWithObject:[NSPredicate predicateWithFormat:@"(status == %i) OR (status == %i)", kWonState, kLossedState]];
+    // Get wins and losses in separate predicates as different operations are performed
+    NSMutableArray* winsPredicates = [NSMutableArray arrayWithObject:[NSPredicate predicateWithFormat:@"(status == %i) OR (status == %i)", kWonState, kLossedState]];
     if(self.selectedSport != nil)
     {
-        [predicates addObject:[NSPredicate predicateWithFormat:@"sport == %@", selectedSport]];
+        NSPredicate* sportPredicate = [NSPredicate predicateWithFormat:@"sport == %@", selectedSport];
+        [winsPredicates addObject:sportPredicate];
     }
     if(self.selectedBookie != nil)
     {
-        [predicates addObject:[NSPredicate predicateWithFormat:@"bookie == %@", selectedBookie]];
+        NSPredicate* bookiePredicate = [NSPredicate predicateWithFormat:@"bookie == %@", selectedBookie];
+        [winsPredicates addObject:bookiePredicate];
     }
-    NSExpression* winsLossesExpression = [NSExpression expressionForKeyPath:@"amount"];
-    NSExpression* winsLossesSummationExpression = [NSExpression expressionForFunction:@"sum:" arguments:[NSArray arrayWithObject:winsLossesExpression]];
-    NSExpressionDescription* expressionDescription = [[NSExpressionDescription alloc] init];
-    [expressionDescription setName:@"sumAmount"];
-    [expressionDescription setExpression:winsLossesSummationExpression];
-    [expressionDescription setExpressionResultType:NSDecimalAttributeType];
-    NSMutableArray* summationResultsArray = [DatabaseManager entitiesWith:BetEntityName withPredicate:[NSCompoundPredicate andPredicateWithSubpredicates:predicates] andExpression:expressionDescription];
-    NSDecimalNumber* decimal = [[summationResultsArray objectAtIndex:0] valueForKey:@"sumAmount"];
-    winsLossesCell.textLabel.text = [NumberManipulator formattedStringWithDecimal:decimal];   
+    return [NSCompoundPredicate andPredicateWithSubpredicates:winsPredicates];
 }
+
 
 @end

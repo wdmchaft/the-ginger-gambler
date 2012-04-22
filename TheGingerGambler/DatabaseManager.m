@@ -12,10 +12,6 @@
 
 @interface DatabaseManager()
 
-+ (NSFetchRequest*) fetchReqestForEntitiesWith:(NSString*)name;
-+ (NSMutableArray*) executeFetchRequest:(NSFetchRequest*)fetchRquest;
-
-
 @end
 
 @implementation DatabaseManager
