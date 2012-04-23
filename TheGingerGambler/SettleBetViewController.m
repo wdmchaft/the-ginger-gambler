@@ -76,19 +76,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)winLossSwitch:(RCSwitchOnOff*)sender {
-    if(bet != nil)
-    {
-        [bet setBetStatus:([sender isOn] ? kWonState : kLossedState)];
-    }
-}
-
 - (IBAction)settleBetButton:(id)sender {
     if(bet != nil)
     {
         [DatabaseManager save];
     }
     [self.navigationController popViewControllerAnimated:YES];
+}
+ - (IBAction)setWonOrLossed:(UISegmentedControl*)sender 
+{
+    if(bet != nil)
+    {
+        bet.betStatus = [sender selectedSegmentIndex] == 0 ? kWonState : kLossedState;    
+    }
 }
 
 - (void)selectBet:(Bet*)betSelected

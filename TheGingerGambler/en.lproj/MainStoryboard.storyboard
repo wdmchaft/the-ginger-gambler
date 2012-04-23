@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
         <scene sceneID="11">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -19,6 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
+        <!--Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
@@ -63,7 +66,7 @@
                                         <rect key="frame" x="0.0" y="91" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Settle Bets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lOV-ja-S6T">
@@ -92,7 +95,7 @@
                                         <rect key="frame" x="0.0" y="135" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Wins/Losses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AMB-YI-PEl">
@@ -134,6 +137,7 @@
             </objects>
             <point key="canvasLocation" x="445" y="64"/>
         </scene>
+        <!--Bookie Picker View Controller - Select Bookie-->
         <scene sceneID="oDy-fb-zUV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w51-Ce-jIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -172,6 +176,7 @@
             </objects>
             <point key="canvasLocation" x="1339" y="-532"/>
         </scene>
+        <!--Place Bet View Controller - Place Bet-->
         <scene sceneID="rru-fG-B9S">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63m-8V-Vmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -209,7 +214,7 @@
                                         <rect key="frame" x="0.0" y="55" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Select Sport..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lrb-xU-Xp1">
@@ -277,6 +282,7 @@
             </objects>
             <point key="canvasLocation" x="902" y="-532"/>
         </scene>
+        <!--Sport Picker View Controller - Select Sport-->
         <scene sceneID="NsQ-l3-b4v">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yP-pM-3fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,6 +321,7 @@
             </objects>
             <point key="canvasLocation" x="1339" y="64"/>
         </scene>
+        <!--Category Adder View Controller-->
         <scene sceneID="3de-bI-ez1">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOL-Wx-dpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,6 +367,7 @@
             </objects>
             <point key="canvasLocation" x="1751" y="64"/>
         </scene>
+        <!--Settle Bet View Controller - Settle Bets-->
         <scene sceneID="tRf-5r-6Xc">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCS-Z7-AYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,32 +405,29 @@
                             </tableViewSection>
                             <tableViewSection id="LuW-an-nBb">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tdo-IP-D39">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tdo-IP-D39">
                                         <rect key="frame" x="0.0" y="76" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" id="qqY-WM-u9n" customClass="RCSwitchOnOff">
-                                                    <rect key="frame" x="189" y="6" width="103" height="31"/>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="VWl-ub-0jl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <segments>
+                                                        <segment title="Won"/>
+                                                        <segment title="Lossed"/>
+                                                    </segments>
                                                     <connections>
-                                                        <action selector="winLossSwitch:" destination="PX9-WU-g1t" eventType="valueChanged" id="Q4B-li-lnN"/>
+                                                        <action selector="setWonOrLossed:" destination="PX9-WU-g1t" eventType="valueChanged" id="Vwp-bj-Gos"/>
                                                     </connections>
-                                                </view>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Won or Lossed" lineBreakMode="tailTruncation" minimumFontSize="10" id="8Qm-fV-bOL">
-                                                    <rect key="frame" x="12" y="11" width="141" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </segmentedControl>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -446,6 +451,7 @@
             </objects>
             <point key="canvasLocation" x="902" y="675"/>
         </scene>
+        <!--Bet Picker View Controller-->
         <scene sceneID="rDk-yV-NZC">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9j-Wd-dIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -484,6 +490,7 @@
             </objects>
             <point key="canvasLocation" x="1339" y="675"/>
         </scene>
+        <!--Wins Losses View Controller-->
         <scene sceneID="20j-BJ-5WB">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHC-T8-gMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -521,7 +528,7 @@
                                         <rect key="frame" x="0.0" y="91" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Sport" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R7K-Qi-XMP">
@@ -580,6 +587,7 @@
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
+        <!--Price Odds View Controller - Price And Odds-->
         <scene sceneID="d4T-AS-4ru">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dh2-Xk-OF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -633,13 +641,75 @@
             <point key="canvasLocation" x="1339" y="-1121"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="BetPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BetPickerViewController.h"/>
+        </class>
+        <class className="BookiePickerViewController" superclassName="EditableTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BookiePickerViewController.h"/>
+        </class>
+        <class className="CategoryAdderViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoryAdderViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="EditableTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditableTableViewController.h"/>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="placeBetsTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="settleBetsTextField" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="winsLossesTextField" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+        <class className="PlaceBetViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlaceBetViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="betButton:"/>
+                <relationship kind="outlet" name="bookieSelect" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="priceOddsCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="sportSelect" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+        <class className="PriceOddsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PriceOddsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveButton:"/>
+                <relationship kind="outlet" name="oddsTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SettleBetViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettleBetViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="setWonOrLossed:" candidateClass="UISegmentedControl"/>
+                <relationship kind="action" name="settleBetButton:"/>
+                <relationship kind="outlet" name="settleBetCell" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+        <class className="SportPickerViewController" superclassName="EditableTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SportPickerViewController.h"/>
+        </class>
+        <class className="WinsLossesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WinsLossesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bookieSelect" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="sportSelect" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="winsLossesCell" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Nqu-PY-8nF"/>
-        <segue reference="YUS-bF-ARO"/>
+        <segue reference="jd2-p6-wHp"/>
+        <segue reference="41F-in-JNB"/>
     </inferredMetricsTieBreakers>
 </document>

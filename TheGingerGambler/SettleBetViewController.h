@@ -16,8 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *settleBetCell;
 
-- (IBAction)winLossSwitch:(RCSwitchOnOff*)sender;
 - (IBAction)settleBetButton:(id)sender;
+- (IBAction)setWonOrLossed:(UISegmentedControl*)sender;
 
 - (void) selectBet:(Bet*)betSelected;
 
