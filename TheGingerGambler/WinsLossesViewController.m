@@ -25,6 +25,7 @@
 @property (strong, nonatomic) Sport* selectedSport;
 
 - (void) calculateProfits;
+- (NSPredicate*) categoryPredicate;
 
 @end
     

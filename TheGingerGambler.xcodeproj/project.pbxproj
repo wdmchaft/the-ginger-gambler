@@ -14,24 +14,6 @@
 		DE5E7323151A621B00F60FBF /* SportPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7322151A621B00F60FBF /* SportPickerViewController.m */; };
 		DE5E7328151A639500F60FBF /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7327151A639500F60FBF /* DatabaseManager.m */; };
 		DE5E732B151A771500F60FBF /* SettleBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E732A151A771400F60FBF /* SettleBetViewController.m */; };
-		DE5E733C151B839500F60FBF /* RCSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E733B151B839400F60FBF /* RCSwitch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DE5E733F151B83A100F60FBF /* RCSwitchOnOff.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E733E151B83A000F60FBF /* RCSwitchOnOff.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DE5E7351151B889300F60FBF /* btn_slider_international_off.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7341151B889300F60FBF /* btn_slider_international_off.png */; };
-		DE5E7352151B889300F60FBF /* btn_slider_international_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7342151B889300F60FBF /* btn_slider_international_off@2x.png */; };
-		DE5E7353151B889300F60FBF /* btn_slider_international_on.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7343151B889300F60FBF /* btn_slider_international_on.png */; };
-		DE5E7354151B889300F60FBF /* btn_slider_international_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7344151B889300F60FBF /* btn_slider_international_on@2x.png */; };
-		DE5E7355151B889300F60FBF /* btn_slider_off.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7345151B889300F60FBF /* btn_slider_off.png */; };
-		DE5E7356151B889300F60FBF /* btn_slider_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7346151B889300F60FBF /* btn_slider_off@2x.png */; };
-		DE5E7357151B889300F60FBF /* btn_slider_on.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7347151B889300F60FBF /* btn_slider_on.png */; };
-		DE5E7358151B889300F60FBF /* btn_slider_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7348151B889300F60FBF /* btn_slider_on@2x.png */; };
-		DE5E7359151B889300F60FBF /* btn_slider_thumb_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7349151B889300F60FBF /* btn_slider_thumb_pressed.png */; };
-		DE5E735A151B889300F60FBF /* btn_slider_thumb_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E734A151B889300F60FBF /* btn_slider_thumb_pressed@2x.png */; };
-		DE5E735B151B889300F60FBF /* btn_slider_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E734B151B889300F60FBF /* btn_slider_thumb.png */; };
-		DE5E735C151B889300F60FBF /* btn_slider_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E734C151B889300F60FBF /* btn_slider_thumb@2x.png */; };
-		DE5E735D151B889300F60FBF /* btn_slider_track_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E734D151B889300F60FBF /* btn_slider_track_pressed.png */; };
-		DE5E735E151B889300F60FBF /* btn_slider_track_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E734E151B889300F60FBF /* btn_slider_track_pressed@2x.png */; };
-		DE5E735F151B889300F60FBF /* btn_slider_track.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E734F151B889300F60FBF /* btn_slider_track.png */; };
-		DE5E7360151B889300F60FBF /* btn_slider_track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7350151B889300F60FBF /* btn_slider_track@2x.png */; };
 		DE5E7374151BBF3E00F60FBF /* Bet.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7373151BBF3E00F60FBF /* Bet.m */; };
 		DE5E7377151BC3FE00F60FBF /* BetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */; };
 		DE64B016152115CC00B2E2E7 /* CategoryAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */; };
@@ -57,6 +39,9 @@
 		DEB7097A151923400006BD83 /* BookiePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709791519233B0006BD83 /* BookiePickerViewController.m */; };
 		DEB7097D151A257B0006BD83 /* PlaceBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */; };
 		DEC4BAD41529E38400F7E25C /* TheGingerGambler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEC4BAD21529E38400F7E25C /* TheGingerGambler.xcdatamodeld */; };
+		DEEF97A51545E7C50043D830 /* BetDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF97A41545E7C40043D830 /* BetDetailsController.m */; };
+		DEEF97A81545F1330043D830 /* Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF97A71545F1330043D830 /* Selection.m */; };
+		DEEF97AB1545F1510043D830 /* Multiple.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF97AA1545F1510043D830 /* Multiple.m */; };
 		DEFE1CE8152CD92E00C61305 /* NumberManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFE1CE7152CD92E00C61305 /* NumberManipulator.m */; };
 /* End PBXBuildFile section */
 
@@ -85,26 +70,6 @@
 		DE5E7327151A639500F60FBF /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		DE5E7329151A771400F60FBF /* SettleBetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettleBetViewController.h; sourceTree = "<group>"; };
 		DE5E732A151A771400F60FBF /* SettleBetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettleBetViewController.m; sourceTree = "<group>"; };
-		DE5E733A151B839400F60FBF /* RCSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSwitch.h; sourceTree = "<group>"; };
-		DE5E733B151B839400F60FBF /* RCSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSwitch.m; sourceTree = "<group>"; };
-		DE5E733D151B83A000F60FBF /* RCSwitchOnOff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSwitchOnOff.h; sourceTree = "<group>"; };
-		DE5E733E151B83A000F60FBF /* RCSwitchOnOff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSwitchOnOff.m; sourceTree = "<group>"; };
-		DE5E7341151B889300F60FBF /* btn_slider_international_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_slider_international_off.png; sourceTree = "<group>"; };
-		DE5E7342151B889300F60FBF /* btn_slider_international_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_international_off@2x.png"; sourceTree = "<group>"; };
-		DE5E7343151B889300F60FBF /* btn_slider_international_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_slider_international_on.png; sourceTree = "<group>"; };
-		DE5E7344151B889300F60FBF /* btn_slider_international_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_international_on@2x.png"; sourceTree = "<group>"; };
-		DE5E7345151B889300F60FBF /* btn_slider_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_slider_off.png; sourceTree = "<group>"; };
-		DE5E7346151B889300F60FBF /* btn_slider_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_off@2x.png"; sourceTree = "<group>"; };
-		DE5E7347151B889300F60FBF /* btn_slider_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_slider_on.png; sourceTree = "<group>"; };
-		DE5E7348151B889300F60FBF /* btn_slider_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_on@2x.png"; sourceTree = "<group>"; };
-		DE5E7349151B889300F60FBF /* btn_slider_thumb_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_slider_thumb_pressed.png; sourceTree = "<group>"; };
-		DE5E734A151B889300F60FBF /* btn_slider_thumb_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_thumb_pressed@2x.png"; sourceTree = "<group>"; };
-		DE5E734B151B889300F60FBF /* btn_slider_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_slider_thumb.png; sourceTree = "<group>"; };
-		DE5E734C151B889300F60FBF /* btn_slider_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_thumb@2x.png"; sourceTree = "<group>"; };
-		DE5E734D151B889300F60FBF /* btn_slider_track_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_slider_track_pressed.png; sourceTree = "<group>"; };
-		DE5E734E151B889300F60FBF /* btn_slider_track_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_track_pressed@2x.png"; sourceTree = "<group>"; };
-		DE5E734F151B889300F60FBF /* btn_slider_track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_slider_track.png; sourceTree = "<group>"; };
-		DE5E7350151B889300F60FBF /* btn_slider_track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_slider_track@2x.png"; sourceTree = "<group>"; };
 		DE5E7372151BBF3E00F60FBF /* Bet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bet.h; sourceTree = "<group>"; };
 		DE5E7373151BBF3E00F60FBF /* Bet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bet.m; sourceTree = "<group>"; };
 		DE5E7375151BC3FE00F60FBF /* BetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetPickerViewController.h; sourceTree = "<group>"; };
@@ -145,6 +110,12 @@
 		DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBetViewController.h; sourceTree = "<group>"; };
 		DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBetViewController.m; sourceTree = "<group>"; };
 		DEC4BAD31529E38400F7E25C /* TheGingerGambler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheGingerGambler.xcdatamodel; sourceTree = "<group>"; };
+		DEEF97A31545E7C40043D830 /* BetDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetDetailsController.h; sourceTree = "<group>"; };
+		DEEF97A41545E7C40043D830 /* BetDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetDetailsController.m; sourceTree = "<group>"; };
+		DEEF97A61545F1330043D830 /* Selection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Selection.h; sourceTree = "<group>"; };
+		DEEF97A71545F1330043D830 /* Selection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Selection.m; sourceTree = "<group>"; };
+		DEEF97A91545F1510043D830 /* Multiple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multiple.h; sourceTree = "<group>"; };
+		DEEF97AA1545F1510043D830 /* Multiple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Multiple.m; sourceTree = "<group>"; };
 		DEFE1CE6152CD92E00C61305 /* NumberManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberManipulator.h; sourceTree = "<group>"; };
 		DEFE1CE7152CD92E00C61305 /* NumberManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberManipulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,29 +170,6 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		DE5E7340151B885B00F60FBF /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				DE5E7341151B889300F60FBF /* btn_slider_international_off.png */,
-				DE5E7342151B889300F60FBF /* btn_slider_international_off@2x.png */,
-				DE5E7343151B889300F60FBF /* btn_slider_international_on.png */,
-				DE5E7344151B889300F60FBF /* btn_slider_international_on@2x.png */,
-				DE5E7345151B889300F60FBF /* btn_slider_off.png */,
-				DE5E7346151B889300F60FBF /* btn_slider_off@2x.png */,
-				DE5E7347151B889300F60FBF /* btn_slider_on.png */,
-				DE5E7348151B889300F60FBF /* btn_slider_on@2x.png */,
-				DE5E7349151B889300F60FBF /* btn_slider_thumb_pressed.png */,
-				DE5E734A151B889300F60FBF /* btn_slider_thumb_pressed@2x.png */,
-				DE5E734B151B889300F60FBF /* btn_slider_thumb.png */,
-				DE5E734C151B889300F60FBF /* btn_slider_thumb@2x.png */,
-				DE5E734D151B889300F60FBF /* btn_slider_track_pressed.png */,
-				DE5E734E151B889300F60FBF /* btn_slider_track_pressed@2x.png */,
-				DE5E734F151B889300F60FBF /* btn_slider_track.png */,
-				DE5E7350151B889300F60FBF /* btn_slider_track@2x.png */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
 		DEB7090C151113070006BD83 = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				70CE0CF015276D9B00F2F4EF /* Classes */,
-				DE5E7340151B885B00F60FBF /* Images */,
 				DE5E7325151A634700F60FBF /* Utils */,
 				DEB70977151915C10006BD83 /* GUI */,
 				DEB709761519158E0006BD83 /* Model */,
@@ -300,6 +247,10 @@
 			isa = PBXGroup;
 			children = (
 				DEC4BAD21529E38400F7E25C /* TheGingerGambler.xcdatamodeld */,
+				DEEF97A91545F1510043D830 /* Multiple.h */,
+				DEEF97AA1545F1510043D830 /* Multiple.m */,
+				DEEF97A61545F1330043D830 /* Selection.h */,
+				DEEF97A71545F1330043D830 /* Selection.m */,
 				DE5E7372151BBF3E00F60FBF /* Bet.h */,
 				DE5E7373151BBF3E00F60FBF /* Bet.m */,
 				DEB7096C1513D38F0006BD83 /* Sport.h */,
@@ -318,10 +269,6 @@
 				DE525A841523A3F60054B5FC /* PriceOddsViewController.m */,
 				DE5E7375151BC3FE00F60FBF /* BetPickerViewController.h */,
 				DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */,
-				DE5E733D151B83A000F60FBF /* RCSwitchOnOff.h */,
-				DE5E733E151B83A000F60FBF /* RCSwitchOnOff.m */,
-				DE5E733A151B839400F60FBF /* RCSwitch.h */,
-				DE5E733B151B839400F60FBF /* RCSwitch.m */,
 				DEB7092C151113080006BD83 /* AppDelegate.h */,
 				DEB7092D151113080006BD83 /* AppDelegate.m */,
 				DEB7092F151113080006BD83 /* MainStoryboard.storyboard */,
@@ -341,6 +288,8 @@
 				DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */,
 				DE865AEA152A373D0067734F /* WinsLossesViewController.h */,
 				DE865AEB152A373D0067734F /* WinsLossesViewController.m */,
+				DEEF97A31545E7C40043D830 /* BetDetailsController.h */,
+				DEEF97A41545E7C40043D830 /* BetDetailsController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -418,22 +367,6 @@
 			files = (
 				DEB70928151113080006BD83 /* InfoPlist.strings in Resources */,
 				DEB70931151113080006BD83 /* MainStoryboard.storyboard in Resources */,
-				DE5E7351151B889300F60FBF /* btn_slider_international_off.png in Resources */,
-				DE5E7352151B889300F60FBF /* btn_slider_international_off@2x.png in Resources */,
-				DE5E7353151B889300F60FBF /* btn_slider_international_on.png in Resources */,
-				DE5E7354151B889300F60FBF /* btn_slider_international_on@2x.png in Resources */,
-				DE5E7355151B889300F60FBF /* btn_slider_off.png in Resources */,
-				DE5E7356151B889300F60FBF /* btn_slider_off@2x.png in Resources */,
-				DE5E7357151B889300F60FBF /* btn_slider_on.png in Resources */,
-				DE5E7358151B889300F60FBF /* btn_slider_on@2x.png in Resources */,
-				DE5E7359151B889300F60FBF /* btn_slider_thumb_pressed.png in Resources */,
-				DE5E735A151B889300F60FBF /* btn_slider_thumb_pressed@2x.png in Resources */,
-				DE5E735B151B889300F60FBF /* btn_slider_thumb.png in Resources */,
-				DE5E735C151B889300F60FBF /* btn_slider_thumb@2x.png in Resources */,
-				DE5E735D151B889300F60FBF /* btn_slider_track_pressed.png in Resources */,
-				DE5E735E151B889300F60FBF /* btn_slider_track_pressed@2x.png in Resources */,
-				DE5E735F151B889300F60FBF /* btn_slider_track.png in Resources */,
-				DE5E7360151B889300F60FBF /* btn_slider_track@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,8 +411,6 @@
 				DE5E7323151A621B00F60FBF /* SportPickerViewController.m in Sources */,
 				DE5E7328151A639500F60FBF /* DatabaseManager.m in Sources */,
 				DE5E732B151A771500F60FBF /* SettleBetViewController.m in Sources */,
-				DE5E733C151B839500F60FBF /* RCSwitch.m in Sources */,
-				DE5E733F151B83A100F60FBF /* RCSwitchOnOff.m in Sources */,
 				DE5E7374151BBF3E00F60FBF /* Bet.m in Sources */,
 				DE5E7377151BC3FE00F60FBF /* BetPickerViewController.m in Sources */,
 				DE64B016152115CC00B2E2E7 /* CategoryAdderViewController.m in Sources */,
@@ -491,6 +422,9 @@
 				DEC4BAD41529E38400F7E25C /* TheGingerGambler.xcdatamodeld in Sources */,
 				DE865AEC152A373D0067734F /* WinsLossesViewController.m in Sources */,
 				DEFE1CE8152CD92E00C61305 /* NumberManipulator.m in Sources */,
+				DEEF97A51545E7C50043D830 /* BetDetailsController.m in Sources */,
+				DEEF97A81545F1330043D830 /* Selection.m in Sources */,
+				DEEF97AB1545F1510043D830 /* Multiple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
