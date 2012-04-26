@@ -182,10 +182,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="wiU-Y1-T5R">
+                            <tableViewSection headerTitle="Categories" id="wiU-Y1-T5R">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BookieCell" textLabel="UCf-5k-hTd" style="IBUITableViewCellStyleDefault" id="p3b-Qd-yL8">
-                                        <rect key="frame" x="0.0" y="10" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -207,7 +207,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SportCell" textLabel="lrb-xU-Xp1" style="IBUITableViewCellStyleDefault" id="Ysi-s5-8Uu">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -230,16 +230,16 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="JZl-88-FBo">
+                            <tableViewSection headerTitle="Odds and Stake" id="JZl-88-FBo">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BookieCell" textLabel="TeA-FC-dKb" style="IBUITableViewCellStyleDefault" id="pbt-qY-h9r">
-                                        <rect key="frame" x="0.0" y="120" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="182" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Enter Price and Odds..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TeA-FC-dKb">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Selections..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TeA-FC-dKb">
                                                     <rect key="frame" x="10" y="0.0" width="260" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -251,8 +251,27 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="Xkq-gl-rdU" kind="push" identifier="EnterPriceAndOdds" id="EbF-BI-eIs"/>
+                                            <segue destination="GVO-BD-aDs" kind="push" id="L1e-vO-j2z"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BookieCell" textLabel="kEt-8S-FKy" style="IBUITableViewCellStyleDefault" id="eYA-wb-W0f">
+                                        <rect key="frame" x="0.0" y="227" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Stake..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kEt-8S-FKy">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -578,165 +597,137 @@
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
-        <scene sceneID="d4T-AS-4ru">
+        <scene sceneID="Ntn-Nj-wkg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dh2-Xk-OF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="PriceAndOdds" title="Price And Odds" id="Xkq-gl-rdU" customClass="PriceOddsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cbm-Dw-mmT">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgU-UZ-qpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="GVO-BD-aDs" customClass="SelectionAdderViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" id="rkQ-pu-iJl">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price" lineBreakMode="tailTruncation" minimumFontSize="10" id="Egk-UT-Lrd">
-                                <rect key="frame" x="57" y="50" width="101" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Odds" lineBreakMode="tailTruncation" minimumFontSize="10" id="ecu-he-Ttt">
-                                <rect key="frame" x="57" y="94" width="101" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="MuB-C5-2XT">
-                                <rect key="frame" x="166" y="52" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="5iu-AQ-vK5">
-                                <rect key="frame" x="166" y="96" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Price And Odds" id="Eba-6F-kV4">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="HHO-6C-Z7f">
-                            <connections>
-                                <action selector="saveButton:" destination="Xkq-gl-rdU" id="VAd-RO-iyt"/>
-                            </connections>
-                        </barButtonItem>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SelectionTableViewCell" rowHeight="94" id="m0I-e1-L7E" customClass="SelectionTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description..." lineBreakMode="tailTruncation" minimumFontSize="10" id="ozj-Lm-5zc">
+                                            <rect key="frame" x="20" y="20" width="149" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Odds..." lineBreakMode="tailTruncation" minimumFontSize="10" id="LvX-em-nSZ">
+                                            <rect key="frame" x="20" y="52" width="58" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Value..." lineBreakMode="tailTruncation" minimumFontSize="10" id="svD-os-8w4">
+                                            <rect key="frame" x="82" y="52" width="58" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Place Terms..." lineBreakMode="tailTruncation" minimumFontSize="10" id="OnT-3y-dhs">
+                                            <rect key="frame" x="148" y="52" width="110" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Value..." lineBreakMode="tailTruncation" minimumFontSize="17" id="fcT-xK-VSI">
+                                            <rect key="frame" x="258" y="52" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GVO-BD-aDs" id="133-xh-bup"/>
+                            <outlet property="delegate" destination="GVO-BD-aDs" id="UkR-Ls-j66"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Selections" id="7kN-Ls-rp7">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="MJp-uz-8Sm"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="oddsTextField" destination="5iu-AQ-vK5" id="36d-HQ-K0o"/>
-                        <outlet property="priceTextField" destination="MuB-C5-2XT" id="Vae-d6-YB4"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1339" y="-1121"/>
-        </scene>
-        <scene sceneID="Zm6-C5-Ijb">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CFk-3J-Jvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="dLi-A0-gEA" customClass="BetDetailsController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ccD-QJ-57z">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="117" sectionHeaderHeight="22" sectionFooterHeight="22" id="lCy-Ah-Egh">
-                                <rect key="frame" x="0.0" y="142" width="320" height="182"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="117" id="umR-lq-1mM">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="117"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description..." minimumFontSize="17" id="Mfq-0s-lLb">
-                                                    <rect key="frame" x="20" y="20" width="200" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Odds..." minimumFontSize="17" id="dxE-UZ-Dyi">
-                                                    <rect key="frame" x="20" y="65" width="97" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place Terms..." minimumFontSize="17" id="5Rk-ue-0L4">
-                                                    <rect key="frame" x="180" y="65" width="120" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="dK8-cN-8ch">
-                                <rect key="frame" x="185" y="13" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Unit Stake" lineBreakMode="tailTruncation" minimumFontSize="17" id="McX-fy-cbC">
-                                <rect key="frame" x="33" y="18" width="91" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total Stake" lineBreakMode="tailTruncation" minimumFontSize="17" id="qEd-2s-o5W">
-                                <rect key="frame" x="33" y="54" width="92" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="XX6-CT-jYX">
-                                <rect key="frame" x="185" y="51" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Returns" lineBreakMode="tailTruncation" minimumFontSize="17" id="7XM-gK-yPB">
-                                <rect key="frame" x="33" y="349" width="107" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="BH6-vD-KlL">
-                                <rect key="frame" x="111" y="97" width="171" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Win Only"/>
-                                    <segment title="Each Way"/>
-                                </segments>
-                            </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ciu-aA-9pc">
-                                <rect key="frame" x="185" y="344" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="betsTableView" destination="lCy-Ah-Egh" id="t49-Id-pfx"/>
-                        <outlet property="returns" destination="ciu-aA-9pc" id="CIL-Sf-19x"/>
-                        <outlet property="totalStake" destination="XX6-CT-jYX" id="HXM-ZR-VEo"/>
-                        <outlet property="unitStake" destination="dK8-cN-8ch" id="n6j-sZ-PET"/>
-                        <outlet property="winOnlyOrEachWay" destination="BH6-vD-KlL" id="xWt-dN-28t"/>
-                    </connections>
-                </viewController>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1763" y="-1115"/>
+            <point key="canvasLocation" x="1339" y="-1098"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="BetPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BetPickerViewController.h"/>
+        </class>
+        <class className="BookiePickerViewController" superclassName="EditableTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BookiePickerViewController.h"/>
+        </class>
+        <class className="CategoryAdderViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoryAdderViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="EditableTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditableTableViewController.h"/>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="placeBetsTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="settleBetsTextField" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="winsLossesTextField" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+        <class className="PlaceBetViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlaceBetViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="betButton:"/>
+                <relationship kind="outlet" name="bookieSelect" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="priceOddsCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="sportSelect" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+        <class className="SelectionAdderViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectionAdderViewController.h"/>
+        </class>
+        <class className="SelectionTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectionTableViewCell.h"/>
+        </class>
+        <class className="SettleBetViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettleBetViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="setWonOrLossed:" candidateClass="UISegmentedControl"/>
+                <relationship kind="action" name="settleBetButton:"/>
+                <relationship kind="outlet" name="settleBetCell" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+        <class className="SportPickerViewController" superclassName="EditableTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SportPickerViewController.h"/>
+        </class>
+        <class className="WinsLossesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WinsLossesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bookieSelect" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="sportSelect" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="winsLossesCell" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

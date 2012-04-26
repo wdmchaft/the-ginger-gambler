@@ -18,7 +18,7 @@
 
 @end
 
-@interface EditableTableViewController : UITableViewController <AdderNotifications>{
+@interface EditableTableViewController : UITableViewController <AdderNotifications> {
 }
 
 @property (nonatomic, weak) id<CategorySelectorNotifications> delegate;

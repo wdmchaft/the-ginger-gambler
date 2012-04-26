@@ -39,9 +39,10 @@
 		DEB7097A151923400006BD83 /* BookiePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB709791519233B0006BD83 /* BookiePickerViewController.m */; };
 		DEB7097D151A257B0006BD83 /* PlaceBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */; };
 		DEC4BAD41529E38400F7E25C /* TheGingerGambler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEC4BAD21529E38400F7E25C /* TheGingerGambler.xcdatamodeld */; };
-		DEEF97A51545E7C50043D830 /* BetDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF97A41545E7C40043D830 /* BetDetailsController.m */; };
 		DEEF97A81545F1330043D830 /* Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF97A71545F1330043D830 /* Selection.m */; };
 		DEEF97AB1545F1510043D830 /* Multiple.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF97AA1545F1510043D830 /* Multiple.m */; };
+		DEFA728E1549DE4B00F46356 /* SelectionAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFA728D1549DE4A00F46356 /* SelectionAdderViewController.m */; };
+		DEFA72961549F31400F46356 /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFA72951549F31400F46356 /* SelectionTableViewCell.m */; };
 		DEFE1CE8152CD92E00C61305 /* NumberManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFE1CE7152CD92E00C61305 /* NumberManipulator.m */; };
 /* End PBXBuildFile section */
 
@@ -110,12 +111,14 @@
 		DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBetViewController.h; sourceTree = "<group>"; };
 		DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBetViewController.m; sourceTree = "<group>"; };
 		DEC4BAD31529E38400F7E25C /* TheGingerGambler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheGingerGambler.xcdatamodel; sourceTree = "<group>"; };
-		DEEF97A31545E7C40043D830 /* BetDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetDetailsController.h; sourceTree = "<group>"; };
-		DEEF97A41545E7C40043D830 /* BetDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetDetailsController.m; sourceTree = "<group>"; };
 		DEEF97A61545F1330043D830 /* Selection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Selection.h; sourceTree = "<group>"; };
 		DEEF97A71545F1330043D830 /* Selection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Selection.m; sourceTree = "<group>"; };
 		DEEF97A91545F1510043D830 /* Multiple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multiple.h; sourceTree = "<group>"; };
 		DEEF97AA1545F1510043D830 /* Multiple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Multiple.m; sourceTree = "<group>"; };
+		DEFA728C1549DE4A00F46356 /* SelectionAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionAdderViewController.h; sourceTree = "<group>"; };
+		DEFA728D1549DE4A00F46356 /* SelectionAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionAdderViewController.m; sourceTree = "<group>"; };
+		DEFA72941549F31400F46356 /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
+		DEFA72951549F31400F46356 /* SelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionTableViewCell.m; sourceTree = "<group>"; };
 		DEFE1CE6152CD92E00C61305 /* NumberManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberManipulator.h; sourceTree = "<group>"; };
 		DEFE1CE7152CD92E00C61305 /* NumberManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberManipulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -288,8 +291,10 @@
 				DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */,
 				DE865AEA152A373D0067734F /* WinsLossesViewController.h */,
 				DE865AEB152A373D0067734F /* WinsLossesViewController.m */,
-				DEEF97A31545E7C40043D830 /* BetDetailsController.h */,
-				DEEF97A41545E7C40043D830 /* BetDetailsController.m */,
+				DEFA728C1549DE4A00F46356 /* SelectionAdderViewController.h */,
+				DEFA728D1549DE4A00F46356 /* SelectionAdderViewController.m */,
+				DEFA72941549F31400F46356 /* SelectionTableViewCell.h */,
+				DEFA72951549F31400F46356 /* SelectionTableViewCell.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -422,9 +427,10 @@
 				DEC4BAD41529E38400F7E25C /* TheGingerGambler.xcdatamodeld in Sources */,
 				DE865AEC152A373D0067734F /* WinsLossesViewController.m in Sources */,
 				DEFE1CE8152CD92E00C61305 /* NumberManipulator.m in Sources */,
-				DEEF97A51545E7C50043D830 /* BetDetailsController.m in Sources */,
 				DEEF97A81545F1330043D830 /* Selection.m in Sources */,
 				DEEF97AB1545F1510043D830 /* Multiple.m in Sources */,
+				DEFA728E1549DE4B00F46356 /* SelectionAdderViewController.m in Sources */,
+				DEFA72961549F31400F46356 /* SelectionTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
