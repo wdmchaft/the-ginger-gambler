@@ -10,8 +10,13 @@
 
 @interface SelectionTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel* description;
-@property (weak, nonatomic) IBOutlet UILabel* odds;
-@property (weak, nonatomic) IBOutlet UILabel* placeTerms;
+@property (weak, nonatomic) IBOutlet UILabel* descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel* oddsLabel;
+@property (weak, nonatomic) IBOutlet UILabel* placeTermsLabel;
+@property (weak, nonatomic) IBOutlet UILabel* oddsValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel* placeTermsValueLabel;
+@property (weak, nonatomic) IBOutlet UITextField* descriptionTextField;
+@property (weak, nonatomic) IBOutlet UITextField* oddsTextField;
+@property (weak, nonatomic) IBOutlet UITextField* placeTermsTextField;
 
 @end

@@ -10,9 +10,14 @@
 
 @implementation SelectionTableViewCell
 
-@synthesize placeTerms;
-@synthesize odds;
-@synthesize description;
+@synthesize descriptionLabel;
+@synthesize oddsLabel;
+@synthesize placeTermsLabel;
+@synthesize descriptionTextField;
+@synthesize oddsTextField;
+@synthesize placeTermsTextField;
+@synthesize placeTermsValueLabel;
+@synthesize oddsValueLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

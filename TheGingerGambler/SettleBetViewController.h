@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RCSwitchOnOff.h"
 #import "BetPickerViewController.h"
 
 @interface SettleBetViewController : UITableViewController<BetSelectorNotifications>{

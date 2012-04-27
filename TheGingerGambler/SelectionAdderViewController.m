@@ -36,7 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.selections = [NSMutableArray array];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -47,6 +48,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    self.selections = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -87,21 +89,42 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.selections.count;
+    return self.selections.count + 2;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString* CellIdentifier = @"SelectionTableViewCell";
     
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    if(self.selections.count >= indexPath.row) 
+    {
+        SelectionTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier ];
+        if (cell == nil) 
+        {
+            cell = [[SelectionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        }
+        if (self.selections.count == indexPath.row) 
+        {
+            [cell.oddsTextField setHidden:TRUE];
+            [cell.placeTermsTextField setHidden:TRUE];
+            [cell.descriptionTextField setHidden:TRUE];
+        }
+        else 
+        {
+            [cell.oddsValueLabel setHidden:TRUE];
+            [cell.placeTermsValueLabel setHidden:TRUE];
+        }
+        return cell;
+    }      
+    else
+    {
+        UITableViewCell* cell  = [[UITableViewCell alloc] initWithFrame:cell.frame];
+        UILabel* label = [[UILabel alloc] init];
+        label.text = @"Add another selection...";
+        [cell addSubview:label];
+        return cell;
     }
-    [cell.textLabel  
-    // Configure the cell..
-
-    return cell;
+    
 }
 
 /*
