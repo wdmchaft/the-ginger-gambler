@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @class Bet;
+@class Selection;
 
 @interface ModelFactory : NSObject
 
 + (Bet*) createBet;
++ (Selection*) createSelection;
 
 @end

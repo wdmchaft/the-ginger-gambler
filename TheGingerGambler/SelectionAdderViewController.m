@@ -8,7 +8,13 @@
 
 #import "SelectionAdderViewController.h"
 #import "SelectionTableViewCell.h"
+#import "ModelFactory.h"
+#import "Selection.h"
 
+@interface SelectionAdderViewController()
+
+-(void) createNewSelection;
+@end
 
 @implementation SelectionAdderViewController
 
@@ -17,7 +23,8 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
+    if (self) 
+    {
         // Custom initialization
     }
     return self;
@@ -96,35 +103,38 @@
 {
     static NSString* CellIdentifier = @"SelectionTableViewCell";
     
-    if(self.selections.count >= indexPath.row) 
+    
+    SelectionTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier ];
+    if (cell == nil) 
     {
-        SelectionTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier ];
-        if (cell == nil) 
-        {
-            cell = [[SelectionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-        if (self.selections.count == indexPath.row) 
-        {
-            [cell.oddsTextField setHidden:TRUE];
-            [cell.placeTermsTextField setHidden:TRUE];
-            [cell.descriptionTextField setHidden:TRUE];
-        }
-        else 
-        {
-            [cell.oddsValueLabel setHidden:TRUE];
-            [cell.placeTermsValueLabel setHidden:TRUE];
-        }
-        return cell;
+        cell = [[SelectionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    if(indexPath.row < self.selections.count) 
+    {
+        [cell.oddsTextField setHidden:TRUE];
+        [cell.placeTermsTextField setHidden:TRUE];
+        [cell.descriptionTextField setHidden:TRUE];
+        [cell.addSelectionLabel setHidden:TRUE];
+    }
+    else if (self.selections.count == indexPath.row) 
+    {
+        [cell.oddsValueLabel setHidden:TRUE];
+        [cell.placeTermsValueLabel setHidden:TRUE];
+        [cell.addSelectionLabel setHidden:TRUE];
     }      
     else
     {
-        UITableViewCell* cell  = [[UITableViewCell alloc] initWithFrame:cell.frame];
-        UILabel* label = [[UILabel alloc] init];
-        label.text = @"Add another selection...";
-        [cell addSubview:label];
-        return cell;
+        [cell.oddsTextField setHidden:TRUE];
+        [cell.placeTermsTextField setHidden:TRUE];
+        [cell.descriptionTextField setHidden:TRUE];
+        [cell.oddsValueLabel setHidden:TRUE];
+        [cell.placeTermsValueLabel setHidden:TRUE];
+        [cell.descriptionLabel setHidden:TRUE];
+        [cell.oddsLabel setHidden:TRUE];
+        [cell.placeTermsLabel setHidden:TRUE];
     }
-    
+    return cell;
 }
 
 /*
@@ -168,15 +178,22 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if(indexPath.row == self.selections.count)
+    {
+        NSIndexPath* selectionPath = [[NSIndexPath alloc] initWithIndex:indexPath.row - 1];
+        SelectionTableViewCell* cell = (SelectionTableViewCell*)[tableView cellForRowAtIndexPath:selectionPath]; 
+        Selection* selection = [ModelFactory createSelection];
+        selection.odds = [NSDecimalNumber decimalNumberWithString:cell.oddsTextField.text];
+        selection.name = cell.descriptionTextField.text;
+        selection.placeterms = [NSDecimalNumber decimalNumberWithString:cell.placeTermsTextField.text];
+    }
+}
+
+-(void) createNewSelection
+{
+    
 }
 
 @end

@@ -18,6 +18,7 @@
 @synthesize placeTermsTextField;
 @synthesize placeTermsValueLabel;
 @synthesize oddsValueLabel;
+@synthesize addSelectionLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

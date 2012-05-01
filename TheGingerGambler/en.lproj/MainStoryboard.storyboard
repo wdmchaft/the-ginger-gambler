@@ -676,10 +676,18 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Add another selection..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" id="8Io-Ws-zbh">
+                                            <rect key="frame" x="60" y="49" width="201" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
+                                    <outlet property="addSelectionLabel" destination="8Io-Ws-zbh" id="CWc-4A-WLn"/>
                                     <outlet property="descriptionLabel" destination="ozj-Lm-5zc" id="zQk-m5-afF"/>
                                     <outlet property="descriptionTextField" destination="Rgz-h9-j2z" id="VZy-sg-SAM"/>
                                     <outlet property="oddsLabel" destination="LvX-em-nSZ" id="4gS-S3-ATD"/>
@@ -746,6 +754,7 @@
         <class className="SelectionTableViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectionTableViewCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="addSelectionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="descriptionTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="oddsLabel" candidateClass="UILabel"/>

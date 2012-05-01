@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField* descriptionTextField;
 @property (weak, nonatomic) IBOutlet UITextField* oddsTextField;
 @property (weak, nonatomic) IBOutlet UITextField* placeTermsTextField;
+@property (weak, nonatomic) IBOutlet UILabel* addSelectionLabel;
 
 @end

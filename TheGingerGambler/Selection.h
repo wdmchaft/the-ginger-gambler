@@ -13,12 +13,12 @@
 
 @interface Selection : NSManagedObject
 
-@property (nonatomic, retain) NSDecimalNumber * odds;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * status;
-@property (nonatomic, retain) NSDecimalNumber * placeterms;
-@property (nonatomic, retain) NSManagedObject *multiple;
-@property (nonatomic, retain) Sport *sport;
-@property (nonatomic, retain) Bookie *bookie;
+@property (nonatomic, retain) NSDecimalNumber* odds;
+@property (nonatomic, retain) NSString* name;
+@property (nonatomic, retain) NSNumber* status;
+@property (nonatomic, retain) NSDecimalNumber* placeterms;
+@property (nonatomic, retain) NSManagedObject* multiple;
+@property (nonatomic, retain) Sport* sport;
+@property (nonatomic, retain) Bookie* bookie;
 
 @end

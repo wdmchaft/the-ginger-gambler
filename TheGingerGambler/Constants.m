@@ -19,6 +19,7 @@ NSString* const BookieCellName = @"BookieCell";
 NSString* const SportEntityName = @"Sport";
 NSString* const BookieEntityName = @"Bookie";
 NSString* const BetEntityName = @"Bet";
+NSString* const SelectionEntityName = @"Selection";
 
 /* Segues */
 NSString* const EnterPriceAndOddsSegue = @"EnterPriceAndOdds";

@@ -10,6 +10,6 @@
 
 @interface SelectionAdderViewController : UITableViewController
 
-@property (strong) NSArray* selections;
+@property (strong) NSMutableArray* selections;
 
 @end

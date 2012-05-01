@@ -27,6 +27,7 @@ extern NSString* const BookieCellName;
 extern NSString* const BetEntityName;
 extern NSString* const SportEntityName;
 extern NSString* const BookieEntityName;
+extern NSString* const SelectionEntityName;
 
 /* Segues */
 extern NSString* const EnterPriceAndOddsSegue;
