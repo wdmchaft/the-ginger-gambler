@@ -21,4 +21,13 @@
 @dynamic sport;
 @dynamic bookie;
 
+
+- (NSDictionary*)dictionify
+{
+    NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithObject:self.name forKey:DescriptionKey];
+    [dictionary setObject:self.odds forKey:OddsKey];
+    [dictionary setObject:self.placeterms forKey:PlaceTermsKey];
+    return dictionary;
+}
+
 @end

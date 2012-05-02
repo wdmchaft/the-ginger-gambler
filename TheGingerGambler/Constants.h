@@ -22,6 +22,7 @@
 extern NSString* const BetCellName;
 extern NSString* const SportCellName;
 extern NSString* const BookieCellName;
+extern NSString* const SelectionCellName;
 
 /* Entities */
 extern NSString* const BetEntityName;
@@ -30,9 +31,18 @@ extern NSString* const BookieEntityName;
 extern NSString* const SelectionEntityName;
 
 /* Segues */
-extern NSString* const EnterPriceAndOddsSegue;
+extern NSString* const PickSelectionsSegue;
 extern NSString* const PickBookieSegue;
 extern NSString* const PickSportSegue;
 extern NSString* const PickBetSegue;
+
+/* View */
+extern NSString* const CategoryAdderView;
+extern NSString* const SelectionAdderView;
+
+/* Selection Cell */
+extern NSString* const DescriptionKey;
+extern NSString* const OddsKey;
+extern NSString* const PlaceTermsKey;
 
 @end

@@ -21,33 +21,13 @@
     [super viewDidLoadWithEntity:BookieEntityName];
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
-{
-    return [super tableView:tableView cellForRowAtIndexPath:indexPath entityCell:BookieCellName];
-}
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.delegate selectBookie:[self.entities objectAtIndex:indexPath.row]];
+    [self.navigationController popViewControllerAnimated:YES]; 
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
-
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [super tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath withEntityName:BookieEntityName];
-}
-
 
 @end

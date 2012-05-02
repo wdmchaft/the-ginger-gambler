@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Bet" representedClassName="Bet" syncable="YES">
         <attribute name="amount" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" maxValueString="50" syncable="YES"/>
-        <attribute name="odds" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="status" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="bookie" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookie" inverseName="bet" inverseEntity="Bookie" syncable="YES"/>
+        <relationship name="selections" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Selection" inverseName="bet" inverseEntity="Selection" syncable="YES"/>
         <relationship name="sport" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Sport" inverseName="bet" inverseEntity="Sport" syncable="YES"/>
     </entity>
     <entity name="Bookie" representedClassName="Bookie" syncable="YES">
@@ -27,6 +27,7 @@
         <attribute name="odds" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="placeterms" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="bet" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bet" inverseName="selections" inverseEntity="Bet" syncable="YES"/>
         <relationship name="bookie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookie" inverseName="selection" inverseEntity="Bookie" syncable="YES"/>
         <relationship name="multiple" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Multiple" inverseName="selections" inverseEntity="Multiple" syncable="YES"/>
         <relationship name="sport" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Sport" inverseName="selection" inverseEntity="Sport" syncable="YES"/>
@@ -40,8 +41,8 @@
         <element name="Bet" positionX="160" positionY="192" width="128" height="135"/>
         <element name="Bookie" positionX="153" positionY="27" width="128" height="75"/>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="Sport" positionX="324" positionY="144" width="128" height="75"/>
         <element name="Multiple" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="Selection" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Selection" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Sport" positionX="324" positionY="144" width="128" height="75"/>
     </elements>
 </model>

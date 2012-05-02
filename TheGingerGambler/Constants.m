@@ -14,6 +14,7 @@
 NSString* const BetCellName = @"BetCell";
 NSString* const SportCellName = @"SportCell";
 NSString* const BookieCellName = @"BookieCell";
+NSString* const SelectionCellName = @"SelectionCell";
 
 /* Entities */
 NSString* const SportEntityName = @"Sport";
@@ -22,9 +23,18 @@ NSString* const BetEntityName = @"Bet";
 NSString* const SelectionEntityName = @"Selection";
 
 /* Segues */
-NSString* const EnterPriceAndOddsSegue = @"EnterPriceAndOdds";
 NSString* const PickBookieSegue = @"PickBookie";
 NSString* const PickSportSegue = @"PickSport";
 NSString* const PickBetSegue = @"PickBet";
+NSString* const PickSelectionsSegue = @"PickSelection";
+
+/* View */
+NSString* const CategoryAdderView = @"CategoryAdder";
+NSString* const SelectionAdderView = @"SelectionAdder";
+
+/* Selection Cell */
+NSString* const DescriptionKey = @"description";
+NSString* const OddsKey = @"odds";
+NSString* const PlaceTermsKey = @"placeTerms";
 
 @end

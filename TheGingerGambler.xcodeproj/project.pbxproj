@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7037DDC515506B9F00DC5349 /* SelectionAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */; };
+		7037DDC81550742C00DC5349 /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */; };
+		708FAF921550B35600C891E4 /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */; };
 		70CE0CF515276E9400F2F4EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CF415276E9300F2F4EF /* Constants.m */; };
 		70CE0CF81527772600F2F4EF /* DatabasePopulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CF71527772600F2F4EF /* DatabasePopulator.m */; };
 		70CE0CFE1527786900F2F4EF /* ModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CFD1527786900F2F4EF /* ModelFactory.m */; };
@@ -41,8 +44,7 @@
 		DEC4BAD41529E38400F7E25C /* TheGingerGambler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEC4BAD21529E38400F7E25C /* TheGingerGambler.xcdatamodeld */; };
 		DEEF97A81545F1330043D830 /* Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF97A71545F1330043D830 /* Selection.m */; };
 		DEEF97AB1545F1510043D830 /* Multiple.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF97AA1545F1510043D830 /* Multiple.m */; };
-		DEFA728E1549DE4B00F46356 /* SelectionAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFA728D1549DE4A00F46356 /* SelectionAdderViewController.m */; };
-		DEFA72961549F31400F46356 /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFA72951549F31400F46356 /* SelectionTableViewCell.m */; };
+		DEFA728E1549DE4B00F46356 /* SelectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFA728D1549DE4A00F46356 /* SelectionsViewController.m */; };
 		DEFE1CE8152CD92E00C61305 /* NumberManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFE1CE7152CD92E00C61305 /* NumberManipulator.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7037DDC315506B9E00DC5349 /* SelectionAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionAdderViewController.h; sourceTree = "<group>"; };
+		7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionAdderViewController.m; sourceTree = "<group>"; };
+		7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionTableViewCell.m; sourceTree = "<group>"; };
+		7037DDC71550742C00DC5349 /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
+		708FAF961550B68F00C891E4 /* DictionaryPopulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryPopulator.h; sourceTree = "<group>"; };
 		70CE0CF115276DB700F2F4EF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		70CE0CF415276E9300F2F4EF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		70CE0CF61527772600F2F4EF /* DatabasePopulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabasePopulator.h; sourceTree = "<group>"; };
@@ -115,10 +122,8 @@
 		DEEF97A71545F1330043D830 /* Selection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Selection.m; sourceTree = "<group>"; };
 		DEEF97A91545F1510043D830 /* Multiple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multiple.h; sourceTree = "<group>"; };
 		DEEF97AA1545F1510043D830 /* Multiple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Multiple.m; sourceTree = "<group>"; };
-		DEFA728C1549DE4A00F46356 /* SelectionAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionAdderViewController.h; sourceTree = "<group>"; };
-		DEFA728D1549DE4A00F46356 /* SelectionAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionAdderViewController.m; sourceTree = "<group>"; };
-		DEFA72941549F31400F46356 /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
-		DEFA72951549F31400F46356 /* SelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionTableViewCell.m; sourceTree = "<group>"; };
+		DEFA728C1549DE4A00F46356 /* SelectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionsViewController.h; sourceTree = "<group>"; };
+		DEFA728D1549DE4A00F46356 /* SelectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionsViewController.m; sourceTree = "<group>"; };
 		DEFE1CE6152CD92E00C61305 /* NumberManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberManipulator.h; sourceTree = "<group>"; };
 		DEFE1CE7152CD92E00C61305 /* NumberManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberManipulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,6 +273,8 @@
 		DEB70977151915C10006BD83 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */,
+				7037DDC71550742C00DC5349 /* SelectionTableViewCell.h */,
 				DE525A831523A3F50054B5FC /* PriceOddsViewController.h */,
 				DE525A841523A3F60054B5FC /* PriceOddsViewController.m */,
 				DE5E7375151BC3FE00F60FBF /* BetPickerViewController.h */,
@@ -291,10 +298,11 @@
 				DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */,
 				DE865AEA152A373D0067734F /* WinsLossesViewController.h */,
 				DE865AEB152A373D0067734F /* WinsLossesViewController.m */,
-				DEFA728C1549DE4A00F46356 /* SelectionAdderViewController.h */,
-				DEFA728D1549DE4A00F46356 /* SelectionAdderViewController.m */,
-				DEFA72941549F31400F46356 /* SelectionTableViewCell.h */,
-				DEFA72951549F31400F46356 /* SelectionTableViewCell.m */,
+				DEFA728C1549DE4A00F46356 /* SelectionsViewController.h */,
+				DEFA728D1549DE4A00F46356 /* SelectionsViewController.m */,
+				7037DDC315506B9E00DC5349 /* SelectionAdderViewController.h */,
+				7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */,
+				708FAF961550B68F00C891E4 /* DictionaryPopulator.h */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -406,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				708FAF921550B35600C891E4 /* SelectionTableViewCell.m in Sources */,
 				DEB7092A151113080006BD83 /* main.m in Sources */,
 				DEB7092E151113080006BD83 /* AppDelegate.m in Sources */,
 				DEB70937151113090006BD83 /* MasterViewController.m in Sources */,
@@ -429,8 +438,8 @@
 				DEFE1CE8152CD92E00C61305 /* NumberManipulator.m in Sources */,
 				DEEF97A81545F1330043D830 /* Selection.m in Sources */,
 				DEEF97AB1545F1510043D830 /* Multiple.m in Sources */,
-				DEFA728E1549DE4B00F46356 /* SelectionAdderViewController.m in Sources */,
-				DEFA72961549F31400F46356 /* SelectionTableViewCell.m in Sources */,
+				DEFA728E1549DE4B00F46356 /* SelectionsViewController.m in Sources */,
+				7037DDC515506B9F00DC5349 /* SelectionAdderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEB70950151113090006BD83 /* TheGingerGamblerTests.m in Sources */,
+				7037DDC81550742C00DC5349 /* SelectionTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

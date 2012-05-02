@@ -10,7 +10,7 @@
 @implementation Bet
 
 @dynamic amount;
-@dynamic odds;
+@dynamic selections;
 @dynamic name;
 @dynamic bookie;
 @dynamic sport;
@@ -20,7 +20,7 @@
 {
     NSString* possibleName = [self primitiveValueForKey:@"name"];
     if (possibleName == nil) {
-        return [NSString stringWithFormat:@"%@ - %@ - %@ - %@", [[self bookie] name], [[self sport] name], [self odds], [self amount]];
+        return [NSString stringWithFormat:@"%@ - %@ - %@ - %@", [[self bookie] name], [[self sport] name], [self amount]];
     }
     return possibleName;
 }

@@ -25,9 +25,9 @@
 
 @property (strong) NSMutableArray* entities;
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath entityCell:(NSString*)name;
 - (void)viewDidLoadWithEntity:(NSString*)name;
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath withEntityName:(NSString*)entityName;
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 
 @end

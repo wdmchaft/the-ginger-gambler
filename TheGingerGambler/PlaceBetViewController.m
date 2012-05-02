@@ -102,12 +102,11 @@
     self.bookieSelect.textLabel.text = [bookie name];
 }
 
-- (void) enterPrice:(NSDecimalNumber*)price withOdds:(NSDecimalNumber*)odds
+- (void) submitSelections:(NSMutableArray *)selections
 {
-    DLog(@"Price and odds set %@", [NSString stringWithFormat:@"%@ : %@", [price stringValue], [odds stringValue]]);
-    [bet setAmount:price];
-    [bet setOdds:odds];
-    self.priceOddsCell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", [price stringValue], [odds stringValue]];
+    DLog(@"%i Selections set", selections.count);
+    bet.selections = selections;
+    self.priceOddsCell.textLabel.text = [NSString stringWithFormat:@"%i Selections set", selections.count];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
@@ -117,9 +116,9 @@
         EditableTableViewController* editableTableController = (EditableTableViewController*)[segue destinationViewController];
         [editableTableController setDelegate:self]; 
     }
-    else if([[segue identifier] isEqualToString:EnterPriceAndOddsSegue])
+    else if([[segue identifier] isEqualToString:PickSelectionsSegue])
     {
-        PriceOddsViewController* priceOddsController = (PriceOddsViewController*)[segue destinationViewController];
+        SelectionsViewController* priceOddsController = (SelectionsViewController*)[segue destinationViewController];
         [priceOddsController setDelegate:self];
     }
 }

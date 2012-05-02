@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Category.h"
 
 @class Bookie, Sport;
 
-@interface Selection : NSManagedObject
+@interface Selection : NSManagedObject<Category>
 
 @property (nonatomic, retain) NSDecimalNumber* odds;
 @property (nonatomic, retain) NSString* name;

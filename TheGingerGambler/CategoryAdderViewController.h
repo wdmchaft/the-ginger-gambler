@@ -2,11 +2,9 @@
 //  BookieAdderViewController.h
 //  TheGingerGambler
 //
-//  Created by Huawei R&D Mexico on 3/26/12.
-//  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
+//  Created by John Bower on 3/26/12.
+//  Copyright (c) 2012 John Bower. All rights reserved.
 //
-
-#define VIEW_CATEGORY_ADDER @"ViewCategoryAdder" 
 
 #import <UIKit/UIKit.h>
 
@@ -21,7 +19,7 @@
 
 @property (nonatomic, weak) id<AdderNotifications> delegate;
 
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField* nameTextField;
 
 - (IBAction)save:(id)sender;
 

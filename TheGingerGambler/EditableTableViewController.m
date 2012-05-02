@@ -2,14 +2,16 @@
 //  BookiePickerViewController.m
 //  TheGingerGambler
 //
-//  Created by Huawei R&D Mexico on 3/20/12.
-//  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
+//  Created by John Bower on 3/20/12.
+//  Copyright (c) 2012 John Bower. All rights reserved.
 //
 
 #import "EditableTableViewController.h"
 #import "AppDelegate.h"
 #import "DatabaseManager.h"
 #import "CategoryAdderViewController.h"
+#import "SelectionTableViewCell.h"
+#import "Category.h"
 
 @implementation EditableTableViewController
 
@@ -98,10 +100,10 @@
     
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath entityCell:(NSString*)name 
+- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath 
 {
     
-    NSString* cellIdentifier = name;
+    NSString* cellIdentifier = @"Cell";
     
     BOOL addCell = (indexPath.row == self.entities.count);
     
@@ -110,10 +112,10 @@
         cellIdentifier = @"AddCell";
     }
     
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    SelectionTableViewCell* cell = (SelectionTableViewCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell == nil)
     {
-        cell =  [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell =  (SelectionTableViewCell*)[[SelectionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         if(!addCell)
         {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -126,11 +128,16 @@
     }
     else
     {
-        id category = [self.entities objectAtIndex:indexPath.row];
-        if([category respondsToSelector:@selector(name)])
+        id<Category> category = [self.entities objectAtIndex:indexPath.row];
+        if([category respondsToSelector:@selector(dictionify)])
+        {
+            [cell populateWithDictionary:[category dictionify]];
+        }
+        else
         {
             cell.textLabel.text = [category name];
         }
+        
     }
     
     // Configure the cell...
@@ -177,12 +184,12 @@
 }
 
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath withEntityName:(NSString*)entityName
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        NSManagedObject* bookieForDelete = [self.entities objectAtIndex:indexPath.row];
-        [DatabaseManager delete:bookieForDelete];
+        NSManagedObject* entityForDelete = [self.entities objectAtIndex:indexPath.row];
+        [DatabaseManager delete:entityForDelete];
         
         [self.entities removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -191,9 +198,8 @@
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) 
     {
-        CategoryAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:VIEW_CATEGORY_ADDER];
+        CategoryAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:CategoryAdderView];
         modalController.delegate = self;
-        modalController.title = entityName;
         [self presentModalViewController:modalController animated:YES];
     }   
 }
@@ -215,10 +221,5 @@
  */
 
 #pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self.navigationController popViewControllerAnimated:YES]; 
-}
 
 @end

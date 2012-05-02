@@ -1,34 +1,20 @@
 //
-//  SelectionAdderViewController.m
+//  BookieAdderViewController.m
 //  TheGingerGambler
 //
-//  Created by Huawei R&D Mexico on 4/26/12.
+//  Created by Huawei R&D Mexico on 3/26/12.
 //  Copyright (c) 2012 Huawei Technologies de Mexico. All rights reserved.
 //
 
 #import "SelectionAdderViewController.h"
-#import "SelectionTableViewCell.h"
-#import "ModelFactory.h"
-#import "Selection.h"
-
-@interface SelectionAdderViewController()
-
--(void) createNewSelection;
-@end
 
 @implementation SelectionAdderViewController
 
-@synthesize selections;
+@synthesize descriptionTextField;
+@synthesize oddsTextField;
+@synthesize placeTermsTextField;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) 
-    {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize delegate;
 
 - (void)didReceiveMemoryWarning
 {
@@ -40,44 +26,12 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.selections = [NSMutableArray array];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
 - (void)viewDidUnload
 {
+    self.descriptionTextField = nil;
     [super viewDidUnload];
-    self.selections = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -86,114 +40,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (IBAction)save:(id)sender 
 {
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.selections.count + 2;
-}
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString* CellIdentifier = @"SelectionTableViewCell";
-    
-    
-    SelectionTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier ];
-    if (cell == nil) 
+    if([[self delegate] respondsToSelector:@selector(add:)])
     {
-        cell = [[SelectionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        [[self delegate] addDescription:self.descriptionTextField.text odds:[NSDecimalNumber decimalNumberWithString:self.oddsTextField.text] placeTerms:[NSDecimalNumber decimalNumberWithString:self.placeTermsTextField.text]];
     }
-    
-    if(indexPath.row < self.selections.count) 
-    {
-        [cell.oddsTextField setHidden:TRUE];
-        [cell.placeTermsTextField setHidden:TRUE];
-        [cell.descriptionTextField setHidden:TRUE];
-        [cell.addSelectionLabel setHidden:TRUE];
-    }
-    else if (self.selections.count == indexPath.row) 
-    {
-        [cell.oddsValueLabel setHidden:TRUE];
-        [cell.placeTermsValueLabel setHidden:TRUE];
-        [cell.addSelectionLabel setHidden:TRUE];
-    }      
-    else
-    {
-        [cell.oddsTextField setHidden:TRUE];
-        [cell.placeTermsTextField setHidden:TRUE];
-        [cell.descriptionTextField setHidden:TRUE];
-        [cell.oddsValueLabel setHidden:TRUE];
-        [cell.placeTermsValueLabel setHidden:TRUE];
-        [cell.descriptionLabel setHidden:TRUE];
-        [cell.oddsLabel setHidden:TRUE];
-        [cell.placeTermsLabel setHidden:TRUE];
-    }
-    return cell;
+    [self dismissModalViewControllerAnimated:YES];
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
-{
-    if(indexPath.row == self.selections.count)
-    {
-        NSIndexPath* selectionPath = [[NSIndexPath alloc] initWithIndex:indexPath.row - 1];
-        SelectionTableViewCell* cell = (SelectionTableViewCell*)[tableView cellForRowAtIndexPath:selectionPath]; 
-        Selection* selection = [ModelFactory createSelection];
-        selection.odds = [NSDecimalNumber decimalNumberWithString:cell.oddsTextField.text];
-        selection.name = cell.descriptionTextField.text;
-        selection.placeterms = [NSDecimalNumber decimalNumberWithString:cell.placeTermsTextField.text];
-    }
-}
-
--(void) createNewSelection
-{
-    
-}
-
 @end

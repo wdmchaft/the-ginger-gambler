@@ -11,5 +11,6 @@
 @protocol Category <NSObject>
 
 - (NSString*) name; 
+- (NSDictionary*) dictionify; 
 
 @end

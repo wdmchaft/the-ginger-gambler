@@ -13,14 +13,10 @@
 @synthesize descriptionLabel;
 @synthesize oddsLabel;
 @synthesize placeTermsLabel;
-@synthesize descriptionTextField;
-@synthesize oddsTextField;
-@synthesize placeTermsTextField;
 @synthesize placeTermsValueLabel;
 @synthesize oddsValueLabel;
-@synthesize addSelectionLabel;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -34,6 +30,13 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void) populateWithDictionary:(NSDictionary*)dictionary
+{
+    self.descriptionLabel.text = [dictionary objectForKey:DescriptionKey];
+    self.oddsValueLabel.text = [[dictionary objectForKey:OddsKey] stringValue];
+    self.placeTermsValueLabel.text = [[dictionary objectForKey:PlaceTermsKey] stringValue];
 }
 
 @end
