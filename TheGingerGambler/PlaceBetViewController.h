@@ -7,19 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EditableTableViewController.h"
-#import "PriceOddsViewController.h"
 #import "SelectionsViewController.h"
+#import "CategorySelectorReceiver.h"
+#import "StakeAdderViewController.h"
 
 @class Bet;
 
-@interface PlaceBetViewController : UITableViewController<CategorySelectorNotifications, SelectionsSubmitNotifications>{
+@interface PlaceBetViewController : UITableViewController<CategorySelectorReceiver, SelectionsAddedReceiver, StakeSubmitReceiver>{
     Bet* bet;
 }
 
 @property (weak, nonatomic) IBOutlet UITableViewCell* bookieSelect;
 @property (weak, nonatomic) IBOutlet UITableViewCell* sportSelect;
 @property (weak, nonatomic) IBOutlet UITableViewCell* priceOddsCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *stakeCell;
 
 - (IBAction)betButton:(id)sender;
 

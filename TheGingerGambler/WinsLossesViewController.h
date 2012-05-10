@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EditableTableViewController.h"
-#import "PriceOddsViewController.h"
+#import "CategorySelectorReceiver.h"
 
-@interface WinsLossesViewController : UITableViewController<CategorySelectorNotifications>
+@interface WinsLossesViewController : UITableViewController<CategorySelectorReceiver>
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *sportSelect;
 @property (weak, nonatomic) IBOutlet UITableViewCell *bookieSelect;

@@ -7,6 +7,8 @@
 //
 
 #import "WinsLossesViewController.h"
+#import "BookiePickerViewController.h"
+#import "SportPickerViewController.h"
 #import "DatabaseManager.h"
 #import "ModelFactory.h"
 #import "Bookie.h"
@@ -116,9 +118,14 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:PickBookieSegue] || [[segue identifier] isEqualToString:PickSportSegue])
+    if([[segue identifier] isEqualToString:PickBookieSegue])
     {
-        EditableTableViewController* editableTableController = (EditableTableViewController*)[segue destinationViewController];
+        BookiePickerViewController* editableTableController = (BookiePickerViewController*)[segue destinationViewController];
+        [editableTableController setDelegate:self]; 
+    }
+    else if([[segue identifier] isEqualToString:PickSportSegue])
+    {
+        SportPickerViewController* editableTableController = (SportPickerViewController*)[segue destinationViewController];
         [editableTableController setDelegate:self]; 
     }
 }
@@ -127,32 +134,16 @@
 {   
     NSFetchRequest* winsLossesRequest = [DatabaseManager fetchReqestForEntitiesWith:BetEntityName]; 
     [winsLossesRequest setPredicate:self.categoryPredicate];
-    [winsLossesRequest setResultType:NSDictionaryResultType];
-    NSArray* props = [NSArray arrayWithObjects:@"amount", @"odds", @"status", nil];
-    [winsLossesRequest setPropertiesToFetch:props];
     // amounts is an array of dictionaries, each hold the desired property values.
-    NSArray* amounts = [DatabaseManager executeFetchRequest:winsLossesRequest]; 
+    NSArray* bets = [DatabaseManager executeFetchRequest:winsLossesRequest]; 
     
     // Loop and sum the individual amounts
     NSDecimalNumber* total = [NSDecimalNumber zero];
     
     // Should do something with auto release pool
-    for (NSDictionary* result in amounts) 
+    for (Bet* bet in bets) 
     {
-        NSDecimalNumber* amount = [result valueForKeyPath:@"amount"];
-        if([[result valueForKeyPath:@"status"] intValue] == kWonState)
-        {
-            NSDecimalNumber* odds = [result valueForKeyPath:@"odds"];
-            
-            // do the unit rate multiplication and accumulate the result in the total
-            
-            NSDecimalNumber* betWinnings = [amount decimalNumberByMultiplyingBy:odds];   
-            total = [total decimalNumberByAdding:betWinnings];
-        }
-        else 
-        {
-            total = [total decimalNumberBySubtracting:amount];
-        }
+        total = [total decimalNumberByAdding:[bet profit]];
     }
     winsLossesCell.textLabel.text = [NumberManipulator formattedStringWithDecimal:total];
 }

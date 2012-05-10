@@ -10,10 +10,10 @@
 		7037DDC515506B9F00DC5349 /* SelectionAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */; };
 		7037DDC81550742C00DC5349 /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */; };
 		708FAF921550B35600C891E4 /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */; };
+		70921DEC155B1D6800B4FAE4 /* StakeAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70921DEB155B1D6400B4FAE4 /* StakeAdderViewController.m */; };
 		70CE0CF515276E9400F2F4EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CF415276E9300F2F4EF /* Constants.m */; };
 		70CE0CF81527772600F2F4EF /* DatabasePopulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CF71527772600F2F4EF /* DatabasePopulator.m */; };
 		70CE0CFE1527786900F2F4EF /* ModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CFD1527786900F2F4EF /* ModelFactory.m */; };
-		DE525A851523A3F60054B5FC /* PriceOddsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE525A841523A3F60054B5FC /* PriceOddsViewController.m */; };
 		DE5E7323151A621B00F60FBF /* SportPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7322151A621B00F60FBF /* SportPickerViewController.m */; };
 		DE5E7328151A639500F60FBF /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7327151A639500F60FBF /* DatabaseManager.m */; };
 		DE5E732B151A771500F60FBF /* SettleBetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5E732A151A771400F60FBF /* SettleBetViewController.m */; };
@@ -64,14 +64,15 @@
 		7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionTableViewCell.m; sourceTree = "<group>"; };
 		7037DDC71550742C00DC5349 /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
 		708FAF961550B68F00C891E4 /* DictionaryPopulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryPopulator.h; sourceTree = "<group>"; };
+		70921DE9155AFE4400B4FAE4 /* CategorySelectorReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategorySelectorReceiver.h; sourceTree = "<group>"; };
+		70921DEA155B1D5D00B4FAE4 /* StakeAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StakeAdderViewController.h; sourceTree = "<group>"; };
+		70921DEB155B1D6400B4FAE4 /* StakeAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StakeAdderViewController.m; sourceTree = "<group>"; };
 		70CE0CF115276DB700F2F4EF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		70CE0CF415276E9300F2F4EF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		70CE0CF61527772600F2F4EF /* DatabasePopulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabasePopulator.h; sourceTree = "<group>"; };
 		70CE0CF71527772600F2F4EF /* DatabasePopulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabasePopulator.m; sourceTree = "<group>"; };
 		70CE0CFC1527786900F2F4EF /* ModelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelFactory.h; sourceTree = "<group>"; };
 		70CE0CFD1527786900F2F4EF /* ModelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelFactory.m; sourceTree = "<group>"; };
-		DE525A831523A3F50054B5FC /* PriceOddsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceOddsViewController.h; sourceTree = "<group>"; };
-		DE525A841523A3F60054B5FC /* PriceOddsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceOddsViewController.m; sourceTree = "<group>"; };
 		DE5E7321151A621B00F60FBF /* SportPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportPickerViewController.h; sourceTree = "<group>"; };
 		DE5E7322151A621B00F60FBF /* SportPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportPickerViewController.m; sourceTree = "<group>"; };
 		DE5E7326151A639500F60FBF /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
@@ -275,8 +276,6 @@
 			children = (
 				7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */,
 				7037DDC71550742C00DC5349 /* SelectionTableViewCell.h */,
-				DE525A831523A3F50054B5FC /* PriceOddsViewController.h */,
-				DE525A841523A3F60054B5FC /* PriceOddsViewController.m */,
 				DE5E7375151BC3FE00F60FBF /* BetPickerViewController.h */,
 				DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */,
 				DEB7092C151113080006BD83 /* AppDelegate.h */,
@@ -303,6 +302,9 @@
 				7037DDC315506B9E00DC5349 /* SelectionAdderViewController.h */,
 				7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */,
 				708FAF961550B68F00C891E4 /* DictionaryPopulator.h */,
+				70921DE9155AFE4400B4FAE4 /* CategorySelectorReceiver.h */,
+				70921DEA155B1D5D00B4FAE4 /* StakeAdderViewController.h */,
+				70921DEB155B1D6400B4FAE4 /* StakeAdderViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -429,7 +431,6 @@
 				DE5E7377151BC3FE00F60FBF /* BetPickerViewController.m in Sources */,
 				DE64B016152115CC00B2E2E7 /* CategoryAdderViewController.m in Sources */,
 				DE64B01C1522502500B2E2E7 /* EditableTableViewController.m in Sources */,
-				DE525A851523A3F60054B5FC /* PriceOddsViewController.m in Sources */,
 				70CE0CF515276E9400F2F4EF /* Constants.m in Sources */,
 				70CE0CF81527772600F2F4EF /* DatabasePopulator.m in Sources */,
 				70CE0CFE1527786900F2F4EF /* ModelFactory.m in Sources */,
@@ -440,6 +441,7 @@
 				DEEF97AB1545F1510043D830 /* Multiple.m in Sources */,
 				DEFA728E1549DE4B00F46356 /* SelectionsViewController.m in Sources */,
 				7037DDC515506B9F00DC5349 /* SelectionAdderViewController.m in Sources */,
+				70921DEC155B1D6800B4FAE4 /* StakeAdderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

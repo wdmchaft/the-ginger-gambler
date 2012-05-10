@@ -276,6 +276,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="Ybv-19-Pbf" kind="push" identifier="PickStake" id="g2U-pA-iLG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -296,6 +299,7 @@
                         <outlet property="bookieSelect" destination="p3b-Qd-yL8" id="XtO-gd-mpE"/>
                         <outlet property="priceOddsCell" destination="pbt-qY-h9r" id="GXr-Tv-Q6d"/>
                         <outlet property="sportSelect" destination="Ysi-s5-8Uu" id="YLr-KC-L9q"/>
+                        <outlet property="stakeCell" destination="eYA-wb-W0f" id="QGZ-Mf-OXS"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -470,7 +474,7 @@
             </objects>
             <point key="canvasLocation" x="902" y="675"/>
         </scene>
-        <!--Bet Picker View Controller-->
+        <!--Bet Picker View Controller - Select Bet-->
         <scene sceneID="rDk-yV-NZC">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9j-Wd-dIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -480,7 +484,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="zTy-NQ-jSi" style="IBUITableViewCellStyleDefault" id="Ww6-Ey-eu6">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BetCell" textLabel="zTy-NQ-jSi" style="IBUITableViewCellStyleDefault" id="Ww6-Ey-eu6">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -504,7 +508,7 @@
                             <outlet property="delegate" destination="R9i-dE-LuV" id="WW9-KA-8pF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="CMW-Or-0pU"/>
+                    <navigationItem key="navigationItem" title="Select Bet" id="CMW-Or-0pU"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1339" y="675"/>
@@ -606,6 +610,45 @@
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
+        <!--Stake Adder View Controller - Stake-->
+        <scene sceneID="e2g-yG-F2P">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDb-YO-t7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Ybv-19-Pbf" customClass="StakeAdderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJJ-HP-tOc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3PH-k4-UXa">
+                                <rect key="frame" x="175" y="86" width="125" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" id="v8d-NE-k2X">
+                                <rect key="frame" x="20" y="91" width="82" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stake" id="hxE-7z-qBY">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="mOX-hr-CzT">
+                            <connections>
+                                <action selector="stakeSubmitButton:" destination="Ybv-19-Pbf" id="tug-t5-ZFz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="stakeTextField" destination="3PH-k4-UXa" id="I7C-vT-JKr"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1339" y="-1691"/>
+        </scene>
         <!--Selections View Controller - Selections-->
         <scene sceneID="Ntn-Nj-wkg">
             <objects>
@@ -675,13 +718,7 @@
                             <outlet property="delegate" destination="GVO-BD-aDs" id="UkR-Ls-j66"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Selections" id="7kN-Ls-rp7">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="MJp-uz-8Sm">
-                            <connections>
-                                <action selector="submitButton:" destination="GVO-BD-aDs" id="r4f-2c-cd5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Selections" id="7kN-Ls-rp7"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
@@ -763,92 +800,13 @@
             <point key="canvasLocation" x="1751" y="-1098"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BetPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BetPickerViewController.h"/>
-        </class>
-        <class className="BookiePickerViewController" superclassName="EditableTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BookiePickerViewController.h"/>
-        </class>
-        <class className="CategoryAdderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoryAdderViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="EditableTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditableTableViewController.h"/>
-        </class>
-        <class className="MasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="placeBetsTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="settleBetsTextField" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="winsLossesTextField" candidateClass="UITableViewCell"/>
-            </relationships>
-        </class>
-        <class className="PlaceBetViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlaceBetViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="betButton:"/>
-                <relationship kind="outlet" name="bookieSelect" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="priceOddsCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="sportSelect" candidateClass="UITableViewCell"/>
-            </relationships>
-        </class>
-        <class className="SelectionAdderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectionAdderViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="descriptionTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="oddsTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="placeTermsTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SelectionTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectionTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="oddsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="oddsValueLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="placeTermsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="placeTermsValueLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SelectionsViewController" superclassName="EditableTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectionsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="submitButton:"/>
-            </relationships>
-        </class>
-        <class className="SettleBetViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettleBetViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="setWonOrLossed:" candidateClass="UISegmentedControl"/>
-                <relationship kind="action" name="settleBetButton:"/>
-                <relationship kind="outlet" name="settleBetCell" candidateClass="UITableViewCell"/>
-            </relationships>
-        </class>
-        <class className="SportPickerViewController" superclassName="EditableTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SportPickerViewController.h"/>
-        </class>
-        <class className="WinsLossesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WinsLossesViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bookieSelect" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="sportSelect" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="winsLossesCell" candidateClass="UITableViewCell"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="41F-in-JNB"/>
-        <segue reference="jd2-p6-wHp"/>
+        <segue reference="YUS-bF-ARO"/>
+        <segue reference="Nqu-PY-8nF"/>
     </inferredMetricsTieBreakers>
 </document>

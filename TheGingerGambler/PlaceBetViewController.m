@@ -7,8 +7,12 @@
 //
 
 #import "PlaceBetViewController.h"
+#import "BookiePickerViewController.h"
+#import "SportPickerViewController.h"
+#import "StakeAdderViewController.h"
 #import "DatabaseManager.h"
 #import "ModelFactory.h"
+#import "NumberManipulator.h"
 #import "Bookie.h"
 #import "Sport.h"
 #import "Bet.h"
@@ -18,6 +22,7 @@
 @synthesize bookieSelect;
 @synthesize sportSelect;
 @synthesize priceOddsCell;
+@synthesize stakeCell;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -49,6 +54,7 @@
     [self setBookieSelect:nil];
     [self setSportSelect:nil];
     [self setPriceOddsCell:nil];
+    [self setStakeCell:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -102,24 +108,49 @@
     self.bookieSelect.textLabel.text = [bookie name];
 }
 
-- (void) submitSelections:(NSMutableArray *)selections
+- (void) submitSelections:(NSMutableArray*)selections
 {
+    if(!bet)
+    {
+        bet = [ModelFactory createBet];
+    }
     DLog(@"%i Selections set", selections.count);
-    bet.selections = selections;
+    bet.selections = [NSSet setWithArray:selections];
     self.priceOddsCell.textLabel.text = [NSString stringWithFormat:@"%i Selections set", selections.count];
+}
+
+- (void) submitStake:(NSDecimalNumber*)stake
+{
+    if(!bet)
+    {
+        bet = [ModelFactory createBet];
+    }
+    DLog(@"%@ Set stake with amount", stake);
+    bet.amount = stake;
+    self.stakeCell.textLabel.text = [NumberManipulator formattedStringWithDecimal:stake];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:PickBookieSegue] || [[segue identifier] isEqualToString:PickSportSegue])
+    if([[segue identifier] isEqualToString:PickBookieSegue])
     {
-        EditableTableViewController* editableTableController = (EditableTableViewController*)[segue destinationViewController];
+        BookiePickerViewController* editableTableController = (BookiePickerViewController*)[segue destinationViewController];
+        [editableTableController setDelegate:self]; 
+    }
+    else if([[segue identifier] isEqualToString:PickSportSegue])
+    {
+        SportPickerViewController* editableTableController = (SportPickerViewController*)[segue destinationViewController];
         [editableTableController setDelegate:self]; 
     }
     else if([[segue identifier] isEqualToString:PickSelectionsSegue])
     {
-        SelectionsViewController* priceOddsController = (SelectionsViewController*)[segue destinationViewController];
-        [priceOddsController setDelegate:self];
+        SelectionsViewController* selectionsViewController = (SelectionsViewController*)[segue destinationViewController];
+        [selectionsViewController setDelegate:self];
+    }
+    else if([[segue identifier] isEqualToString:PickStakeSegue])
+    {
+        StakeAdderViewController* stakesViewController = (StakeAdderViewController*)[segue destinationViewController];
+        [stakesViewController setDelegate:self];
     }
 }
 

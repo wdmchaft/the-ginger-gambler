@@ -7,6 +7,8 @@
 
 @implementation SelectionsViewController
 
+@synthesize delegate;
+
 - (void) addDescription:(NSString*)description odds:(NSDecimalNumber*)odds placeTerms:(NSDecimalNumber*)placeTerms
 {
     Selection* selection = [ModelFactory createSelection];
@@ -20,7 +22,8 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoadWithEntity:SelectionEntityName];
+    UIBarButtonItem* saveButton = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(submitButton:)];
+    [super viewDidLoadWithEntity:SelectionEntityName andButton:saveButton];
 }
 
 #pragma mark - Table view delegate
@@ -44,7 +47,8 @@
 
 - (IBAction)submitButton:(id)sender 
 {
-    
+    [self.delegate submitSelections:self.entities];
+    [self.navigationController popViewControllerAnimated:YES]; 
 }
 
 @end

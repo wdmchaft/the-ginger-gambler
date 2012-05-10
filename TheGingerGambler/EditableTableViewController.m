@@ -16,7 +16,6 @@
 @implementation EditableTableViewController
 
 @synthesize entities = _entities;
-@synthesize delegate;
 
 - (void) add:(NSString *)name
 {
@@ -50,6 +49,19 @@
     
     // displays an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.entities = [DatabaseManager entitiesFor:name];
+}
+
+- (void)viewDidLoadWithEntity:(NSString*)name andButton:(UIBarButtonItem*)button
+{
+    [super viewDidLoad];
+    
+    // Preserves selection between presentations.
+    self.clearsSelectionOnViewWillAppear = NO;
+    
+    // displays an Edit button in the navigation bar for this view controller.
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:self.editButtonItem, button, nil];
     
     self.entities = [DatabaseManager entitiesFor:name];
 }

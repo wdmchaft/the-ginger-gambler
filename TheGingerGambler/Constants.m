@@ -27,6 +27,7 @@ NSString* const PickBookieSegue = @"PickBookie";
 NSString* const PickSportSegue = @"PickSport";
 NSString* const PickBetSegue = @"PickBet";
 NSString* const PickSelectionsSegue = @"PickSelection";
+NSString* const PickStakeSegue = @"PickStake";
 
 /* View */
 NSString* const CategoryAdderView = @"CategoryAdder";

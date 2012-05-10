@@ -35,6 +35,7 @@ extern NSString* const PickSelectionsSegue;
 extern NSString* const PickBookieSegue;
 extern NSString* const PickSportSegue;
 extern NSString* const PickBetSegue;
+extern NSString* const PickStakeSegue;
 
 /* View */
 extern NSString* const CategoryAdderView;

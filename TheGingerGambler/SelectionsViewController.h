@@ -10,7 +10,7 @@
 #import "EditableTableViewController.h"
 #import "SelectionAdderViewController.h"
 
-@protocol SelectionsSubmitNotifications <NSObject>
+@protocol SelectionsAddedReceiver <NSObject>
 
 - (void) submitSelections:(NSMutableArray*) selections;
 
@@ -18,6 +18,6 @@
 
 @interface SelectionsViewController : EditableTableViewController <SelectionNotifications> 
 
-- (IBAction)submitButton:(id)sender;
+@property (nonatomic, weak) id<SelectionsAddedReceiver> delegate;
 
 @end

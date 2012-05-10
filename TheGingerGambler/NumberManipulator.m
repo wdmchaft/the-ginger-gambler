@@ -10,7 +10,7 @@
 
 @implementation NumberManipulator
 
-+ (NSString *)formattedStringWithDecimal:(NSDecimalNumber *)decimalNumber
++ (NSString*)formattedStringWithDecimal:(NSDecimalNumber *)decimalNumber
 {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setMaximumFractionDigits:2]; //two deimal spaces

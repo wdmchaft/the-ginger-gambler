@@ -12,6 +12,8 @@
 
 @implementation SportPickerViewController
 
+@synthesize delegate;
+
 - (void) add:(NSString *)name
 {
     Sport* sport = [[Sport alloc] initWithEntity:[DatabaseManager entityDescriptionFor:SportEntityName] insertIntoManagedObjectContext:[DatabaseManager context]];
@@ -31,9 +33,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.delegate selectBookie:[self.entities objectAtIndex:indexPath.row]];
+    [self.delegate selectSport:[self.entities objectAtIndex:indexPath.row]];
     [self.navigationController popViewControllerAnimated:YES]; 
-    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
 @end
