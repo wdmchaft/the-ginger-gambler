@@ -7,6 +7,7 @@
         <relationship name="bookie" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookie" inverseName="bet" inverseEntity="Bookie" syncable="YES"/>
         <relationship name="selections" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Selection" inverseName="bet" inverseEntity="Selection" syncable="YES"/>
         <relationship name="sport" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Sport" inverseName="bet" inverseEntity="Sport" syncable="YES"/>
+        <relationship name="unitbets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UnitBet" inverseName="bet" inverseEntity="UnitBet" syncable="YES"/>
     </entity>
     <entity name="Bookie" representedClassName="Bookie" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -37,12 +38,18 @@
         <relationship name="bet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bet" inverseName="sport" inverseEntity="Bet" syncable="YES"/>
         <relationship name="selection" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Selection" inverseName="sport" inverseEntity="Selection" syncable="YES"/>
     </entity>
+    <entity name="UnitBet" representedClassName="UnitBet" syncable="YES">
+        <attribute name="stake" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="unitbet" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="bet" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bet" inverseName="unitbets" inverseEntity="Bet" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Bet" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Bet" positionX="160" positionY="192" width="128" height="150"/>
         <element name="Bookie" positionX="153" positionY="27" width="128" height="75"/>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
         <element name="Multiple" positionX="160" positionY="192" width="128" height="105"/>
         <element name="Selection" positionX="160" positionY="192" width="128" height="165"/>
         <element name="Sport" positionX="324" positionY="144" width="128" height="75"/>
+        <element name="UnitBet" positionX="160" positionY="192" width="128" height="90"/>
     </elements>
 </model>

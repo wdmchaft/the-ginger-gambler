@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "SelectionsViewController.h"
 #import "CategorySelectorReceiver.h"
-#import "StakeAdderViewController.h"
+#import "StakeViewController.h"
 
 @class Bet;
 
-@interface PlaceBetViewController : UITableViewController<CategorySelectorReceiver, SelectionsAddedReceiver, StakeSubmitReceiver>{
+@interface PlaceBetViewController : UITableViewController<CategorySelectorReceiver, SelectionsAddedReceiver>{
     Bet* bet;
 }
 

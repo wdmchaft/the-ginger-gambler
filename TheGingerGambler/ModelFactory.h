@@ -10,10 +10,12 @@
 
 @class Bet;
 @class Selection;
+@class UnitBet;
 
 @interface ModelFactory : NSObject
 
 + (Bet*) createBet;
 + (Selection*) createSelection;
++ (UnitBet*) createUnitBet;
 
 @end

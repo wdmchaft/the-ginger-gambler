@@ -29,6 +29,7 @@ extern NSString* const BetEntityName;
 extern NSString* const SportEntityName;
 extern NSString* const BookieEntityName;
 extern NSString* const SelectionEntityName;
+extern NSString* const UnitBetEntityName;
 
 /* Segues */
 extern NSString* const PickSelectionsSegue;

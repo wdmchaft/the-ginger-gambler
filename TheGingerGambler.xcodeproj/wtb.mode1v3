@@ -208,13 +208,15 @@
 		<dict>
 			<key>ChosenToolbarItems</key>
 			<array>
-				<string>active-combo-popup</string>
+				<string>active-target-popup</string>
+				<string>active-buildstyle-popup</string>
 				<string>action</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
-				<string>debugger-enable-breakpoints</string>
-				<string>build-and-go</string>
+				<string>buildOrClean</string>
+				<string>build-and-goOrGo</string>
 				<string>com.apple.ide.PBXToolbarStopButton</string>
 				<string>get-info</string>
+				<string>toggle-editor</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
 				<string>com.apple.pbx.toolbar.searchfield</string>
 			</array>
@@ -323,12 +325,12 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7022331415215219004E8BC4</string>
+										<string>70E449E4155BF55A0005C2DF</string>
 										<key>history</key>
 										<array>
 											<string>707029C715168EA600A09AD6</string>
 											<string>707029C815168EA600A09AD6</string>
-											<string>707029CA15168EA600A09AD6</string>
+											<string>7022331415215219004E8BC4</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -388,9 +390,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>7022331115215215004E8BC4</string>
+				<string>70E449E5155BF55A0005C2DF</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>7022331215215215004E8BC4</string>
+				<string>70E449E6155BF55A0005C2DF</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -528,7 +530,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>707029CE15168EA600A09AD6</string>
 		<string>/Users/wtb/dev/the-ginger-gambler/TheGingerGambler.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

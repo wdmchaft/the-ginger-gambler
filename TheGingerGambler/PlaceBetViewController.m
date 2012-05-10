@@ -9,7 +9,7 @@
 #import "PlaceBetViewController.h"
 #import "BookiePickerViewController.h"
 #import "SportPickerViewController.h"
-#import "StakeAdderViewController.h"
+#import "StakeViewController.h"
 #import "DatabaseManager.h"
 #import "ModelFactory.h"
 #import "NumberManipulator.h"
@@ -149,8 +149,8 @@
     }
     else if([[segue identifier] isEqualToString:PickStakeSegue])
     {
-        StakeAdderViewController* stakesViewController = (StakeAdderViewController*)[segue destinationViewController];
-        [stakesViewController setDelegate:self];
+        StakeViewController* stakeViewController = (StakeViewController*)[segue destinationViewController];
+        stakeViewController.bet = bet;
     }
 }
 

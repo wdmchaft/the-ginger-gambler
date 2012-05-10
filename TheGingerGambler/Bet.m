@@ -17,6 +17,7 @@
 @dynamic bookie;
 @dynamic sport;
 @dynamic status;
+@dynamic unitBets;
 
 - (NSString*) name
 {

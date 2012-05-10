@@ -21,9 +21,6 @@
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
-		dataTipCustomDataFormattersEnabled = 1;
-		dataTipShowTypeColumn = 1;
-		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -33,7 +30,6 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = TheGingerGambler;
-		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
@@ -71,17 +67,18 @@
 		vrLen = 565;
 		vrLoc = 0;
 	};
-	707029CA15168EA600A09AD6 /* PBXTextBookmark */ = {
+	70E449E4155BF55A0005C2DF /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = DEB70930151113080006BD83 /* en */;
 		name = "MainStoryboard.storyboard: 1";
 		rLen = 0;
 		rLoc = 0;
 		rType = 0;
-		vrLen = 3608;
+		vrLen = 3030;
 		vrLoc = 0;
 	};
 	DEB7090E151113070006BD83 /* Project object */ = {
+		activeArchitecture = i386;
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 707029B215168D5600A09AD6 /* TheGingerGambler */;
 		activeTarget = DEB70916151113080006BD83 /* TheGingerGambler */;
@@ -112,14 +109,14 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 354505232;
-			PBXWorkspaceStateSaveDate = 354505232;
+			PBXPerProjectTemplateStateSaveDate = 358348108;
+			PBXWorkspaceStateSaveDate = 358348108;
 		};
 		perUserProjectItems = {
 			7022331415215219004E8BC4 /* PBXTextBookmark */ = 7022331415215219004E8BC4 /* PBXTextBookmark */;
 			707029C715168EA600A09AD6 /* PBXTextBookmark */ = 707029C715168EA600A09AD6 /* PBXTextBookmark */;
 			707029C815168EA600A09AD6 /* PBXTextBookmark */ = 707029C815168EA600A09AD6 /* PBXTextBookmark */;
-			707029CA15168EA600A09AD6 /* PBXTextBookmark */ = 707029CA15168EA600A09AD6 /* PBXTextBookmark */;
+			70E449E4155BF55A0005C2DF /* PBXTextBookmark */ = 70E449E4155BF55A0005C2DF /* PBXTextBookmark */;
 		};
 		sourceControlManager = 707029C415168D7800A09AD6 /* Source Control */;
 		userBuildSettings = {
@@ -133,9 +130,9 @@
 	};
 	DEB70930151113080006BD83 /* en */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2406, 7189}}";
+			sepNavIntBoundsRect = "{{0, 0}, {2064, 16996}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 3643}";
+			sepNavVisRange = "{0, 3030}";
 			sepNavWindowFrame = "{{15, 63}, {750, 710}}";
 		};
 	};

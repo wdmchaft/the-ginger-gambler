@@ -10,7 +10,8 @@
 #import <CoreData/CoreData.h>
 #import "Category.h"
 
-@class Bookie, Sport;
+@class Bookie;
+@class Sport;
 
 @interface Selection : NSManagedObject<Category>
 

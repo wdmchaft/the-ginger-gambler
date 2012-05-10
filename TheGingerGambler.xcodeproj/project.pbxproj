@@ -3,14 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7037DDC515506B9F00DC5349 /* SelectionAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */; };
 		7037DDC81550742C00DC5349 /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */; };
 		708FAF921550B35600C891E4 /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */; };
-		70921DEC155B1D6800B4FAE4 /* StakeAdderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70921DEB155B1D6400B4FAE4 /* StakeAdderViewController.m */; };
+		70921DF2155B4AFD00B4FAE4 /* StakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70921DF1155B4AFC00B4FAE4 /* StakeCell.m */; };
+		70921DF8155B4D3C00B4FAE4 /* StakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70921DF7155B4D3A00B4FAE4 /* StakeViewController.m */; };
+		70921DFB155B4F2B00B4FAE4 /* UnitBet.m in Sources */ = {isa = PBXBuildFile; fileRef = 70921DFA155B4F2B00B4FAE4 /* UnitBet.m */; };
 		70CE0CF515276E9400F2F4EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CF415276E9300F2F4EF /* Constants.m */; };
 		70CE0CF81527772600F2F4EF /* DatabasePopulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CF71527772600F2F4EF /* DatabasePopulator.m */; };
 		70CE0CFE1527786900F2F4EF /* ModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE0CFD1527786900F2F4EF /* ModelFactory.m */; };
@@ -65,8 +67,12 @@
 		7037DDC71550742C00DC5349 /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
 		708FAF961550B68F00C891E4 /* DictionaryPopulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryPopulator.h; sourceTree = "<group>"; };
 		70921DE9155AFE4400B4FAE4 /* CategorySelectorReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategorySelectorReceiver.h; sourceTree = "<group>"; };
-		70921DEA155B1D5D00B4FAE4 /* StakeAdderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StakeAdderViewController.h; sourceTree = "<group>"; };
-		70921DEB155B1D6400B4FAE4 /* StakeAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StakeAdderViewController.m; sourceTree = "<group>"; };
+		70921DF0155B4AFB00B4FAE4 /* StakeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StakeCell.h; sourceTree = "<group>"; };
+		70921DF1155B4AFC00B4FAE4 /* StakeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StakeCell.m; sourceTree = "<group>"; };
+		70921DF6155B4D3A00B4FAE4 /* StakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StakeViewController.h; sourceTree = "<group>"; };
+		70921DF7155B4D3A00B4FAE4 /* StakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StakeViewController.m; sourceTree = "<group>"; };
+		70921DF9155B4F2B00B4FAE4 /* UnitBet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitBet.h; sourceTree = "<group>"; };
+		70921DFA155B4F2B00B4FAE4 /* UnitBet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitBet.m; sourceTree = "<group>"; };
 		70CE0CF115276DB700F2F4EF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		70CE0CF415276E9300F2F4EF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		70CE0CF61527772600F2F4EF /* DatabasePopulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabasePopulator.h; sourceTree = "<group>"; };
@@ -101,7 +107,7 @@
 		DEB7092B151113080006BD83 /* TheGingerGambler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheGingerGambler-Prefix.pch"; sourceTree = "<group>"; };
 		DEB7092C151113080006BD83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DEB7092D151113080006BD83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DEB70930151113080006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DEB70930151113080006BD83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DEB70935151113090006BD83 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		DEB70936151113090006BD83 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		DEB70940151113090006BD83 /* TheGingerGamblerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheGingerGamblerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				DEC4BAD21529E38400F7E25C /* TheGingerGambler.xcdatamodeld */,
+				70921DF9155B4F2B00B4FAE4 /* UnitBet.h */,
+				70921DFA155B4F2B00B4FAE4 /* UnitBet.m */,
 				DEEF97A91545F1510043D830 /* Multiple.h */,
 				DEEF97AA1545F1510043D830 /* Multiple.m */,
 				DEEF97A61545F1330043D830 /* Selection.h */,
@@ -303,8 +311,10 @@
 				7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */,
 				708FAF961550B68F00C891E4 /* DictionaryPopulator.h */,
 				70921DE9155AFE4400B4FAE4 /* CategorySelectorReceiver.h */,
-				70921DEA155B1D5D00B4FAE4 /* StakeAdderViewController.h */,
-				70921DEB155B1D6400B4FAE4 /* StakeAdderViewController.m */,
+				70921DF0155B4AFB00B4FAE4 /* StakeCell.h */,
+				70921DF1155B4AFC00B4FAE4 /* StakeCell.m */,
+				70921DF6155B4D3A00B4FAE4 /* StakeViewController.h */,
+				70921DF7155B4D3A00B4FAE4 /* StakeViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -358,8 +368,7 @@
 				ORGANIZATIONNAME = "Huawei Technologies de Mexico";
 			};
 			buildConfigurationList = DEB70911151113070006BD83 /* Build configuration list for PBXProject "TheGingerGambler" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -441,7 +450,9 @@
 				DEEF97AB1545F1510043D830 /* Multiple.m in Sources */,
 				DEFA728E1549DE4B00F46356 /* SelectionsViewController.m in Sources */,
 				7037DDC515506B9F00DC5349 /* SelectionAdderViewController.m in Sources */,
-				70921DEC155B1D6800B4FAE4 /* StakeAdderViewController.m in Sources */,
+				70921DF2155B4AFD00B4FAE4 /* StakeCell.m in Sources */,
+				70921DF8155B4D3C00B4FAE4 /* StakeViewController.m in Sources */,
+				70921DFB155B4F2B00B4FAE4 /* UnitBet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,6 +21,7 @@ NSString* const SportEntityName = @"Sport";
 NSString* const BookieEntityName = @"Bookie";
 NSString* const BetEntityName = @"Bet";
 NSString* const SelectionEntityName = @"Selection";
+NSString* const UnitBetEntityName = @"UnitBet";
 
 /* Segues */
 NSString* const PickBookieSegue = @"PickBookie";

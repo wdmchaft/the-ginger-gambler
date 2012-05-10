@@ -276,9 +276,6 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="Ybv-19-Pbf" kind="push" identifier="PickStake" id="g2U-pA-iLG"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -610,44 +607,82 @@
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
-        <!--Stake Adder View Controller - Stake-->
-        <scene sceneID="e2g-yG-F2P">
+        <!--Stake View Controller-->
+        <scene sceneID="zMq-HH-eKg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WDb-YO-t7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Ybv-19-Pbf" customClass="StakeAdderViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LJJ-HP-tOc">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3PH-k4-UXa">
-                                <rect key="frame" x="175" y="86" width="125" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" id="v8d-NE-k2X">
-                                <rect key="frame" x="20" y="91" width="82" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Stake" id="hxE-7z-qBY">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="mOX-hr-CzT">
-                            <connections>
-                                <action selector="stakeSubmitButton:" destination="Ybv-19-Pbf" id="tug-t5-ZFz"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="stakeTextField" destination="3PH-k4-UXa" id="I7C-vT-JKr"/>
-                    </connections>
-                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Swe-GH-7BT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="cd7-ta-9FR" customClass="StakeViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="132" sectionHeaderHeight="22" sectionFooterHeight="22" id="Plh-I5-OlD">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gWv-rQ-TAh">
+                            <rect key="frame" x="0.0" y="154" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Submit" id="uze-ak-et8">
+                                    <connections>
+                                        <action selector="submitUnitBet:" destination="cd7-ta-9FR" id="Fim-wa-bD4"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" showsReorderControl="YES" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="132" id="I3z-bz-k4k" customClass="StakeCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="132"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="XKv-hZ-rkl">
+                                            <rect key="frame" x="192" y="20" width="108" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="bet"/>
+                                                <segment title="stick"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="betStickSwitched:" destination="I3z-bz-k4k" eventType="valueChanged" id="vTa-7R-VMz"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Multiple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" id="TPn-XB-YNR">
+                                            <rect key="frame" x="35" y="31" width="80" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Slr-r5-Gjz">
+                                            <rect key="frame" x="192" y="80" width="108" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" id="Jd2-76-keJ">
+                                            <rect key="frame" x="98" y="85" width="59" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="multipleLabel" destination="TPn-XB-YNR" id="ueS-v5-TvI"/>
+                                    <outlet property="stakeTextField" destination="Slr-r5-Gjz" id="IbT-8Q-88k"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cd7-ta-9FR" id="6yE-F9-qyt"/>
+                            <outlet property="delegate" destination="cd7-ta-9FR" id="26Z-vh-iY3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1339" y="-1691"/>
+            <point key="canvasLocation" x="1339" y="-1699"/>
         </scene>
         <!--Selections View Controller - Selections-->
         <scene sceneID="Ntn-Nj-wkg">
