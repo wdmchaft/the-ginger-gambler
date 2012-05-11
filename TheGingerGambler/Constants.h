@@ -47,4 +47,10 @@ extern NSString* const DescriptionKey;
 extern NSString* const OddsKey;
 extern NSString* const PlaceTermsKey;
 
+/* Unit bets */
+extern NSString* const Single;
+extern NSString* const Double;
+extern NSString* const Treble;
+extern NSString* const Fold;
+
 @end

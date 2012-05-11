@@ -39,4 +39,11 @@ NSString* const DescriptionKey = @"description";
 NSString* const OddsKey = @"odds";
 NSString* const PlaceTermsKey = @"placeTerms";
 
+/* Unit bets */
+NSString* const Single = @"Single";
+NSString* const Double = @"Double";
+NSString* const Treble = @"Treble";
+NSString* const Fold = @"Fold";
+
+
 @end

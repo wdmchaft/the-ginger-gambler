@@ -4,7 +4,7 @@
 //
 
 #import "SettleBetViewController.h"
-#import "Bet.h"
+#import "Selection.h"
 #import "DatabaseManager.h"
 
 
@@ -77,24 +77,25 @@
 }
 
 - (IBAction)settleBetButton:(id)sender {
-    if(bet != nil)
+    if(selection != nil)
     {
+        [selection.bet updateStatus];
         [DatabaseManager save];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
  - (IBAction)setWonOrLossed:(UISegmentedControl*)sender 
 {
-    if(bet != nil)
+    if(selection != nil)
     {
-        bet.betStatus = [sender selectedSegmentIndex] == 0 ? kWonState : kLossedState;    
+        selection.selectionStatus = [sender selectedSegmentIndex] == 0 ? kWonState : kLossedState;    
     }
 }
 
-- (void)selectBet:(Bet*)betSelected
+- (void)selectSelection:(Selection*)selectedSelection
 {
-    settleBetCell.textLabel.text = [betSelected name];
-    bet = betSelected;
+    settleBetCell.textLabel.text = [selectedSelection name];
+    selection = selectedSelection;
 }
 
 #pragma mark - Table view delegate

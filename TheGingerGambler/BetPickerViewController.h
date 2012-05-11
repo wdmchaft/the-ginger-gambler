@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class Bet;
+@class Selection;
 
 @protocol BetSelectorNotifications <NSObject>
     
-- (void) selectBet:(Bet*)bet;
+- (void) selectSelection:(Selection*)selection;
 
 @end
 

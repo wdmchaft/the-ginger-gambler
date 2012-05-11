@@ -18,7 +18,8 @@
 
 @implementation StakeViewController
 
-@synthesize bet;
+@synthesize selectionCount;
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -56,24 +57,38 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.selectionCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    StakeCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
+    
+    switch (indexPath.row) 
+    {
+        case 0:
+            cell.multipleLabel.text = Single;
+            break;
+        case 1:
+            cell.multipleLabel.text = Double;
+            break;
+        case 2:
+            cell.multipleLabel.text = Treble;
+            break;    
+        default:
+            cell.multipleLabel.text = [NSString stringWithFormat:@"%i-@%", indexPath.row, Fold];
+            break;
+    }
     
     return cell;
 }
@@ -136,13 +151,14 @@
     for (int i = 0; i < [self.tableView numberOfRowsInSection:0]; i++) 
     {
         NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-        UITableViewCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        StakeCell* cell = (StakeCell*)[self.tableView cellForRowAtIndexPath:indexPath];
         UnitBet* unitBet = [ModelFactory createUnitBet];
         unitBet.unitbet = [NSNumber numberWithInt:i + 1];
-        unitBet.stake = [NSDecimalNumber decimalNumberWithString:cell.textLabel.text];
+        unitBet.stake = [NSDecimalNumber decimalNumberWithString:cell.stakeTextField.text];
         [unitBets addObject:unitBet];
     } 
-    self.bet.unitBets = unitBets;
+    [self.delegate submitStakes:unitBets]; 
+    [self.navigationController popViewControllerAnimated:YES];
 }
      
 @end

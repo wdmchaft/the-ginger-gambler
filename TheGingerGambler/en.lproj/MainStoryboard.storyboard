@@ -276,6 +276,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="cd7-ta-9FR" kind="push" identifier="PickStake" id="Hrd-p1-2MK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -613,7 +616,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Swe-GH-7BT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="cd7-ta-9FR" customClass="StakeViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="132" sectionHeaderHeight="22" sectionFooterHeight="22" id="Plh-I5-OlD">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gWv-rQ-TAh">
@@ -628,7 +631,7 @@
                             </items>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" showsReorderControl="YES" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="132" id="I3z-bz-k4k" customClass="StakeCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" showsReorderControl="YES" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="132" id="I3z-bz-k4k" customClass="StakeCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -659,8 +662,8 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" id="Jd2-76-keJ">
-                                            <rect key="frame" x="98" y="85" width="59" height="21"/>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" id="Jd2-76-keJ">
+                                            <rect key="frame" x="98" y="85" width="60" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -671,6 +674,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="multipleLabel" destination="TPn-XB-YNR" id="ueS-v5-TvI"/>
+                                    <outlet property="stakeLabel" destination="Jd2-76-keJ" id="Y6n-hR-OZ9"/>
                                     <outlet property="stakeTextField" destination="Slr-r5-Gjz" id="IbT-8Q-88k"/>
                                 </connections>
                             </tableViewCell>
@@ -680,6 +684,7 @@
                             <outlet property="delegate" destination="cd7-ta-9FR" id="26Z-vh-iY3"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Upm-01-Gfj"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1339" y="-1699"/>

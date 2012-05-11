@@ -9,6 +9,7 @@
 #import "BetPickerViewController.h"
 #import "DatabaseManager.h"
 #import "Bet.h"
+#import "Selection.h"
 
 @implementation BetPickerViewController
 
@@ -84,20 +85,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.bets.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.bets.count;
+    return [[[self.bets objectAtIndex:section] selections] count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:BetCellName];
-    Bet* bet = [self.bets objectAtIndex:indexPath.row];
-    cell.textLabel.text = [bet name];
-    
+    DLog(@"Index path section : %i", indexPath.section);
+    DLog(@"Bet count : %i", self.bets.count);
+    Bet* bet = [self.bets objectAtIndex:indexPath.section];
+    DLog(@"Index path row : %i", indexPath.row);
+    DLog(@"Selection count : %i", bet.selections.count);
+    Selection* selection = [[bet.selections allObjects] objectAtIndex:indexPath.row];
+    cell.textLabel.text = selection.name;
     return cell;
 }
 
@@ -142,9 +147,10 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    [self.delegate selectBet:[self.bets objectAtIndex:indexPath.row]];
+    Bet* bet = [self.bets objectAtIndex:indexPath.section];
+    [self.delegate selectSelection:[[bet.selections allObjects] objectAtIndex:indexPath.row]];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

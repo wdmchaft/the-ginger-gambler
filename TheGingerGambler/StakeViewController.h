@@ -10,9 +10,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SubmitStakesReceiver <NSObject>
+
+- (void) submitStakes:(NSMutableArray*)stakes;
+
+@end
+
 @interface StakeViewController : UITableViewController
 
-@property (nonatomic, weak) Bet* bet;
+@property NSInteger selectionCount;
+@property (nonatomic, weak) id<SubmitStakesReceiver> delegate;
 
 - (IBAction)submitUnitBet:(id)sender;
 

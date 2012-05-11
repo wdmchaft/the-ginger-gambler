@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "Category.h"
+#import "Bet.h"
 
 @class Bookie;
 @class Sport;
@@ -22,5 +23,13 @@
 @property (nonatomic, retain) NSManagedObject* multiple;
 @property (nonatomic, retain) Sport* sport;
 @property (nonatomic, retain) Bookie* bookie;
+@property (nonatomic, retain) Bet* bet;
+
+
+- (Status)selectionStatus;
+
+- (void)setSelectionStatus:(Status)selectionStatus;
+
++ (NSSet*)keyPathsForValuesAffectingSelectionStatus;
 
 @end

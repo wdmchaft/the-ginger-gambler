@@ -13,6 +13,7 @@
 
 @synthesize stakeTextField;
 @synthesize multipleLabel;
+@synthesize stakeLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -31,10 +32,12 @@
     if(sender.selectedSegmentIndex == bet)
     {
         [self.stakeTextField setHidden:FALSE];
+        [self.stakeLabel setHidden:FALSE];
     }
     else if(sender.selectedSegmentIndex == stick) 
     {
         [self.stakeTextField setHidden:TRUE];
+        [self.stakeLabel setHidden:TRUE];
     }
 }
 

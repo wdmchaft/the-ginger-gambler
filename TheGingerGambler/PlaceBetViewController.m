@@ -119,15 +119,15 @@
     self.priceOddsCell.textLabel.text = [NSString stringWithFormat:@"%i Selections set", selections.count];
 }
 
-- (void) submitStake:(NSDecimalNumber*)stake
+- (void) submitStakes:(NSMutableArray*)stake
 {
     if(!bet)
     {
         bet = [ModelFactory createBet];
     }
-    DLog(@"%@ Set stake with amount", stake);
-    bet.amount = stake;
-    self.stakeCell.textLabel.text = [NumberManipulator formattedStringWithDecimal:stake];
+    DLog(@"%i Set stakes", stake.count);
+    bet.unitbets = [NSSet setWithArray:stake];
+    self.stakeCell.textLabel.text = [NSString stringWithFormat:@"%i Stakes set", stake.count];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
@@ -135,22 +135,23 @@
     if([[segue identifier] isEqualToString:PickBookieSegue])
     {
         BookiePickerViewController* editableTableController = (BookiePickerViewController*)[segue destinationViewController];
-        [editableTableController setDelegate:self]; 
+        editableTableController.delegate = self; 
     }
     else if([[segue identifier] isEqualToString:PickSportSegue])
     {
         SportPickerViewController* editableTableController = (SportPickerViewController*)[segue destinationViewController];
-        [editableTableController setDelegate:self]; 
+        editableTableController.delegate = self; 
     }
     else if([[segue identifier] isEqualToString:PickSelectionsSegue])
     {
         SelectionsViewController* selectionsViewController = (SelectionsViewController*)[segue destinationViewController];
-        [selectionsViewController setDelegate:self];
+        selectionsViewController.delegate = self;
     }
     else if([[segue identifier] isEqualToString:PickStakeSegue])
     {
         StakeViewController* stakeViewController = (StakeViewController*)[segue destinationViewController];
-        stakeViewController.bet = bet;
+        stakeViewController.selectionCount = bet.selections.count;
+        stakeViewController.delegate = self;
     }
 }
 

@@ -10,7 +10,7 @@
 #import "BetPickerViewController.h"
 
 @interface SettleBetViewController : UITableViewController<BetSelectorNotifications>{
-    Bet* bet;
+    Selection* selection;
 }
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *settleBetCell;
@@ -18,6 +18,6 @@
 - (IBAction)settleBetButton:(id)sender;
 - (IBAction)setWonOrLossed:(UISegmentedControl*)sender;
 
-- (void) selectBet:(Bet*)betSelected;
+- (void) selectSelection:(Selection *)selection;
 
 @end

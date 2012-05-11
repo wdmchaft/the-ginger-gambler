@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel* multipleLabel;
 @property (weak, nonatomic) IBOutlet UITextField* stakeTextField;
+@property (weak, nonatomic) IBOutlet UILabel* stakeLabel;
 
 - (IBAction)betStickSwitched:(UISegmentedControl*)sender;
 

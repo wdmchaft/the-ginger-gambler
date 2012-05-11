@@ -17,7 +17,7 @@
 @dynamic bookie;
 @dynamic sport;
 @dynamic status;
-@dynamic unitBets;
+@dynamic unitbets;
 
 - (NSString*) name
 {
@@ -43,6 +43,33 @@
         total = [total decimalNumberBySubtracting:self.amount];
     }
     return total;
+}
+
+- (void) updateStatus
+{
+    // set it to won, then if it doesn't hit any of the following conditions then it
+    // doesn't need setting
+    self.status = [NSNumber numberWithInt:kWonState];
+
+    for(Selection* selection in self.selections)
+    {
+        NSInteger status = [selection.status intValue]; 
+        if(status == kLossedState)
+        {
+            self.status = [NSNumber numberWithInt:kLossedState];
+            break;
+        }
+        else if(status == kPlacedState)
+        {
+            self.status = [NSNumber numberWithInt:kPlacedState];
+            break;
+        }
+        else if(status == kDraftState)
+        {
+            self.status = [NSNumber numberWithInt:kDraftState];
+            break;
+        }
+    }
 }
 
 #pragma mark - Status methods

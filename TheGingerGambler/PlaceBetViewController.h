@@ -13,7 +13,7 @@
 
 @class Bet;
 
-@interface PlaceBetViewController : UITableViewController<CategorySelectorReceiver, SelectionsAddedReceiver>{
+@interface PlaceBetViewController : UITableViewController<CategorySelectorReceiver, SelectionsAddedReceiver, SubmitStakesReceiver>{
     Bet* bet;
 }
 
