@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TheGingerGambler/Bet.m"
-         timestampString = "358377392.148681"
+         timestampString = "358473358.692813"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "84"
-         endingLineNumber = "84"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
          landmarkName = "-setBetStatus:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,16 +47,16 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TheGingerGambler/Bet.m"
-         timestampString = "358300949.531736"
+         timestampString = "358473358.692813"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "25"
-         endingLineNumber = "25"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
          landmarkName = "-name"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TheGingerGambler/WinsLossesViewController.m"
@@ -73,24 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "TheGingerGambler/Bet.m"
-         timestampString = "358301155.039927"
+         timestampString = "358473358.692813"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
-         landmarkName = "-profit"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "TheGingerGambler/Bet.m"
-         timestampString = "358301157.166201"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
          landmarkName = "-profit"
          landmarkType = "5">
       </FileBreakpoint>
@@ -170,6 +157,45 @@
          startingLineNumber = "124"
          endingLineNumber = "124"
          landmarkName = "-submitStakes:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "TheGingerGambler/WinsLossesViewController.m"
+         timestampString = "358437623.576547"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "146"
+         endingLineNumber = "146"
+         landmarkName = "-calculateProfits"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "TheGingerGambler/Bet.m"
+         timestampString = "358449947.884031"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "121"
+         endingLineNumber = "121"
+         landmarkName = "-payoutWithBetType:forStake:fromWinningSelections:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "TheGingerGambler/Bet.m"
+         timestampString = "358473358.692813"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "55"
+         endingLineNumber = "55"
+         landmarkName = "-profit"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

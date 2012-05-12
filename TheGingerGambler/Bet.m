@@ -8,10 +8,19 @@
 #import "Sport.h"
 #import "NumberManipulator.h"
 #import "Selection.h"
+#import "UnitBet.h"
+#import "Combination.h"
+
+@interface Bet()
+
+- (NSMutableArray*) winningSelections;
+- (NSDecimalNumber*) payoutWithBetType:(NSInteger)betType forStake:(NSDecimalNumber*)stake fromWinningSelections:(NSArray*)selections;
+- (NSDecimalNumber*) payoutFromOddsAtPositions:(NSMutableArray*)oddsPositions inWinningSelections:(NSArray*)selections withStake:(NSDecimalNumber*)stake; 
+
+@end
 
 @implementation Bet
 
-@dynamic amount;
 @dynamic selections;
 @dynamic name;
 @dynamic bookie;
@@ -23,7 +32,7 @@
 {
     NSString* possibleName = [self primitiveValueForKey:@"name"];
     if (possibleName == nil) {
-        return [NSString stringWithFormat:@"%@ - %@ - %@", [[self bookie] name], [[self sport] name], [NumberManipulator formattedStringWithDecimal:self.amount]];
+        return [NSString stringWithFormat:@"%@ - %@ - %@", [[self bookie] name], [[self sport] name]];
     }
     return possibleName;
 }
@@ -31,16 +40,20 @@
 - (NSDecimalNumber*) profit
 {
     NSDecimalNumber* total = [NSDecimalNumber zero];
-    if(self.status == [NSNumber numberWithInt:kWonState])
+    
+    if(self.status == [NSNumber numberWithInt:kWonState] || self.status == [NSNumber numberWithInt:kLossedState])
     {
-        for(Selection* selection in self.selections)
+        NSMutableArray* winningSelections = [self winningSelections];
+        for(UnitBet* unitbet in self.unitbets)
         {
-            total = [total decimalNumberByAdding:[[self.amount decimalNumberByMultiplyingBy:selection.odds] decimalNumberBySubtracting:self.amount]]; 
+            if(winningSelections.count >= [unitbet.unitbet intValue])
+            {
+                total = [total decimalNumberByAdding:[self payoutWithBetType:[unitbet.unitbet intValue] forStake:unitbet.stake fromWinningSelections:winningSelections]];
+            }
+            Combination* combination = [[Combination alloc] initWithNumberOfItems:self.selections.count andSubsetSize:[unitbet.unitbet intValue]];
+            NSDecimalNumber* possibleCombinationsCount = [NSDecimalNumber decimalNumberWithDecimal:[[NSNumber numberWithInt:[combination choose]] decimalValue]];
+            total = [total decimalNumberBySubtracting:[unitbet.stake decimalNumberByMultiplyingBy:possibleCombinationsCount]];
         }
-    }
-    else if(self.status == [NSNumber numberWithInt:kLossedState])
-    {
-        total = [total decimalNumberBySubtracting:self.amount];
     }
     return total;
 }
@@ -84,8 +97,47 @@
     [self setStatus:[NSNumber numberWithInt:betStatus]];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingBetStatus   {
++ (NSSet*)keyPathsForValuesAffectingBetStatus   
+{
     return [NSSet setWithObject:@"status"];
 }
+
+#pragma mark - Private methods
+
+- (NSArray*) winningSelections
+{
+    NSMutableArray* selectionsWon = [NSMutableArray array];
+    for (Selection* selection in self.selections) {
+        if([selection.status intValue] == kWonState)
+        {
+            [selectionsWon addObject:selection];
+        }
+    }
+    return selectionsWon;
+}
+
+- (NSDecimalNumber*) payoutWithBetType:(NSInteger)betType forStake:(NSDecimalNumber*)stake fromWinningSelections:(NSArray*)selections
+{
+    NSDecimalNumber* payout = [NSDecimalNumber zero]; 
+    Combination* combination = [[Combination alloc] initWithNumberOfItems:selections.count andSubsetSize:betType];
+    do 
+    {
+        payout = [payout decimalNumberByAdding:[self payoutFromOddsAtPositions:combination.currentCombination inWinningSelections:selections withStake:stake]];
+    } 
+    while ((combination = combination.successor) != nil);
+    return payout;
+}
+
+- (NSDecimalNumber*) payoutFromOddsAtPositions:(NSMutableArray*)oddsPositions inWinningSelections:(NSArray*)selections withStake:(NSDecimalNumber*)stake 
+{
+    NSDecimalNumber* odds = [NSDecimalNumber one];
+    for (NSNumber* oddPosition in oddsPositions) 
+    {
+        NSDecimalNumber* odd = [(Selection*)[selections objectAtIndex:[oddPosition intValue]] odds];
+        odds = [odds decimalNumberByMultiplyingBy:odd];
+    }
+    return [stake decimalNumberByMultiplyingBy:odds];
+}
+
 
 @end

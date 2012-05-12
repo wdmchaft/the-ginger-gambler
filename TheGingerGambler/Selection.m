@@ -19,7 +19,6 @@
 @dynamic name;
 @dynamic status;
 @dynamic placeterms;
-@dynamic multiple;
 @dynamic sport;
 @dynamic bookie;
 
