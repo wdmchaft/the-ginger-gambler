@@ -29,10 +29,17 @@ NSString* const PickSportSegue = @"PickSport";
 NSString* const PickBetSegue = @"PickBet";
 NSString* const PickSelectionsSegue = @"PickSelection";
 NSString* const PickStakeSegue = @"PickStake";
+NSString* const NextWizardViewSegue = @"NextWizardView";
+NSString* const MasterBookiePickerSegue = @"MasterBookiePicker";
+
 
 /* View */
 NSString* const CategoryAdderView = @"CategoryAdder";
-NSString* const SelectionAdderView = @"SelectionAdder";
+NSString* const SelectionsView = @"Selections";
+NSString* const StakeView = @"Stake";
+NSString* const SportPickerView = @"SportPicker";
+NSString* const BookiePickerView = @"BookiePicker";
+NSString* const PlaceBetView = @"PlaceBet";
 
 /* Selection Cell */
 NSString* const DescriptionKey = @"description";

@@ -10,7 +10,7 @@
 #import "EditableTableViewController.h"
 #import "CategorySelectorReceiver.h"
 
-@interface SportPickerViewController : EditableTableViewController
+@interface SportPickerViewController : EditableTableViewController<Delegator>
 
 @property (nonatomic, weak) id<CategorySelectorReceiver> delegate;
 

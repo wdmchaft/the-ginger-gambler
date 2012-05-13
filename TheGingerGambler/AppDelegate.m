@@ -2,6 +2,7 @@
 
 #import "AppDelegate.h"
 
+#import "TGGNavigationController.h"
 #import "DatabaseManager.h"
 #import "MasterViewController.h"
 #import "Bookie.h"
@@ -18,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    TGGNavigationController *navigationController = (TGGNavigationController*)self.window.rootViewController;
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     

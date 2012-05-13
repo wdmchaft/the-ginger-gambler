@@ -12,6 +12,9 @@
 #import "CategoryAdderViewController.h"
 #import "SelectionTableViewCell.h"
 #import "Category.h"
+#import "DictionaryPopulatable.h"
+#import "TGGNavigationController.h"
+#import "SportPickerViewController.h"
 
 @implementation EditableTableViewController
 
@@ -21,6 +24,11 @@
 {
 }
 
+- (TGGNavigationController*)tggNavigationController
+{
+    return (TGGNavigationController*)self.navigationController;
+}
+   
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -124,10 +132,10 @@
         cellIdentifier = @"AddCell";
     }
     
-    SelectionTableViewCell* cell = (SelectionTableViewCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell == nil)
     {
-        cell =  (SelectionTableViewCell*)[[SelectionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell =  (UITableViewCell*)[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         if(!addCell)
         {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -141,9 +149,9 @@
     else
     {
         id<Category> category = [self.entities objectAtIndex:indexPath.row];
-        if([category respondsToSelector:@selector(dictionify)])
+        if ([cell conformsToProtocol:@protocol(DictionaryPopulatable)])
         {
-            [cell populateWithDictionary:[category dictionify]];
+            [(UITableViewCell <DictionaryPopulatable>*)cell populateWithDictionary:[category dictionify]];
         }
         else
         {
@@ -231,6 +239,11 @@
  return YES;
  }
  */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [(SportPickerViewController*)segue.destinationViewController setDelegate:[self.tggNavigationController placeBetWizard]]; 
+}
 
 #pragma mark - Table view delegate
 

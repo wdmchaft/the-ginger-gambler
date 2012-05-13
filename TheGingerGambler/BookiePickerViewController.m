@@ -3,6 +3,7 @@
 #import "BookiePickerViewController.h"
 #import "DatabaseManager.h"
 #import "Bookie.h"
+#import "TGGNavigationController.h"
 
 @implementation BookiePickerViewController
 
@@ -28,7 +29,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
     [self.delegate selectBookie:[self.entities objectAtIndex:indexPath.row]];
-    [self.navigationController popViewControllerAnimated:YES]; 
+    if([self.tggNavigationController placeBetWizardInProgress])
+    {
+        [self.tggNavigationController next];
+    }
+    else 
+    {
+        [self.tggNavigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

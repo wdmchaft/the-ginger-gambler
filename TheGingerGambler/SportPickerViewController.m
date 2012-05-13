@@ -9,6 +9,7 @@
 #import "SportPickerViewController.h"
 #import "DatabaseManager.h"
 #import "Sport.h"
+#import "TGGNavigationController.h"
 
 @implementation SportPickerViewController
 
@@ -34,7 +35,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.delegate selectSport:[self.entities objectAtIndex:indexPath.row]];
-    [self.navigationController popViewControllerAnimated:YES]; 
+    if([self.tggNavigationController placeBetWizardInProgress])
+    {
+        [self.tggNavigationController next];
+    }
+    else 
+    {
+        [self.tggNavigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

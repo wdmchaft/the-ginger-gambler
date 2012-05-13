@@ -10,6 +10,7 @@
 #import "StakeCell.h"
 #import "ModelFactory.h"
 #import "UnitBet.h"
+#import "TGGNavigationController.h"
 #import "Bet.h"
 
 @interface StakeViewController ()
@@ -33,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.selectionCount = [self.tggNavigationController selectionCountForWizardBet];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -158,7 +159,20 @@
         [unitBets addObject:unitBet];
     } 
     [self.delegate submitStakes:unitBets]; 
-    [self.navigationController popViewControllerAnimated:YES];
+
+    if([self.tggNavigationController placeBetWizardInProgress])
+    {
+        [self.tggNavigationController next];
+    }
+    else 
+    {
+        [self.tggNavigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (TGGNavigationController*) tggNavigationController
+{
+    return (TGGNavigationController*)self.navigationController;
 }
      
 @end

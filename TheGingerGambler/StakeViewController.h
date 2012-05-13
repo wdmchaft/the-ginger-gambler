@@ -10,13 +10,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TGGNavigationControllerHandle.h"
+#import "Delegator.h"
+
 @protocol SubmitStakesReceiver <NSObject>
 
 - (void) submitStakes:(NSMutableArray*)stakes;
 
 @end
 
-@interface StakeViewController : UITableViewController
+@interface StakeViewController : UITableViewController<TGGNavigationControllerHandle, Delegator>
 
 @property NSInteger selectionCount;
 @property (nonatomic, weak) id<SubmitStakesReceiver> delegate;

@@ -37,10 +37,17 @@ extern NSString* const PickBookieSegue;
 extern NSString* const PickSportSegue;
 extern NSString* const PickBetSegue;
 extern NSString* const PickStakeSegue;
+extern NSString* const NextWizardViewSegue;
+extern NSString* const MasterBookiePickerSegue;
 
 /* View */
 extern NSString* const CategoryAdderView;
-extern NSString* const SelectionAdderView;
+extern NSString* const SelectionsView;
+extern NSString* const StakeView;
+extern NSString* const SportPickerView;
+extern NSString* const BookiePickerView;
+extern NSString* const PlaceBetView;
+
 
 /* Selection Cell */
 extern NSString* const DescriptionKey;

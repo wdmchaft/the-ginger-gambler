@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DictionaryPopulator.h"
+#import "DictionaryPopulatable.h"
 
-@interface SelectionTableViewCell : UITableViewCell<DictionaryPopulator>
+@interface SelectionTableViewCell : UITableViewCell<DictionaryPopulatable>
 
 @property (weak, nonatomic) IBOutlet UILabel* descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel* oddsLabel;

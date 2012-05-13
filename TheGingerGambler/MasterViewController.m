@@ -7,6 +7,7 @@
 //
 
 #import "MasterViewController.h"
+#import "TGGNavigationController.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -112,7 +113,7 @@
     return NO;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
@@ -121,9 +122,26 @@
     }
 }
 
+#pragma mark - Table view delegate
+
+- (void) tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    const NSInteger placeBetRowIndex = 0;
+    
+    if(indexPath.row == placeBetRowIndex)
+    {
+        [self.tggNavigationController initPlaceBetWizard];
+    }
+}
+         
+- (TGGNavigationController*)tggNavigationController
+{
+    return (TGGNavigationController*)self.navigationController;
+}
+
 #pragma mark - Fetched results controller
 
-- (NSFetchedResultsController *)fetchedResultsController
+- (NSFetchedResultsController*)fetchedResultsController
 {
     if (__fetchedResultsController != nil) {
         return __fetchedResultsController;

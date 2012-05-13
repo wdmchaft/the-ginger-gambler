@@ -4,6 +4,7 @@
 #import "DatabaseManager.h"
 #import "Selection.h"
 #import "ModelFactory.h"
+#import "TGGNavigationController.h"
 
 @implementation SelectionsViewController
 
@@ -22,11 +23,17 @@
 
 - (void)viewDidLoad
 {
-    UIBarButtonItem* saveButton = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(submitButton:)];
-    [super viewDidLoadWithEntity:SelectionEntityName andButton:saveButton];
+    [super viewDidLoadWithEntity:SelectionEntityName];
 }
 
 #pragma mark - Table view delegate
+
+- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath 
+{
+    UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -39,7 +46,7 @@
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) 
     {
-        SelectionAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:SelectionAdderView];
+        SelectionAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:SelectionsView];
         modalController.delegate = self;
         [self presentModalViewController:modalController animated:YES];
     }   
@@ -48,7 +55,14 @@
 - (IBAction)submitButton:(id)sender 
 {
     [self.delegate submitSelections:self.entities];
-    [self.navigationController popViewControllerAnimated:YES]; 
+    if([self.tggNavigationController placeBetWizardInProgress])
+    {
+        [self.tggNavigationController next];
+    }
+    else 
+    {
+        [self.tggNavigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

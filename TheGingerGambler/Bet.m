@@ -32,7 +32,7 @@
 {
     NSString* possibleName = [self primitiveValueForKey:@"name"];
     if (possibleName == nil) {
-        return [NSString stringWithFormat:@"%@ - %@ - %@", [[self bookie] name], [[self sport] name]];
+        return [NSString stringWithFormat:@"%@ - %@", [[self bookie] name], [[self sport] name]];
     }
     return possibleName;
 }

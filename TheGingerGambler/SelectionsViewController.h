@@ -16,7 +16,7 @@
 
 @end
 
-@interface SelectionsViewController : EditableTableViewController <SelectionNotifications> 
+@interface SelectionsViewController : EditableTableViewController <SelectionNotifications, Delegator> 
 
 @property (nonatomic, weak) id<SelectionsAddedReceiver> delegate;
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DictionaryPopulator <NSObject>
+@protocol DictionaryPopulatable <NSObject>
 
 - (void) populateWithDictionary:(NSDictionary*)dictionary;   
 

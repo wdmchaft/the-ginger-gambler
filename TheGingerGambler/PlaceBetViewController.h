@@ -13,9 +13,7 @@
 
 @class Bet;
 
-@interface PlaceBetViewController : UITableViewController<CategorySelectorReceiver, SelectionsAddedReceiver, SubmitStakesReceiver>{
-    Bet* bet;
-}
+@interface PlaceBetViewController : UITableViewController<CategorySelectorReceiver, SelectionsAddedReceiver, SubmitStakesReceiver>
 
 @property (weak, nonatomic) IBOutlet UITableViewCell* bookieSelect;
 @property (weak, nonatomic) IBOutlet UITableViewCell* sportSelect;
@@ -23,5 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *stakeCell;
 
 - (IBAction)betButton:(id)sender;
+
+- (void) setUpWithBet:(Bet*)bet;
 
 @end
