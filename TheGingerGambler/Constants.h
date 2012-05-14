@@ -43,6 +43,7 @@ extern NSString* const MasterBookiePickerSegue;
 /* View */
 extern NSString* const CategoryAdderView;
 extern NSString* const SelectionsView;
+extern NSString* const SelectionAdderView;
 extern NSString* const StakeView;
 extern NSString* const SportPickerView;
 extern NSString* const BookiePickerView;
@@ -59,5 +60,12 @@ extern NSString* const Single;
 extern NSString* const Double;
 extern NSString* const Treble;
 extern NSString* const Fold;
+
+/* Stake cell */
+extern NSInteger const BetSegment;
+extern NSInteger const StickSegment;
+
+/* Storyboard name */
+extern NSString* const StoryboardName;
 
 @end

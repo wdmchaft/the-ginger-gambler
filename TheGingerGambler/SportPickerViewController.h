@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "EditableTableViewController.h"
 #import "CategorySelectorReceiver.h"
+#import "WizardItem.h"
 
-@interface SportPickerViewController : EditableTableViewController<Delegator>
+@interface SportPickerViewController : EditableTableViewController<Delegator, WizardItem>
 
 @property (nonatomic, weak) id<CategorySelectorReceiver> delegate;
 

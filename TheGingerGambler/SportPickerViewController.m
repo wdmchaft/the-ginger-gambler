@@ -27,7 +27,8 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoadWithEntity:SportEntityName];
+    [super viewDidLoad];
+    self.entities = [DatabaseManager entitiesFor:SportEntityName];
 }
 
 #pragma mark - Table view delegate
@@ -43,6 +44,11 @@
     {
         [self.tggNavigationController popViewControllerAnimated:YES];
     }
+}
+
+- (NSString*)nextItem
+{
+    return SelectionAdderView;
 }
 
 @end

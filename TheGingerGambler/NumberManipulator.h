@@ -11,5 +11,6 @@
 @interface NumberManipulator : NSObject
 
 + (NSString *)formattedStringWithDecimal:(NSDecimalNumber *)decimalNumber;
++ (NSDecimalNumber*)decimalWithString:(NSString*)string;
 
 @end

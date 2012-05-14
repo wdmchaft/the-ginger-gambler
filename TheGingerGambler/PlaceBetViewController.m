@@ -19,7 +19,7 @@
 
 @interface PlaceBetViewController()
 
-@property (weak, nonatomic) Bet* bet;
+@property (strong, nonatomic) Bet* bet;
  
 @end
 
@@ -131,11 +131,16 @@
     self.priceOddsCell.textLabel.text = [NSString stringWithFormat:@"%i Selections set", selections.count];
 }
 
-- (void) submitStakes:(NSMutableArray*)stake
+- (void) submitStakes:(NSMutableSet*)stake
 {
     DLog(@"%i Set stakes", stake.count);
-    self.bet.unitbets = [NSSet setWithArray:stake];
+    self.bet.unitbets = stake;
     self.stakeCell.textLabel.text = [NSString stringWithFormat:@"%i Stakes set", stake.count];
+}
+
+- (NSString*)nextItem
+{
+    return nil;
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
@@ -154,11 +159,19 @@
     {
         SelectionsViewController* selectionsViewController = (SelectionsViewController*)[segue destinationViewController];
         selectionsViewController.delegate = self;
+        if(self.bet.selections != nil)
+        {
+            [selectionsViewController setUpWithSelections:[NSMutableArray arrayWithArray:[self.bet.selections allObjects]]];
+        }
     }
     else if([[segue identifier] isEqualToString:PickStakeSegue])
     {
         StakeViewController* stakeViewController = (StakeViewController*)[segue destinationViewController];
         stakeViewController.selectionCount = self.bet.selections.count;
+        if(self.bet.unitbets != nil)
+        {
+            [stakeViewController setUpWithBetTypes:[NSMutableSet setWithSet:self.bet.unitbets]];
+        }
         stakeViewController.delegate = self;
     }
 }

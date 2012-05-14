@@ -11,17 +11,20 @@
 #import "SportPickerViewController.h"
 #import "SelectionsViewController.h"
 #import "StakeViewController.h"
+#import "TGGNavigationController.h"
 #import "PlaceBetViewController.h"
 #import "Bet.h"
 #import "ModelFactory.h"
 #import "Sport.h"
 #import "Bookie.h"
+#import "Selection.h"
 
 @interface PlaceBetWizardManager()
 
 @property (strong, nonatomic) Bet* bet;
-@property (strong, nonatomic) NSMutableArray* viewSequence;
-@property (weak, nonatomic) UINavigationController* navigationController;
+@property (strong, nonatomic) Selection* selection;
+@property (weak, nonatomic) TGGNavigationController* navigationController;
+@property (weak, nonatomic) UIViewController* initiatingView;
 
 - (void) nextViewController;
 
@@ -32,16 +35,17 @@
 @synthesize bet;
 @synthesize isInProgress;
 @synthesize navigationController;
-@synthesize viewSequence;
+@synthesize initiatingView;
+@synthesize selection;
 
-- (id) initWithNavigationController:(UINavigationController*)controller
+- (id) initWithNavigationController:(TGGNavigationController*)controller
 {
     if (self = [super init])
     {
         self.bet = [ModelFactory createBet];
         self.isInProgress = YES;
         self.navigationController = controller;
-        self.viewSequence = [NSMutableArray arrayWithObjects:BookiePickerView, SportPickerView, SelectionsView, StakeView, PlaceBetView, nil];
+        self.initiatingView = controller.visibleViewController;
     }
     return self;
 }
@@ -49,7 +53,9 @@
 - (void)start
 {
     self.isInProgress = YES;
-    [self nextViewController];
+    UIViewController<Delegator>* controller = [[UIStoryboard storyboardWithName:StoryboardName bundle:NULL] instantiateViewControllerWithIdentifier:BookiePickerView];
+    controller.delegate = self;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)next
@@ -65,19 +71,21 @@
 
 - (void) nextViewController
 {
-    DLog(@"Views count : %i", self.viewSequence.count);
-    UIViewController<Delegator>* controller = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:[self.viewSequence objectAtIndex:0]];
-    [self.viewSequence removeObjectAtIndex:0];
-    if (self.viewSequence.count == 0)
+    NSString* viewName = [self.navigationController proceedingWizardViewController];
+    DLog(@"Next View : %@", viewName);
+    UIViewController<Delegator>* controller = [[UIStoryboard storyboardWithName:StoryboardName bundle:NULL] instantiateViewControllerWithIdentifier:viewName];
+    if (viewName == PlaceBetView)
     {
+        self.isInProgress = NO; 
         [(PlaceBetViewController*)controller setUpWithBet:bet];
-        [self.navigationController popViewControllerAnimated:NO];
-        [self.navigationController popViewControllerAnimated:NO];
-        [self.navigationController popViewControllerAnimated:NO];
-        [self.navigationController popViewControllerAnimated:NO];
+        [self.navigationController popToViewController:initiatingView animated:NO];
     }
     else 
     {
+        if(viewName == SelectionsView)
+        {
+            [(SelectionsViewController*)controller setUpWithSelection:self.selection];
+        }
         controller.delegate = self;
     }
     [self.navigationController pushViewController:controller animated:YES];
@@ -100,12 +108,17 @@
     DLog(@"%i Selections set", selections.count);
     bet.selections = [NSSet setWithArray:selections];
 }
+             
+- (void) submitSelection:(Selection*)newSelection
+{
+    DLog(@"Selection set : %@", newSelection.name);
+    self.selection = newSelection;
+}
 
 - (void) submitStakes:(NSMutableArray*)stake
 {
     DLog(@"%i Set stakes", stake.count);
     bet.unitbets = [NSSet setWithArray:stake];
 }
-
 
 @end

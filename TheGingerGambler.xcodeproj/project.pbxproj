@@ -67,6 +67,7 @@
 		7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionAdderViewController.m; sourceTree = "<group>"; };
 		7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionTableViewCell.m; sourceTree = "<group>"; };
 		7037DDC71550742C00DC5349 /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
+		7055FE93156079D700FEB54C /* WizardItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WizardItem.h; sourceTree = "<group>"; };
 		705BC165155F345D00225A01 /* Delegator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delegator.h; sourceTree = "<group>"; };
 		705BC166155F3B2600225A01 /* PlaceBetWizardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceBetWizardManager.h; sourceTree = "<group>"; };
 		705BC167155F3B2600225A01 /* PlaceBetWizardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceBetWizardManager.m; sourceTree = "<group>"; };
@@ -169,9 +170,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		708BC4B5155F80C500E38C87 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE5E7321151A621B00F60FBF /* SportPickerViewController.h */,
+				DE5E7322151A621B00F60FBF /* SportPickerViewController.m */,
+				DEB70935151113090006BD83 /* MasterViewController.h */,
+				70921DF6155B4D3A00B4FAE4 /* StakeViewController.h */,
+				70921DF7155B4D3A00B4FAE4 /* StakeViewController.m */,
+				70DBBB39155EC1BC001A1231 /* TGGNavigationController.h */,
+				70DBBB3A155EC1BD001A1231 /* TGGNavigationController.m */,
+				DEB70936151113090006BD83 /* MasterViewController.m */,
+				DEB70978151923390006BD83 /* BookiePickerViewController.h */,
+				DEB709791519233B0006BD83 /* BookiePickerViewController.m */,
+				DE64B01A1522502400B2E2E7 /* EditableTableViewController.h */,
+				DE64B01B1522502400B2E2E7 /* EditableTableViewController.m */,
+				DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */,
+				DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */,
+				DE5E7329151A771400F60FBF /* SettleBetViewController.h */,
+				DE5E732A151A771400F60FBF /* SettleBetViewController.m */,
+				DE64B014152115CC00B2E2E7 /* CategoryAdderViewController.h */,
+				DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */,
+				DE865AEA152A373D0067734F /* WinsLossesViewController.h */,
+				DE865AEB152A373D0067734F /* WinsLossesViewController.m */,
+				DEFA728C1549DE4A00F46356 /* SelectionsViewController.h */,
+				DEFA728D1549DE4A00F46356 /* SelectionsViewController.m */,
+				7037DDC315506B9E00DC5349 /* SelectionAdderViewController.h */,
+				7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */,
+				DE5E7375151BC3FE00F60FBF /* BetPickerViewController.h */,
+				DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		708BC4B6155F80F500E38C87 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				705BC165155F345D00225A01 /* Delegator.h */,
+				705BC169155F511200225A01 /* TGGNavigationControllerHandle.h */,
+				708FAF961550B68F00C891E4 /* DictionaryPopulatable.h */,
+				70921DE9155AFE4400B4FAE4 /* CategorySelectorReceiver.h */,
+				7055FE93156079D700FEB54C /* WizardItem.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		70CE0CF015276D9B00F2F4EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DEB7092C151113080006BD83 /* AppDelegate.h */,
+				DEB7092D151113080006BD83 /* AppDelegate.m */,
+				708BC4B6155F80F500E38C87 /* Protocols */,
+				708BC4B5155F80C500E38C87 /* Controllers */,
+				DEB709761519158E0006BD83 /* Model */,
+				DEB70977151915C10006BD83 /* GUI */,
+				DE5E7325151A634700F60FBF /* Utils */,
 				70CE0CF115276DB700F2F4EF /* Constants.h */,
 				70CE0CF415276E9300F2F4EF /* Constants.m */,
 			);
@@ -232,9 +285,6 @@
 			isa = PBXGroup;
 			children = (
 				70CE0CF015276D9B00F2F4EF /* Classes */,
-				DE5E7325151A634700F60FBF /* Utils */,
-				DEB70977151915C10006BD83 /* GUI */,
-				DEB709761519158E0006BD83 /* Model */,
 				DEB70924151113080006BD83 /* Supporting Files */,
 			);
 			path = TheGingerGambler;
@@ -294,41 +344,9 @@
 			children = (
 				7037DDC61550742C00DC5349 /* SelectionTableViewCell.m */,
 				7037DDC71550742C00DC5349 /* SelectionTableViewCell.h */,
-				DE5E7375151BC3FE00F60FBF /* BetPickerViewController.h */,
-				DE5E7376151BC3FE00F60FBF /* BetPickerViewController.m */,
-				DEB7092C151113080006BD83 /* AppDelegate.h */,
-				DEB7092D151113080006BD83 /* AppDelegate.m */,
 				DEB7092F151113080006BD83 /* MainStoryboard.storyboard */,
-				DE5E7321151A621B00F60FBF /* SportPickerViewController.h */,
-				DE5E7322151A621B00F60FBF /* SportPickerViewController.m */,
-				DEB70935151113090006BD83 /* MasterViewController.h */,
-				DEB70936151113090006BD83 /* MasterViewController.m */,
-				DEB70978151923390006BD83 /* BookiePickerViewController.h */,
-				DEB709791519233B0006BD83 /* BookiePickerViewController.m */,
-				DE64B01A1522502400B2E2E7 /* EditableTableViewController.h */,
-				DE64B01B1522502400B2E2E7 /* EditableTableViewController.m */,
-				DEB7097B151A257A0006BD83 /* PlaceBetViewController.h */,
-				DEB7097C151A257B0006BD83 /* PlaceBetViewController.m */,
-				DE5E7329151A771400F60FBF /* SettleBetViewController.h */,
-				DE5E732A151A771400F60FBF /* SettleBetViewController.m */,
-				DE64B014152115CC00B2E2E7 /* CategoryAdderViewController.h */,
-				DE64B015152115CC00B2E2E7 /* CategoryAdderViewController.m */,
-				DE865AEA152A373D0067734F /* WinsLossesViewController.h */,
-				DE865AEB152A373D0067734F /* WinsLossesViewController.m */,
-				DEFA728C1549DE4A00F46356 /* SelectionsViewController.h */,
-				DEFA728D1549DE4A00F46356 /* SelectionsViewController.m */,
-				7037DDC315506B9E00DC5349 /* SelectionAdderViewController.h */,
-				7037DDC415506B9E00DC5349 /* SelectionAdderViewController.m */,
-				708FAF961550B68F00C891E4 /* DictionaryPopulatable.h */,
-				70921DE9155AFE4400B4FAE4 /* CategorySelectorReceiver.h */,
 				70921DF0155B4AFB00B4FAE4 /* StakeCell.h */,
 				70921DF1155B4AFC00B4FAE4 /* StakeCell.m */,
-				70921DF6155B4D3A00B4FAE4 /* StakeViewController.h */,
-				70921DF7155B4D3A00B4FAE4 /* StakeViewController.m */,
-				70DBBB39155EC1BC001A1231 /* TGGNavigationController.h */,
-				70DBBB3A155EC1BD001A1231 /* TGGNavigationController.m */,
-				705BC165155F345D00225A01 /* Delegator.h */,
-				705BC169155F511200225A01 /* TGGNavigationControllerHandle.h */,
 			);
 			name = GUI;
 			sourceTree = "<group>";

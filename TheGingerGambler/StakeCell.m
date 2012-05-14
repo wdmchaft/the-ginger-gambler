@@ -14,27 +14,26 @@
 @synthesize stakeTextField;
 @synthesize multipleLabel;
 @synthesize stakeLabel;
+@synthesize betStickSwitch;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
+    if (self) 
+    {
+        // init code
     }
     return self;
 }
 
 - (IBAction)betStickSwitched:(UISegmentedControl*)sender
 {
-    NSInteger const bet = 0;
-    NSInteger const stick = 1;
-    
-    if(sender.selectedSegmentIndex == bet)
+    if(sender.selectedSegmentIndex == BetSegment)
     {
         [self.stakeTextField setHidden:FALSE];
         [self.stakeLabel setHidden:FALSE];
     }
-    else if(sender.selectedSegmentIndex == stick) 
+    else if(sender.selectedSegmentIndex == StickSegment) 
     {
         [self.stakeTextField setHidden:TRUE];
         [self.stakeLabel setHidden:TRUE];

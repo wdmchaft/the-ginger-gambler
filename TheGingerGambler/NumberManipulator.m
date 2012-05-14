@@ -21,5 +21,9 @@
     return result;
 }
 
++ (NSDecimalNumber*)decimalWithString:(NSString*)string
+{
+    return [NSDecimalNumber decimalNumberWithString:string];
+}
 
 @end

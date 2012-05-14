@@ -40,6 +40,7 @@ NSString* const StakeView = @"Stake";
 NSString* const SportPickerView = @"SportPicker";
 NSString* const BookiePickerView = @"BookiePicker";
 NSString* const PlaceBetView = @"PlaceBet";
+NSString* const SelectionAdderView = @"SelectionAdder";
 
 /* Selection Cell */
 NSString* const DescriptionKey = @"description";
@@ -52,5 +53,11 @@ NSString* const Double = @"Double";
 NSString* const Treble = @"Treble";
 NSString* const Fold = @"Fold";
 
+/* Stake cell */
+NSInteger const BetSegment = 0;
+NSInteger const StickSegment = 1;
+
+/* Storyboard name */
+NSString* const StoryboardName = @"MainStoryboard";
 
 @end

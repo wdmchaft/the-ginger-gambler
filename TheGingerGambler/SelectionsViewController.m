@@ -10,12 +10,19 @@
 
 @synthesize delegate;
 
-- (void) addDescription:(NSString*)description odds:(NSDecimalNumber*)odds placeTerms:(NSDecimalNumber*)placeTerms
+- (void)setUpWithSelection:(Selection*)newSelection
 {
-    Selection* selection = [ModelFactory createSelection];
-    selection.name = description;
-    selection.odds = odds;
-    selection.placeterms = placeTerms;
+    self.entities = [NSMutableArray arrayWithObject:newSelection];
+}
+
+- (void)setUpWithSelections:(NSMutableArray*)newSelections
+{
+    self.entities = newSelections;    
+}
+
+
+- (void) submitSelection:(Selection *)selection
+{
     [self.entities addObject:selection];
     [self setEditing:YES];
     [self.tableView reloadData];
@@ -23,7 +30,11 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoadWithEntity:SelectionEntityName];
+    [super viewDidLoad];
+    if (self.entities == nil)
+    {
+        self.entities = [NSMutableArray array];
+    }
 }
 
 #pragma mark - Table view delegate
@@ -46,8 +57,9 @@
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) 
     {
-        SelectionAdderViewController* modalController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:NULL] instantiateViewControllerWithIdentifier:SelectionsView];
+        SelectionAdderViewController* modalController = [[UIStoryboard storyboardWithName:StoryboardName bundle:NULL] instantiateViewControllerWithIdentifier:SelectionAdderView];
         modalController.delegate = self;
+        modalController.presentedAsModal = YES;
         [self presentModalViewController:modalController animated:YES];
     }   
 }
@@ -63,6 +75,11 @@
     {
         [self.tggNavigationController popViewControllerAnimated:YES];
     }
+}
+
+- (NSString*)nextItem
+{
+    return StakeView;
 }
 
 @end

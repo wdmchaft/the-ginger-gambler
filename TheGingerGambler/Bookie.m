@@ -15,4 +15,10 @@
 @dynamic name;
 @dynamic bet;
 
+- (NSDictionary*)dictionify
+{
+    NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithObject:self.name forKey:DescriptionKey];
+    return dictionary;
+}
+
 @end

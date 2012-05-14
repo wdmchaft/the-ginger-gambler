@@ -10,15 +10,16 @@
 #import "SelectionsViewController.h"
 #import "CategorySelectorReceiver.h"
 #import "StakeViewController.h"
+#import "WizardItem.h"
 
 @class Bet;
 
-@interface PlaceBetViewController : UITableViewController<CategorySelectorReceiver, SelectionsAddedReceiver, SubmitStakesReceiver>
+@interface PlaceBetViewController : UITableViewController<CategorySelectorReceiver, SelectionsAddedReceiver, SubmitStakesReceiver, WizardItem>
 
 @property (weak, nonatomic) IBOutlet UITableViewCell* bookieSelect;
 @property (weak, nonatomic) IBOutlet UITableViewCell* sportSelect;
 @property (weak, nonatomic) IBOutlet UITableViewCell* priceOddsCell;
-@property (weak, nonatomic) IBOutlet UITableViewCell *stakeCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell* stakeCell;
 
 - (IBAction)betButton:(id)sender;
 

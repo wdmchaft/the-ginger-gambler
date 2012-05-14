@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EditableTableViewController.h"
 #import "SelectionAdderViewController.h"
+#import "WizardItem.h"
 
 @protocol SelectionsAddedReceiver <NSObject>
 
@@ -16,8 +17,11 @@
 
 @end
 
-@interface SelectionsViewController : EditableTableViewController <SelectionNotifications, Delegator> 
+@interface SelectionsViewController : EditableTableViewController <SubmitSelectionReceiver, Delegator, WizardItem> 
 
 @property (nonatomic, weak) id<SelectionsAddedReceiver> delegate;
+
+- (void)setUpWithSelection:(Selection*)newSelection;
+- (void)setUpWithSelections:(NSMutableArray*)newSelections;
 
 @end

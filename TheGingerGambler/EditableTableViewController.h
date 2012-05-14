@@ -18,9 +18,6 @@
 
 @property (strong) NSMutableArray* entities;
 
-- (void)viewDidLoadWithEntity:(NSString*)name;
-- (void)viewDidLoadWithEntity:(NSString*)name andButton:(UIBarButtonItem*)button;
-
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 

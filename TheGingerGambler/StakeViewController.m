@@ -12,8 +12,11 @@
 #import "UnitBet.h"
 #import "TGGNavigationController.h"
 #import "Bet.h"
+#import "NumberManipulator.h"
 
 @interface StakeViewController ()
+
+@property (strong) NSMutableSet* betTypes; 
 
 @end
 
@@ -21,11 +24,18 @@
 
 @synthesize selectionCount;
 @synthesize delegate;
+@synthesize betTypes;
+
+- (void)setUpWithBetTypes:(NSMutableSet*)newBetTypes
+{
+    self.betTypes = newBetTypes;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
+    if (self) 
+    {
         // Custom initialization
     }
     return self;
@@ -35,11 +45,10 @@
 {
     [super viewDidLoad];
     self.selectionCount = [self.tggNavigationController selectionCountForWizardBet];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if(self.betTypes == nil)
+    {
+        self.betTypes = [NSMutableArray array];
+    } 
 }
 
 - (void)viewDidUnload
@@ -89,6 +98,19 @@
         default:
             cell.multipleLabel.text = [NSString stringWithFormat:@"%i-@%", indexPath.row, Fold];
             break;
+    }
+    
+    if(self.betTypes.count != 0)
+    {
+        for (UnitBet* betType in self.betTypes) 
+        {
+            if([betType.unitbet intValue] == (indexPath.row + 1))
+            {
+                [cell.betStickSwitch setSelectedSegmentIndex:0];
+                cell.stakeTextField.text = [NumberManipulator formattedStringWithDecimal:betType.stake];
+                [cell betStickSwitched:cell.betStickSwitch];
+            }
+        }
     }
     
     return cell;
@@ -148,17 +170,19 @@
 
 - (IBAction)submitUnitBet:(id)sender 
 {
-    NSMutableArray* unitBets = [NSMutableArray array];
     for (int i = 0; i < [self.tableView numberOfRowsInSection:0]; i++) 
     {
         NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:0];
         StakeCell* cell = (StakeCell*)[self.tableView cellForRowAtIndexPath:indexPath];
-        UnitBet* unitBet = [ModelFactory createUnitBet];
-        unitBet.unitbet = [NSNumber numberWithInt:i + 1];
-        unitBet.stake = [NSDecimalNumber decimalNumberWithString:cell.stakeTextField.text];
-        [unitBets addObject:unitBet];
+        if (cell.betStickSwitch.selectedSegmentIndex == BetSegment) 
+        {
+            UnitBet* unitBet = [ModelFactory createUnitBet];
+            unitBet.unitbet = [NSNumber numberWithInt:i + 1];
+            unitBet.stake = [NSDecimalNumber decimalNumberWithString:cell.stakeTextField.text];
+            [self.betTypes addObject:unitBet];
+        }
     } 
-    [self.delegate submitStakes:unitBets]; 
+    [self.delegate submitStakes:betTypes]; 
 
     if([self.tggNavigationController placeBetWizardInProgress])
     {
@@ -173,6 +197,11 @@
 - (TGGNavigationController*) tggNavigationController
 {
     return (TGGNavigationController*)self.navigationController;
+}
+
+- (NSString*)nextItem
+{
+    return PlaceBetView;
 }
      
 @end

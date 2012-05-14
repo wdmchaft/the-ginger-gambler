@@ -21,7 +21,7 @@ typedef enum
 
 @interface Bet : NSManagedObject
 
-@property (nonatomic, retain) NSMutableArray* unitbets;
+@property (nonatomic, retain) NSSet* unitbets;
 @property (nonatomic, retain) NSSet* selections;
 @property (nonatomic, retain) NSString* name;
 @property (nonatomic, retain) Bookie* bookie;

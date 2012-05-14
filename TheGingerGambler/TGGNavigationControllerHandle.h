@@ -13,7 +13,5 @@
 @protocol TGGNavigationControllerHandle <NSObject>
 
 - (TGGNavigationController*)tggNavigationController;
-- (void) initPlaceBetWizard;
-- (void) selectionCountForWizardBet;
 
 @end

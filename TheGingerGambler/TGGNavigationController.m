@@ -8,6 +8,7 @@
 
 #import "TGGNavigationController.h"
 #import "PlaceBetWizardManager.h"
+#import "WizardItem.h"
 
 @interface TGGNavigationController () 
 
@@ -47,6 +48,15 @@
     {
         [self popViewControllerAnimated:YES];
     }
+}
+
+- (NSString*) proceedingWizardViewController
+{
+    if([self.visibleViewController conformsToProtocol:@protocol(WizardItem)])
+    {
+        return [(UIViewController<WizardItem>*) self.visibleViewController nextItem]; 
+    }
+    return nil;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

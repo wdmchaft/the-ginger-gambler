@@ -12,18 +12,20 @@
 
 #import "TGGNavigationControllerHandle.h"
 #import "Delegator.h"
+#import "WizardItem.h"
 
 @protocol SubmitStakesReceiver <NSObject>
 
-- (void) submitStakes:(NSMutableArray*)stakes;
+- (void) submitStakes:(NSMutableSet*)stakes;
 
 @end
 
-@interface StakeViewController : UITableViewController<TGGNavigationControllerHandle, Delegator>
+@interface StakeViewController : UITableViewController<TGGNavigationControllerHandle, Delegator, WizardItem>
 
 @property NSInteger selectionCount;
 @property (nonatomic, weak) id<SubmitStakesReceiver> delegate;
 
 - (IBAction)submitUnitBet:(id)sender;
+- (void)setUpWithBetTypes:(NSMutableSet*)betTypes;
 
 @end

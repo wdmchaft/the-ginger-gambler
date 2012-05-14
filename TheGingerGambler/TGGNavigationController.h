@@ -14,6 +14,7 @@
 @property (strong, nonatomic) PlaceBetWizardManager* placeBetWizard;
 
 - (void)next;
+- (NSString*) proceedingWizardViewController;
 - (BOOL)placeBetWizardInProgress;
 - (void)initPlaceBetWizard;
 - (NSInteger)selectionCountForWizardBet;

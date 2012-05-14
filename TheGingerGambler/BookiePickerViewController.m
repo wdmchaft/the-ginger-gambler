@@ -21,7 +21,8 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoadWithEntity:BookieEntityName];
+    [super viewDidLoad];
+    self.entities = [DatabaseManager entitiesFor:BookieEntityName];
 }
 
 #pragma mark - Table view delegate
@@ -37,6 +38,11 @@
     {
         [self.tggNavigationController popViewControllerAnimated:YES];
     }
+}
+
+- (NSString*)nextItem
+{
+    return SportPickerView;
 }
 
 @end

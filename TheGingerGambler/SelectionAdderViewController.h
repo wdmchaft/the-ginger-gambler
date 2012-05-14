@@ -6,23 +6,31 @@
 //  Copyright (c) John Bower. All rights reserved.
 //
 
-#define VIEW_CATEGORY_ADDER @"ViewCategoryAdder" 
-
 #import <UIKit/UIKit.h>
+#import "TGGNavigationControllerHandle.h"
+#import "Delegator.h"
+#import "WizardItem.h"
 
-@protocol SelectionNotifications <NSObject>
+@class Selection;
 
-- (void) addDescription:(NSString*)description odds:(NSDecimalNumber*)odds placeTerms:(NSDecimalNumber*)placeTerms;
+@protocol SubmitSelectionReceiver <NSObject>
+
+- (void) submitSelection:(Selection*)selection;
 
 @end
 
-@interface SelectionAdderViewController : UIViewController
+@interface SelectionAdderViewController : UIViewController<TGGNavigationControllerHandle, WizardItem, Delegator>
 
-@property (nonatomic, weak) id<SelectionNotifications> delegate;
+@property (nonatomic, weak) id<SubmitSelectionReceiver> delegate;
 
-@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
-@property (weak, nonatomic) IBOutlet UITextField *oddsTextField;
-@property (weak, nonatomic) IBOutlet UITextField *placeTermsTextField;
+@property BOOL presentedAsModal;
+
+@property (weak, nonatomic) IBOutlet UITextField* descriptionTextField;
+@property (weak, nonatomic) IBOutlet UITextField* oddsTextField;
+@property (weak, nonatomic) IBOutlet UITextField* placeTermsTextField;
+@property (weak, nonatomic) IBOutlet UILabel *placeTermsLabel;
+
+- (IBAction)winOnlyEachWaySwitched:(UISegmentedControl *)sender;
 
 - (IBAction)save:(id)sender;
 

@@ -12,7 +12,7 @@
 #import "StakeViewController.h"
 #import "SelectionsViewController.h"
 
-@interface PlaceBetWizardManager : NSObject<CategorySelectorReceiver, SelectionsAddedReceiver, SubmitStakesReceiver>
+@interface PlaceBetWizardManager : NSObject<CategorySelectorReceiver, SelectionsAddedReceiver, SubmitStakesReceiver, SubmitSelectionReceiver>
 
 @property BOOL isInProgress;
 
