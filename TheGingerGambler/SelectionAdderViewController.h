@@ -16,10 +16,11 @@
 @protocol SubmitSelectionReceiver <NSObject>
 
 - (void) submitSelection:(Selection*)selection;
+- (NSString*) bookieAndSport; 
 
 @end
 
-@interface SelectionAdderViewController : UIViewController<TGGNavigationControllerHandle, WizardItem, Delegator>
+@interface SelectionAdderViewController : UIViewController<TGGNavigationControllerHandle, WizardItem, Delegator, UITextFieldDelegate>
 
 @property (nonatomic, weak) id<SubmitSelectionReceiver> delegate;
 
@@ -29,6 +30,11 @@
 @property (weak, nonatomic) IBOutlet UITextField* oddsTextField;
 @property (weak, nonatomic) IBOutlet UITextField* placeTermsTextField;
 @property (weak, nonatomic) IBOutlet UILabel *placeTermsLabel;
+ 
+@property (weak, nonatomic) IBOutlet UINavigationBar *modaNavigationBar;
+
+@property (weak, nonatomic) IBOutlet UIScrollView* scrollView;
+
 
 - (IBAction)winOnlyEachWaySwitched:(UISegmentedControl *)sender;
 

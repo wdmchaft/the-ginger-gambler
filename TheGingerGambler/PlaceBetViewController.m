@@ -184,4 +184,13 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (NSString*) bookieAndSport
+{
+    if(self.bet)
+    {
+        return [NSString stringWithFormat:@"%@ - %@", [self.bet.bookie.name substringToIndex:4], [self.bet.sport.name substringToIndex:4]];
+    }
+    return nil;
+}
+
 @end

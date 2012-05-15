@@ -14,6 +14,7 @@
 @protocol SelectionsAddedReceiver <NSObject>
 
 - (void) submitSelections:(NSMutableArray*) selections;
+- (NSString*) bookieAndSport;
 
 @end
 

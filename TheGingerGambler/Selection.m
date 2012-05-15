@@ -22,7 +22,6 @@
 @dynamic sport;
 @dynamic bookie;
 
-
 - (NSDictionary*)dictionify
 {
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithObject:self.name forKey:DescriptionKey];

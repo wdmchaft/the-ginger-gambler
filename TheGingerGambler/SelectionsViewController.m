@@ -82,4 +82,9 @@
     return StakeView;
 }
 
+- (NSString*) bookieAndSport
+{
+    return [self.delegate bookieAndSport];
+}
+
 @end

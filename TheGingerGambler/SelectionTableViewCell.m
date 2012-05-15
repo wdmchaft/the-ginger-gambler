@@ -19,7 +19,8 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
+    if (self) 
+    {
         // Initialization code
     }
     return self;
@@ -36,7 +37,13 @@
 {
     self.descriptionLabel.text = [dictionary objectForKey:DescriptionKey];
     self.oddsValueLabel.text = [[dictionary objectForKey:OddsKey] stringValue];
-    self.placeTermsValueLabel.text = [[dictionary objectForKey:PlaceTermsKey] stringValue];
+    NSDecimalNumber* placeTerms = (NSDecimalNumber*)[dictionary objectForKey:PlaceTermsKey];
+    if(![placeTerms isEqualToNumber:[NSDecimalNumber notANumber]])
+    {    
+        [self.placeTermsLabel setHidden:NO];
+        [self.placeTermsValueLabel setHidden:NO];
+        self.placeTermsValueLabel.text = [placeTerms stringValue];
+    }
 }
 
 @end
